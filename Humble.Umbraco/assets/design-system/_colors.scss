@@ -1,0 +1,17 @@
+/*
+	Font colors
+*/
+@each $title, $value in config("colors") {
+	.-fg\:#{$title} {
+		color: $value;
+	}
+}
+
+/*
+	Background colors
+*/
+@each $title, $value in config("colors") {
+	.-bg\:#{$title} {
+		background-color: $value;
+	}
+}

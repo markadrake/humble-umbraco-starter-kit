@@ -1,0 +1,19 @@
+/*
+	Block Editor and Blocks
+	- Remove `max-width` from the block list wrapper.
+	- Center align "Add Content" button text.
+	- Keep a reference to when blocks begin and end.
+*/
+.umb-block-list .umb-block-list__wrapper {
+  max-width: none; }
+
+.umb-block-list .umb-block-list__create-button {
+  padding-left: 59px; }
+
+.umb-block-list .umb-block-list__block--view {
+  border: 1px dashed #bbbabf;
+  border-radius: 3px;
+  padding: 5px 15px;
+  margin-bottom: 5px; }
+  .umb-block-list .umb-block-list__block--view:hover {
+    border-color: #2152a3; }

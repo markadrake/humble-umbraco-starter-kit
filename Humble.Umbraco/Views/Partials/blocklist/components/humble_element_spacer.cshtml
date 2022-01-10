@@ -1,0 +1,33 @@
+@inherits UmbracoViewPage<BlockListItem>
+@{
+	if (Model == null)
+	{
+		return;
+	}
+
+	var content = (Humble_Element_Spacer)Model.Content;
+	var settings = Model.Settings;
+
+	var cssClasses = "";
+
+	switch (content.Size)
+	{
+		case "Smallest":
+			cssClasses += "-size:xs";
+			break;
+		case "Smaller":
+			cssClasses += "-size:s";
+			break;
+		case "Larger":
+			cssClasses += "-size:l";
+			break;
+		case "Largest":
+			cssClasses += "-size:xl";
+			break;
+		default:
+			cssClasses += "-size:m";
+			break;
+	}
+}
+
+<div class="spacer @(cssClasses)"></div>

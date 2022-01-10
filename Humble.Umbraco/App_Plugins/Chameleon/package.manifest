@@ -1,0 +1,6 @@
+{
+	"css": [
+		"/assets/backoffice.css",
+		"/App_Plugins/Chameleon/Sections/Dashboards/default.min.css"
+	]
+}

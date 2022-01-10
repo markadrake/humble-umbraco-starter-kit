@@ -1,0 +1,34 @@
+.humble_dashboard_colors {
+	display: flex;
+
+	.humble_dashboard_colors_grid {
+		width: 42rem;
+		max-width: 75%;
+		padding-right: 1rem;
+
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+
+			li {
+				position: relative;
+				width: 100%;
+				height: 0;
+				padding-bottom: 100%;
+				overflow: hidden;
+
+				p {
+					position: absolute;
+					right: 1rem;
+					bottom: 1rem;
+					left: 1rem;
+					color: #fff;
+					mix-blend-mode: difference;
+				}
+			}
+		}
+	}
+}

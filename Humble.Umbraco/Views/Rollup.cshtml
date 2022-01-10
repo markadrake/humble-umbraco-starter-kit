@@ -1,0 +1,19 @@
+﻿@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Humble_Document_WebPage>
+@{
+	Layout = "~/Views/Layout.cshtml";
+}
+
+@* the fun starts here *@
+
+@foreach (ContentModels.Humble_Document_WebPage child in Model.Children())
+{
+
+	<h1>@child.Name</h1>
+
+	if (child.Content != null)
+	{
+		@Html.GetBlockListHtml(child.Content)
+	}
+
+}

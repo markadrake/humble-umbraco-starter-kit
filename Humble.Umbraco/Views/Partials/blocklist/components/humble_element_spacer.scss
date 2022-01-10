@@ -1,0 +1,64 @@
+﻿/*
+	Spacers
+*/
+.spacer {
+	&.-size\:xs {
+		height: 0.5rem;
+
+		@include breakpoint-m {
+			height: 1rem;
+		}
+
+		@include breakpoint-l {
+			height: 2rem;
+		}
+	}
+
+	&.-size\:s {
+		height: 1rem;
+
+		@include breakpoint-m {
+			height: 2rem;
+		}
+
+		@include breakpoint-l {
+			height: 4rem;
+		}
+	}
+
+	&.-size\:m {
+		height: 2rem;
+
+		@include breakpoint-m {
+			height: 4rem;
+		}
+
+		@include breakpoint-l {
+			height: 6rem;
+		}
+	}
+
+	&.-size\:l {
+		height: 4rem;
+
+		@include breakpoint-m {
+			height: 6rem;
+		}
+
+		@include breakpoint-l {
+			height: 8rem;
+		}
+	}
+
+	&.-size\:xl {
+		height: 6rem;
+
+		@include breakpoint-m {
+			height: 8rem;
+		}
+
+		@include breakpoint-l {
+			height: 10rem;
+		}
+	}
+}

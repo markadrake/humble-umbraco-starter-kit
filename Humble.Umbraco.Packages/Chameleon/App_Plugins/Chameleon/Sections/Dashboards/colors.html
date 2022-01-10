@@ -1,0 +1,21 @@
+<div class="humble_dashboard_colors"
+	 ng-controller="HumbleUmbraco.Dashboard.ColorsController as vm">
+
+	<div class="humble_dashboard_colors_grid">
+		<ul>
+			<li ng-repeat="color in vm.colors"
+				style="background:{{color.value}}">
+				<p>
+					<span>{{color.label}} &mdash; </span>
+					<span>{{color.value}}</span>
+				</p>
+			</li>
+		</ul>
+	</div>
+
+	<div>
+		<p>Select a color swatch from the left.</p>
+		<p>Or add a new color swatch.</p>
+	</div>
+
+</div>

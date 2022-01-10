@@ -1,0 +1,68 @@
+@inherits UmbracoViewPage<BlockListItem>
+@{
+	if (Model == null)
+	{
+		return;
+	}
+
+	var content = (Humble_Element_DualSlider)Model.Content;
+	var settings = Model.Settings;
+	string guid = content.Key.ToString("N");
+}
+
+<div class="dualLayerSlider" data-guid="@(guid)">
+
+	<div class="bg">
+		<div class="focus">
+			<div class="sequenced">
+				@foreach (var slide in content.Slides)
+				{
+					var slideContent = (Humble_Element_DualSlide) slide.Content;
+
+					<section style="background-image:url(@(slideContent.BackgroundImage.Url())"></section>
+				}
+			</div>
+		</div>
+	</div>
+
+	<div class="fg">
+		@if (!string.IsNullOrEmpty(content.Heading))
+		{
+			<p class="tagline">@(content.Heading)</p>
+		}
+		<div class="focus">
+			<div class="sequenced">
+
+				@foreach (var slide in content.Slides)
+				{
+					var slideContent = (Humble_Element_DualSlide)slide.Content;
+
+					<section>
+						<h1 class="title">@(slideContent.Heading)</h1>
+						<hr>
+						<p>@(slideContent.Copy)</p>
+					</section>
+				}
+
+			</div>
+		</div>
+		<div class="pagination">
+			@for (int i = 0; i < content.Slides.Count(); i++)
+			{
+				<a href="#" class="page"></a>
+			}
+			<a href="#" class="next"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background: new 0 0 100 100;" xml:space="preserve"><polyline class="icon-arrow" points="78.3,97.2 21.7,50 78.3,2.8" style=" fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 10; " /></svg></a>
+		</div>
+	</div>
+</div>
+
+<script>
+	window._queue.onLoad.push(function () {
+		try {
+			var el = document.querySelector(".dualLayerSlider[data-guid='@(guid)']");
+			window.app.dualLayerSlider(el);
+		} catch (e) {
+			console.log(e);
+		}
+	});
+</script>

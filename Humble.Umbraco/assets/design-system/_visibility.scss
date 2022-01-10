@@ -1,0 +1,60 @@
+/*
+	Hide something at specific breakpoints and above
+*/
+.-hide {
+	display: none!important;
+}
+@media (min-width: config("breakpoints.s.min")) {
+	.-hide\:s {
+		display: none!important;
+	}
+}
+@media (min-width: config("breakpoints.m.min")) {
+	.-hide\:m {
+		display: none!important;
+	}
+}
+@media (min-width: config("breakpoints.l.min")) {
+	.-hide\:l {
+		display: none!important;
+	}
+}
+
+/*
+	Show something at specific breakpoints and above
+*/
+@media (max-width: config("breakpoints.xs.max")) {
+	.-show\:s {
+		display: none!important;
+	}
+}
+@media (max-width: config("breakpoints.s.max")) {
+	.-show\:m {
+		display: none!important;
+	}
+}
+@media (max-width: config("breakpoints.m.max")) {
+	.-show\:l {
+		display: none!important;
+	}
+}
+
+/*
+	Overflow scroll
+*/
+.-scroll\:y {
+	overflow-y: auto;
+	max-width: 100%;
+}
+
+.-scroll\:x {
+	overflow-x: auto;
+	max-height: 100%;
+}
+
+/*
+	Pointer Events
+*/
+.-events\:none {
+	pointer-events: none!important;
+}

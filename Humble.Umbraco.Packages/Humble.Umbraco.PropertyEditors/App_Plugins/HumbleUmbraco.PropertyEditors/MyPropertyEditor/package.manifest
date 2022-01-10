@@ -1,0 +1,37 @@
+{
+	"propertyEditors": [
+		{
+			"alias": "humbleumbraco.propertyEditors.hint",
+			"name": "Hint",
+			"icon": "icon-help",
+			"group": "Humble",
+			"editor": {
+				"view": "~/App_Plugins/HumbleUmbraco.PropertyEditors/MyPropertyEditor/hint.html",
+                "hideLabel": true,
+				"valueType": "JSON"
+			},
+			"prevalues": {
+				"fields": [
+					{
+						"label": "Heading",
+						"description": "Provide a heading.",
+						"key": "heading",
+						"view": "textstring"
+					},
+					{
+						"label": "Copy",
+						"description": "Provide the copy.",
+						"key": "copy",
+						"view": "textarea"
+					}
+				]
+			}
+		}
+	],
+	"javascript": [
+		"~/App_Plugins/HumbleUmbraco.PropertyEditors/MyPropertyEditor/hint.js"
+	],
+	"css": [
+		"~/App_Plugins/HumbleUmbraco.PropertyEditors/MyPropertyEditor/hint.css"
+	]
+}

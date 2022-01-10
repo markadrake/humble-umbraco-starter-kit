@@ -1,0 +1,27 @@
+<div class="humble_dashboards_breakpoints"
+	 ng-controller="HumbleUmbraco.Dashboard.BreakpointsController as vm" ">
+
+	<h3>Breakpoints</h3>
+
+	<ul>
+		<li ng-repeat="breakpoint in vm.breakpoints"
+			ng-click="vm.select('selectedBreakpoint', breakpoint)">{{breakpoint.label}}</li>
+	</ul>
+
+	<ul ng-if="vm.selectedBreakpoint">
+		<li ng-repeat="device in vm.commonDevices"
+			ng-click="vm.select('selectedDevice', device)">{{device.label}}</li>
+	</ul>
+
+	<p ng-if="vm.selectedBreakpoint">Selected breakpoint: {{vm.selectedBreakpoint.label}}</p>
+	<button ng-if="vm.selectedBreakpoint"
+			ng-click="vm.select('selectedBreakpoint', null)">
+		Clear Selection
+	</button>
+	<p ng-if="vm.selectedDevice">Selected device: {{vm.selectedDevice.label}}</p>
+	<button ng-if="vm.selectedDevice"
+			ng-click="vm.select('selectedDevice', null)">
+		Clear Selection
+	</button>
+
+</div>

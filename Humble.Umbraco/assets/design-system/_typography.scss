@@ -1,0 +1,231 @@
+/*
+	Normalize all Text Elements
+*/
+html {
+	font-size: 16px; // rem value
+}
+
+html,
+input,
+textarea {
+	font-family: "Roboto", "Open Sans", sans-serif;
+	color: #202020;
+}
+
+figcaption,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+p,
+blockquote,
+td,
+dt, 
+dd {
+	font-size: 1.125rem;
+	font-weight: normal;
+	line-height: 1.5;
+	margin: 0;
+}
+
+p {
+	svg {
+		width: 1.2rem;
+		height: 1.2rem;
+		vertical-align: middle;
+		margin-right: 0.5rem;
+	}
+}
+
+ol,
+ul,
+dl {
+	margin: 0;
+}
+
+strong, 
+dt {
+	font-weight: 700;
+}
+
+/*
+	Style Text Elements
+*/
+a {
+	color: config("colors.primary1");
+}
+
+.heading {
+	font-size: 2.3375rem;
+	line-height: 2.3375rem;
+	font-weight: 700;
+
+	@include breakpoint-s {
+		font-size: 3.0375rem;
+		line-height: 3.0375rem;
+	}
+
+	@include breakpoint-m {
+		font-size: 4.225rem;
+		line-height: 4.225rem;
+	}
+
+	@include breakpoint-l {
+		font-size: 4.45rem;
+		line-height: 4.45rem;
+	}
+}
+
+.subheading {
+	font-size: 1.375rem;
+	line-height: 1.8rem;
+	font-weight: 600;
+
+	@include breakpoint-m {
+		font-size: 1.5rem;
+	}
+}
+
+.title {
+	font-size: 2rem;
+	font-weight: 600;
+	line-height: 1.1;
+
+	@include breakpoint-m {
+		font-size: 2.25rem;
+	}
+}
+
+.subtitle {
+	font-size: 1.1rem;
+	font-weight: 600;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+
+	@include breakpoint-m {
+		font-size: 1.2rem;
+	}
+}
+
+.intro {
+	font-size: 1.1rem;
+	line-height: 1.8rem;
+
+	@include breakpoint-m {
+		font-size: 1.2rem;
+		line-height: 2rem;
+	}
+}
+
+.quote {
+	@include typography-quote;
+}
+
+.code {
+	color: config("colors.primary1");
+}
+
+.cutline,
+figcaption,
+small {
+	font-size: .85rem;
+	line-height: 1.1rem;
+}
+
+/*
+	Lists
+*/
+ul, ol {
+	&.-flatten {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+
+		> li {
+
+			+ li {
+				margin-left: 1rem;
+			}
+		}
+	}
+}
+
+/*
+	Vertical Rhythm
+*/
+.heading,
+.subheading,
+.title,
+.subtitle {
+	+ p {
+		margin-top: 1.5rem;
+	}
+}
+p,
+ul, 
+ol, 
+dl,
+blockquote {
+	+ .title,
+	+ .subtitle,
+	+ p,
+	+ ul,
+	+ ol,
+	+ dl,
+	+ blockquote {
+		margin-top: 1.5rem;
+	}
+}
+dd + dt {
+	margin-top: 1.5rem;
+}
+/*
+	Abbreviated _fyin Element
+*/
+.fyin-abbr {
+	font-size: 1.3125rem;
+	line-height: 1.3125rem;
+	user-select: none;
+
+	> span {
+		&:nth-child(1) {
+			font-weight: 300;
+		}
+
+		&:nth-child(2) {
+			animation-name: blink;
+			animation-iteration-count: infinite;
+			animation-duration: 1.5s;
+		}
+
+		&:nth-child(3) {
+			color: config("colors.primary1");
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+	}
+
+	@include breakpoint-m {
+		font-size: 2.1875rem;
+		line-height: 2.1875rem;
+	}
+}
+
+/*
+	Modifiers for Text Elements
+*/
+.-text\:right {
+	text-align: right;
+}
+
+.-text\:center {
+	text-align: center;
+}
+
+.-text\:left {
+	text-align: left;
+}

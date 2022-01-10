@@ -1,0 +1,22 @@
+{
+	"compileOnSave": false,
+	"compilerOptions": {
+		//"noImplicitAny": false,
+		//"noEmitOnError": true,
+		"removeComments": true,
+		"sourceMap": true,
+		"target": "es5",
+		"module": "ES2015",
+		//"outDir": "dist",
+		"moduleResolution": "Node",
+		"noLib": false,
+	},
+	"include": [
+		"assets/**/*",
+		"views/**/*"
+	],
+	"exclude": [
+		"bin",
+		"node_modules"
+	]
+}

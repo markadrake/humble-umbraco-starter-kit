@@ -1,0 +1,41 @@
+/*
+	CSS Grid Layout
+*/
+.grid {
+	display: grid;
+	// Quick grid arrangements
+	@for $i from 2 through 6 {
+		&.-xs\:#{$i} {
+			grid-template-columns: repeat($i, 1fr);
+		}
+	}
+
+	@include breakpoint-s {
+		@for $i from 2 through 6 {
+			&.-s\:#{$i} {
+				grid-template-columns: repeat($i, 1fr);
+			}
+		}
+	}
+
+	@include breakpoint-m {
+		@for $i from 2 through 6 {
+			&.-m\:#{$i} {
+				grid-template-columns: repeat($i, 1fr);
+			}
+		}
+	}
+
+	@include breakpoint-l {
+		@for $i from 2 through 6 {
+			&.-l\:#{$i} {
+				grid-template-columns: repeat($i, 1fr);
+			}
+		}
+	}
+
+	&[class^="-x"] {
+		> div {
+		}
+	}
+}

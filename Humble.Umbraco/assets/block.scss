@@ -1,0 +1,9 @@
+﻿@import "./critical.scss";
+@import "./app.scss";
+
+/*
+	Certain elements are unsafe to click when rendered in the backoffice.
+*/
+a {
+	pointer-events: none;
+}

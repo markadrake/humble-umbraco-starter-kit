@@ -1,0 +1,40 @@
+@inherits UmbracoViewPage<BlockListItem>
+@{
+	if (Model == null)
+	{
+		return;
+	}
+
+	var content = (Humble_Element_Card)Model.Content;
+	var settings = Model.Settings;
+}
+
+<div class="card flex">
+	<div class="copy">
+		<h1 class="heading">@(content.Heading)</h1>
+		<p>@(content.Copy)</p>
+		@if(content.CallToAction.Any()) {
+			Umbraco.Cms.Core.Models.Link cta = content.CallToAction.FirstOrDefault();
+			<a class="button" href="@(cta.Url)" target="@(cta.Target)">@(cta.Name)</a>
+		}
+	</div>
+	<div class="media">
+		@if(content.Images.Any()) {
+			if(content.Images.Count() == 1) {
+				var image = content.Images.FirstOrDefault();
+
+				<img src="@(image.Url())" alt="@(image.Name)">
+			} else {
+				carousel(content.Images);
+			}
+		}
+	</div>
+</div>
+
+@{
+	void carousel(IEnumerable<Umbraco.Cms.Core.Models.MediaWithCrops> images){
+		foreach(var image in images) {
+			<img src="@(image.Url())" alt="@(image.Name)">
+		}
+	}
+}

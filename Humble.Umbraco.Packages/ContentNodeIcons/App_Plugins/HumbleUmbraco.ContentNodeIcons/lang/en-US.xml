@@ -1,0 +1,17 @@
+<?xml version="1.0" 
+	encoding="utf-8" 
+	standalone="yes"?>
+<language 
+	alias="en_us" 
+	intName="English (US)" 
+	localName="English (US)" 
+	lcid="" 
+	culture="en-US">
+	<creator>
+		<name>Mark Drake</name>
+		<link>https://markadrake.com</link>
+	</creator>
+	<area alias="humbleumbraco">
+		<key alias="contentnodeicons_unset">Reset to Document Icon</key>
+	</area>
+</language>

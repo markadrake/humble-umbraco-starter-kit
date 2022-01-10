@@ -1,0 +1,119 @@
+/*
+	CSS Flexible Box Layout
+	https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout
+*/
+.flex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+
+	> * {
+		flex: 1 0;
+		min-width: 0; // https://css-tricks.com/flexbox-truncated-text/
+		&.-static {
+			flex: none;
+		}
+	}
+
+	&.-vertical {
+		flex-direction: column;
+		/*
+			Bug: specifically seen in IE11 where if the
+			following rules are not applied, then IE
+			doesn't know the height of the container and
+			the columns are stacked ontop of eachother.
+		*/
+		> * {
+			flex-grow: 1;
+			flex-shrink: 0;
+			flex-basis: auto;
+
+			&.-static {
+				flex-grow: 0;
+			}
+
+			&:last-child {
+				margin-top: auto;
+			}
+		}
+	}
+
+	&.-align\:top {
+		align-items: flex-start;
+	}
+
+	&.-align\:middle {
+		align-items: center;
+	}
+
+	&.-align\:bottom {
+		align-items: flex-end;
+	}
+
+	&.-align\:right {
+		justify-content: flex-end;
+	}
+
+	&.-align\:center {
+		justify-content: center;
+	}
+
+	.-alignItems\:bottom {
+		align-items: flex-end;
+	}
+
+	@for $i from 1 through 6 {
+		> .-xs\:#{$i} {
+			flex-grow: $i;
+		}
+	}
+
+	@include breakpoint-s {
+		@for $i from 1 through 6 {
+			> .-s\:#{$i} {
+				flex-grow: $i;
+			}
+		}
+	}
+
+	@include breakpoint-m {
+		@for $i from 1 through 6 {
+			> .-m\:#{$i} {
+				flex-grow: $i;
+			}
+		}
+	}
+
+	@include breakpoint-l {
+		@for $i from 1 through 6 {
+			> .-l\:#{$i} {
+				flex-grow: $i;
+			}
+		}
+	}
+}
+
+/*
+	Stack children at certain breakpoints.
+*/
+.flex {
+
+	@media (max-width: config("breakpoints.xs.max")) {
+		&.-xs\:stack {
+			display: block;
+		}
+	}
+
+	@media (max-width: config("breakpoints.s.max")) {
+		&.-s\:stack {
+			display: block;
+		}
+	}
+
+	@media (max-width: config("breakpoints.m.max")) {
+		&.-m\:stack {
+			display: block;
+		}
+	}
+
+}

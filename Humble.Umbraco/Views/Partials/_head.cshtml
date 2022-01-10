@@ -1,0 +1,85 @@
+﻿@inherits UmbracoViewPage
+@{
+	Humble_Composition_HasWebApplicationSettings settings = (Humble_Composition_HasWebApplicationSettings)Model.Root().FirstChildOfType("humble_document_websiteSettings");
+	//var request = HttpContext.Current.Request;
+	var currentPage = Umbraco.AssignedContentItem;
+	var isRoot = currentPage.AncestorOrSelf(1).Id == currentPage.Id;
+}
+@*
+	Page Meta
+*@
+@*@if (settings != null && !string.IsNullOrEmpty(settings.Favicon))
+{
+	<link rel="shortcut icon" href="@(settings.Favicon)" type="image/x-icon">
+}*@
+@*
+	SEO
+*@
+@*@if (!ConfigurationManager.AppSettings["Environment"].ToLower().Equals("production"))
+{
+	<meta name="googlebot" content="noindex, nofollow">
+}*@
+@{
+	var title = currentPage.Value<string>("metaTitle");
+	if (string.IsNullOrEmpty(title))
+	{
+		title = currentPage.Name;
+	}
+
+	var titlePrefix = settings != null ? settings.Value<string>("titlePrefix") : "";
+	var titlePostfix = settings != null ? settings.Value<string>("titlePostfix") : "";
+
+	if (!isRoot)
+	{
+		if (!string.IsNullOrEmpty(titlePrefix))
+		{
+			title = $"{titlePrefix} {title}";
+		}
+
+		if (!string.IsNullOrEmpty(titlePostfix))
+		{
+			title = $"{title} {titlePostfix}";
+		}
+	}
+
+	<title>@(title)</title>
+}
+@if (!String.IsNullOrEmpty(currentPage.Value<string>("metaDescription")))
+{
+	<meta name="description" content="@(currentPage.Value<string>("metaDescription"))" />
+}
+@*
+	Canonical URL
+	TODO: Determine the logic here. We may need a canonical domain, and sometimes page content
+	dictates that canonical URL. I've commented the code below until we have time to define this.
+*@
+@{
+	//var canonicalUrl = !string.IsNullOrEmpty(currentPage.Value<string>("canonicalPath")) ?
+	//	currentPage.Value<string>("canonicalPath") : Model.Url(null, UrlMode.Absolute);
+}
+@*<link rel="canonical" href="@canonicalUrl">*@
+@*
+	Open Graph
+	Composition: HasOpenGraphContentV3
+*@
+@if (Model.IsComposedOf("hasOpenGraphContentV3"))
+{
+	@*HasOpenGraphContentV3 content = new HasOpenGraphContentV3(Model);
+
+		//TODO: Finish the Open Graph integration.
+		<meta property="og:title" content="@(globalTitle)" />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="" />
+		<meta property="og:url" content="@(Model.Url())" />*@
+}
+@*
+	Twitter Card
+	Composition: HasTwitterCardContentV3
+*@
+@if (Model.IsComposedOf("hasTwitterCardContentV3"))
+{
+	//HasTwitterCardContentV3 content = new HasTwitterCardContentV3(Model);
+
+	//TODO: Finish the Twitter Card integration.
+	//https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup
+}

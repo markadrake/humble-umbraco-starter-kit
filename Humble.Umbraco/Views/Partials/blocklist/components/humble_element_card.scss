@@ -1,0 +1,19 @@
+﻿.card {
+
+	> .media {
+		align-self: stretch;
+		position: relative;
+		overflow: hidden;
+		flex: 0 1 auto;
+
+		// Single Image
+		> img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+
+	}
+}

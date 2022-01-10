@@ -1,0 +1,7 @@
+<!--
+	Rich Text
+	- Allows us to render this block in the backoffice.
+	- See for more detail: https://our.umbraco.com/Documentation/Fundamentals/Backoffice/Property-Editors/Built-in-Property-Editors/Block-List-Editor/
+-->
+<div ng-bind-html="block.data.copy | trustAs"
+	ng-click="block.edit()"></div>

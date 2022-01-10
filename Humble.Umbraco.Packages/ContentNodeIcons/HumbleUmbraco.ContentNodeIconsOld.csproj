@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <ContentTargetFolders>.</ContentTargetFolders>
+		<Product>HumbleUmbraco.ContentNodeIcons</Product>
+        <PackageId>HumbleUmbraco.ContentNodeIcons</PackageId>
+        <Title>HumbleUmbraco.ContentNodeIcons</Title>
+        <Description>Assign custom icons to individual content nodes through the backoffice of Umbraco.</Description>
+        <PackageTags>Umbraco Umbraco9 ContentNodeIcons Humble</PackageTags>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<Authors>Mark Drake</Authors>
+		<Version>9.1.3</Version>
+		<PackageProjectUrl>https://github.com/markadrake/U8SK.ContentNodeIcons</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/markadrake/U8SK.ContentNodeIcons</RepositoryUrl>
+		<RepositoryType>Git</RepositoryType>
+		<Copyright>Copyright (c) Mark Drake, www.markadrake.com, 2021</Copyright>
+		<PackageReleaseNotes>- Now makes use of the OOTB icon picker.</PackageReleaseNotes>
+		<RootNamespace>HumbleUmbraco.ContentNodeIcons</RootNamespace>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Umbraco.Cms.Web.Website" Version="9.2.0" />
+        <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="9.2.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Include="App_Plugins\**\*.*">
+			<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+			<CopyToPublishDirectory>Always</CopyToPublishDirectory>
+        </Content>
+        <None Include="build\**\*.*">
+            <Pack>True</Pack>
+			<PackagePath>buildTransitive</PackagePath>
+		</None>
+    </ItemGroup>
+
+    <ItemGroup>
+		<None Remove="App_Plugins\**\*.*" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Humble.Umbraco", "Humble.Umbraco\Humble.Umbraco.csproj", "{DC3859C5-A0FC-4965-86F3-F0D8C16EC15A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Humble.Umbraco.Packages", "Humble.Umbraco.Packages", "{46774B56-D02A-4E25-972B-BC0B5443FC14}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chameleon", "Humble.Umbraco.Packages\Chameleon\Chameleon.csproj", "{4D0DC84A-7A5F-423C-A7BE-8C13376A2881}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Humble.Umbraco.PropertyEditors", "Humble.Umbraco.Packages\Humble.Umbraco.PropertyEditors\Humble.Umbraco.PropertyEditors.csproj", "{F1619AA2-8224-4B3A-BA0C-E37F3D68C815}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D57F821F-2D78-4E3C-9A9D-4D46C1810CF4}"
+	ProjectSection(SolutionItems) = preProject
+		.filenesting.json = .filenesting.json
+		readme.md = readme.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Humble.Umbraco.ContentNodeIcons", "Humble.Umbraco.Packages\Humble.Umbraco.ContentNodeIcons\Humble.Umbraco.ContentNodeIcons.csproj", "{09A6CE0E-B4A6-4881-A96E-DA03256C1F9C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Humble.Umbraco.API", "Humble.Umbraco.Packages\Humble.Umbraco.API\Humble.Umbraco.API.csproj", "{68626A4C-3C5E-4D19-8272-8737506A3137}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Humble.Umbraco.UI", "Humble.Umbraco.Packages\Humble.Umbraco.UI\Humble.Umbraco.UI.csproj", "{F97242D9-D8FE-4FD2-AECD-B2367EAE1DFA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{6CE10158-FD39-46DF-AD2E-1781CA4509A0}"
+	ProjectSection(SolutionItems) = preProject
+		readme.md = readme.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC3859C5-A0FC-4965-86F3-F0D8C16EC15A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC3859C5-A0FC-4965-86F3-F0D8C16EC15A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC3859C5-A0FC-4965-86F3-F0D8C16EC15A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC3859C5-A0FC-4965-86F3-F0D8C16EC15A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D0DC84A-7A5F-423C-A7BE-8C13376A2881}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D0DC84A-7A5F-423C-A7BE-8C13376A2881}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D0DC84A-7A5F-423C-A7BE-8C13376A2881}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D0DC84A-7A5F-423C-A7BE-8C13376A2881}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1619AA2-8224-4B3A-BA0C-E37F3D68C815}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1619AA2-8224-4B3A-BA0C-E37F3D68C815}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1619AA2-8224-4B3A-BA0C-E37F3D68C815}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1619AA2-8224-4B3A-BA0C-E37F3D68C815}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09A6CE0E-B4A6-4881-A96E-DA03256C1F9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09A6CE0E-B4A6-4881-A96E-DA03256C1F9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09A6CE0E-B4A6-4881-A96E-DA03256C1F9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09A6CE0E-B4A6-4881-A96E-DA03256C1F9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68626A4C-3C5E-4D19-8272-8737506A3137}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68626A4C-3C5E-4D19-8272-8737506A3137}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68626A4C-3C5E-4D19-8272-8737506A3137}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68626A4C-3C5E-4D19-8272-8737506A3137}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F97242D9-D8FE-4FD2-AECD-B2367EAE1DFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F97242D9-D8FE-4FD2-AECD-B2367EAE1DFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F97242D9-D8FE-4FD2-AECD-B2367EAE1DFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F97242D9-D8FE-4FD2-AECD-B2367EAE1DFA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4D0DC84A-7A5F-423C-A7BE-8C13376A2881} = {46774B56-D02A-4E25-972B-BC0B5443FC14}
+		{F1619AA2-8224-4B3A-BA0C-E37F3D68C815} = {46774B56-D02A-4E25-972B-BC0B5443FC14}
+		{09A6CE0E-B4A6-4881-A96E-DA03256C1F9C} = {46774B56-D02A-4E25-972B-BC0B5443FC14}
+		{68626A4C-3C5E-4D19-8272-8737506A3137} = {46774B56-D02A-4E25-972B-BC0B5443FC14}
+		{F97242D9-D8FE-4FD2-AECD-B2367EAE1DFA} = {46774B56-D02A-4E25-972B-BC0B5443FC14}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F0A5EF84-2D31-4F02-9A33-4FC3B05F11D9}
+	EndGlobalSection
+EndGlobal

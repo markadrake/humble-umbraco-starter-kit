@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "assets/block.css",
+    "inputFile": "assets/block.scss"
+  },
+  {
+    "outputFile": "assets/app.css",
+    "inputFile": "assets/app.scss"
+  },
+  {
+    "outputFile": "assets/critical.css",
+    "inputFile": "assets/critical.scss"
+  }
+]

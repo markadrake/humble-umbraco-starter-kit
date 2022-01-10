@@ -1,0 +1,35 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = null;
+
+	var root = Model.AncestorOrSelf(0);
+	var currentPage = Umbraco.AssignedContentItem;
+	var currentCulture = System.Threading.Thread.CurrentThread.CurrentCulture;
+}
+<!DOCTYPE html>
+<html lang="@(currentCulture.TwoLetterISOLanguageName)">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	@Html.Partial("_head")
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link rel="stylesheet" href="/assets/critical.min.css">
+	<link rel="preload" href="/assets/app.min.css" as="style" onload="this.rel='stylesheet';this.onload=null">
+	<script src="~/assets/critical.js"></script>
+	@RenderSection("HeadClose", false)
+</head>
+<body>
+	@RenderSection("BodyOpen", false)
+
+	@RenderBody()
+
+	<noscript>
+		<link rel="stylesheet" href="/assets/app.min.css">
+	</noscript>
+	<script src="~/assets/app.js" async defer></script>
+
+	@RenderSection("BodyClose", false)
+</body>
+</html>

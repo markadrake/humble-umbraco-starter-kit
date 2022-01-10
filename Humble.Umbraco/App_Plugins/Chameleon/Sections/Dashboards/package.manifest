@@ -1,0 +1,19 @@
+{
+    "dashboards":  [
+        {
+            "alias": "humble.default",
+            "view":  "/App_Plugins/Chameleon/Sections/Dashboards/default.html",
+            "sections":  [ "humble" ],
+            "weight": -10
+        }
+    ],
+	"javascript": [
+		"~/App_Plugins/Chameleon/Sections/Dashboards/breakpoints.controller.js",
+		"~/App_Plugins/Chameleon/Sections/Dashboards/colors.controller.js",
+		//"~/App_Plugins/Chameleon/Sections/Dashboards/components.controller.js",
+		"~/App_Plugins/Chameleon/Sections/Dashboards/default.controller.js",
+		//"~/App_Plugins/Chameleon/Sections/Dashboards/elements.controller.js",
+		"~/App_Plugins/Chameleon/Sections/Dashboards/styleguide.controller.js",
+		"~/App_Plugins/Chameleon/Sections/Dashboards/typography.controller.js"
+	]
+}

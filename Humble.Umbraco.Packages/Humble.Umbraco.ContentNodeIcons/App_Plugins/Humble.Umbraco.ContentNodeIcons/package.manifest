@@ -1,0 +1,8 @@
+{
+	"javascript": [
+		"~/app_plugins/humble.umbraco.contentNodeIcons/set.js",
+		"~/app_plugins/humble.umbraco.contentNodeIcons/unset.js"
+	],
+	"css": [
+	]
+}

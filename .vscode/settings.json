@@ -1,0 +1,15 @@
+{
+	"editor.detectIndentation": false,
+	"editor.insertSpaces": false,
+	"vetur.format.options.tabSize": 4,
+	"vetur.format.options.useTabs": true,
+	"files.exclude": {
+		"**/bin": true,
+		"**/obj": true,
+		"**/umbraco": true
+	},
+	"emmet.includeLanguages": {
+		"razor": "html",
+		"aspnetcorerazor": "html"
+	}
+}

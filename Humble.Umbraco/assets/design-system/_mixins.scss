@@ -1,0 +1,95 @@
+/*
+	Alignment
+	Helps us to align the left and right edges of content.
+*/
+@mixin alignToContentEdges {
+	width: 100%;
+	max-width: 100rem;
+	margin-left: auto;
+	margin-right: auto;
+
+	@include breakpoint-s-and-below {
+		padding: 0 1rem;
+	}
+
+	@include breakpoint-m {
+		padding: 0 2rem;
+	}
+}
+
+/*
+	XS Breakpoint
+	Viewport Width <= 39.99rem (639px)
+*/
+@mixin breakpoint-xs {
+	@media (max-width: config("breakpoints.xs.max")) {
+		@content;
+	}
+}
+
+/*
+	S Breakpoint
+	Viewport Width >= 40rem (640px)
+*/
+@mixin breakpoint-s {
+	@media (min-width: config("breakpoints.s.min")) {
+		@content;
+	}
+}
+@mixin breakpoint-s-and-below {
+	@media (max-width: config("breakpoints.s.max")) {
+		@content;
+	}
+}
+
+/*
+	M Breakpoint
+	Viewport Width >= 64rem (1024px)
+*/
+@mixin breakpoint-m {
+	@media (min-width: config("breakpoints.m.min")) {
+		@content;
+	}
+}
+@mixin breakpoint-m-and-below {
+	@media (max-width: config("breakpoints.m.max")) {
+		@content;
+	}
+}
+
+/*
+	L Breakpoint
+	Viewport Width >= 90rem (1440px)
+*/
+@mixin breakpoint-l {
+	@media (min-width: config("breakpoints.l.min")) {
+		@content;
+	}
+}
+@mixin breakpoint-l-and-below {
+	@media (max-width: config("breakpoints.l.max")) {
+		@content;
+	}
+}
+
+/*
+	XL Breakpoint
+	Viewport Width >= 120rem (1920px)
+*/
+@mixin breakpoint-xl {
+	@media (min-width: config("breakpoints.xl.min")) {
+		@content;
+	}
+}
+
+/*
+	Typography
+*/
+@mixin typography-quote {
+	font-size: 1.125rem;
+	line-height: 2rem;
+
+	@include breakpoint-m {
+		font-size: 1.4rem;
+	}
+}

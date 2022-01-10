@@ -1,0 +1,110 @@
+@import "./functions";
+@import "./mixins";
+
+/*
+	-------------------------------------------------------
+	Updates to this file should not be made directly in the
+	framework. Instead, copy this file to the /src/
+	directory. Update `app.scss` to point your new file.
+	-------------------------------------------------------
+*/
+$settings: (
+	/*
+		-------------------------------------------------------
+		Breakpoints are defined with EM or REM values because
+		it allows our design to respond not only to the size
+		of the screen itself (viewport), but also to the user's
+		accessibility settings such as default font size and
+		zoom level.
+
+		Use the following resource for data around popular
+		screen resolutions:
+			https://www.w3counter.com/globalstats.php
+		-------------------------------------------------------
+	*/
+	breakpoints: (
+		xs: (
+			max: 39.999rem
+		),
+		s: (
+			min: 40rem, // 640
+			max: 63.999rem
+		),
+		m: (
+			min: 64rem, // 1024
+			max: 89.999rem
+		),
+		l: (
+			min: 90rem, // 1440
+			max: 119.999rem
+		),
+		xl: (
+			min: 120rem // 1920
+		)
+	),
+	/*
+		-------------------------------------------------------
+		Ratios are typically used for images, video, or embeds.
+		The values below are used as `padding-bottom` to create
+		the necessary space on the screen.
+		-------------------------------------------------------
+	*/
+	ratios: (
+		"1x1": 100%,
+		"1x2": 200%,
+		"2x1": 50%,
+		"4x3": 75%,
+		"3x4": 133.333%,
+		"16x9": 56.25%
+	),
+	/*
+		-------------------------------------------------------
+		The $colors map is used to programmatically create CSS
+		classnames for foreground & background modifier classes
+		and allows us to use these as variables as well.
+		-------------------------------------------------------
+	*/
+	colors: (
+		/*
+			Brand Specific Colors
+		*/
+		"primary1": #ea8925,
+		"primary2": #017dab,
+		"secondary1": #686868,
+		"secondary2": #c9c8c7,
+		"tertiary1": #e7e7e7,
+		"tertiary2": #f7f7f7,
+		"accent1": #ef7521,
+		"accent2": #2f3136,
+		/*
+			Common Colors
+		*/
+		"white": #fff,
+		"green": #5cb85c,
+		"red": #e50914,
+		"black": #000000,
+		"almostBlack": #100F0F,
+		/*
+			Social Network Branding
+		*/
+		"facebook": #3b5998,
+		"flickr": #0063db,
+		"github": #4183c4,
+		"googleplus": #dd4b39,
+		"instagram": #517fa4,
+		"linkedin": #007bb6,
+		"pinterest": #cb2027,
+		"twitter": #00aced,
+		"vimeo": #aad450,
+		"youtube": #b00
+	),
+	/*
+		-------------------------------------------------------
+		Settings related to the `flex` classes built around the
+		Flexbox Layout Model.
+		-------------------------------------------------------
+	*/
+	grid: (
+		columns: 16
+	)
+) !default;

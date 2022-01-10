@@ -1,0 +1,38 @@
+/*
+	A function to split a string on periods (.) to
+	access a SASS map through a familiar syntax.
+*/
+@function ns($map, $path) {
+	$keys: ();
+	$separator: ".";
+	$index: str-index($path, $separator);
+
+	@while $index != null {
+		$item: str-slice($path, 1, $index - 1);
+		$keys: append($keys, $item);
+		$path: str-slice($path, $index + 1);
+		$index: str-index($path, $separator);
+	}
+
+	$keys: append($keys, $path);
+	@each $key in $keys {
+		$map: map-get($map, $key);
+	}
+	@return $map;
+}
+
+/*
+	Use:
+		config("my.path")
+*/
+@function config($path) {
+	@return ns($settings, $path);
+}
+
+/*
+	Use:
+		pxToRem([int])
+*/
+@function pxToRem($val) {
+	@return #{($val / 16)}rem;
+}

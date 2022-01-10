@@ -1,0 +1,104 @@
+/*
+	Media Normalization
+	-------------------
+*/
+img,
+svg {
+	display: block;
+	max-width: 100%;
+    height: auto;
+}
+
+svg {
+	fill: currentColor;
+}
+
+/*
+	Aspect Ratios
+	-------------
+	These allow for responsive embedding of video content based on
+	aspect ratio of the media.
+*/
+.ratio {
+	display: block;
+	height: 0;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+
+	&.-size\:1x1 {
+		padding: 0 0 100% 0;
+	}
+
+	&.-size\:16x9 {
+		padding: 0 0 56.25% 0;
+	}
+
+	&.-size\:4x3 {
+		padding: 0 0 75% 0;
+	}
+
+	> * {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	/*
+		This allows us to control the ratio between
+		breakpoints, just as we do our flex containers.
+	*/
+	@include breakpoint-xs {
+		@each $name, $value in config("ratios") {
+			&.-xs\:#{$name} {
+				padding: 0 0 $value 0;
+			}
+		}
+	}
+
+	@include breakpoint-s {
+		@each $name, $value in config("ratios") {
+			&.-s\:#{$name} {
+				padding: 0 0 $value 0;
+			}
+		}
+	}
+
+	@include breakpoint-m {
+		@each $name, $value in config("ratios") {
+			&.-m\:#{$name} {
+				padding: 0 0 $value 0;
+			}
+		}
+	}
+
+	@include breakpoint-l {
+		@each $name, $value in config("ratios") {
+			&.-l\:#{$name} {
+				padding: 0 0 $value 0;
+			}
+		}
+	}
+}
+
+/*
+	Utility Classes
+	---------------
+	Classes that are useful for the presentation of media.
+*/
+img {
+	&.-cover {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center center;
+	}
+}

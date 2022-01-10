@@ -1,0 +1,849 @@
+﻿/* Configuration, Mixins, and Functions */
+/*
+	A function to split a string on periods (.) to
+	access a SASS map through a familiar syntax.
+*/
+/*
+	Use:
+		config("my.path")
+*/
+/*
+	Use:
+		pxToRem([int])
+*/
+/*
+	Alignment
+	Helps us to align the left and right edges of content.
+*/
+/*
+	XS Breakpoint
+	Viewport Width <= 39.99rem (639px)
+*/
+/*
+	S Breakpoint
+	Viewport Width >= 40rem (640px)
+*/
+/*
+	M Breakpoint
+	Viewport Width >= 64rem (1024px)
+*/
+/*
+	L Breakpoint
+	Viewport Width >= 90rem (1440px)
+*/
+/*
+	XL Breakpoint
+	Viewport Width >= 120rem (1920px)
+*/
+/*
+	Typography
+*/
+/*
+	-------------------------------------------------------
+	Updates to this file should not be made directly in the
+	framework. Instead, copy this file to the /src/
+	directory. Update `app.scss` to point your new file.
+	-------------------------------------------------------
+*/
+/* Global */
+body {
+  margin: 0; }
+
+/* Layout */
+/*
+	CSS Flexible Box Layout
+	https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout
+*/
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap; }
+  .flex > * {
+    flex: 1 0;
+    min-width: 0; }
+    .flex > *.-static {
+      flex: none; }
+  .flex.-vertical {
+    flex-direction: column;
+    /*
+			Bug: specifically seen in IE11 where if the
+			following rules are not applied, then IE
+			doesn't know the height of the container and
+			the columns are stacked ontop of eachother.
+		*/ }
+    .flex.-vertical > * {
+      flex-grow: 1;
+      flex-shrink: 0;
+      flex-basis: auto; }
+      .flex.-vertical > *.-static {
+        flex-grow: 0; }
+      .flex.-vertical > *:last-child {
+        margin-top: auto; }
+  .flex.-align\:top {
+    align-items: flex-start; }
+  .flex.-align\:middle {
+    align-items: center; }
+  .flex.-align\:bottom {
+    align-items: flex-end; }
+  .flex.-align\:right {
+    justify-content: flex-end; }
+  .flex.-align\:center {
+    justify-content: center; }
+  .flex .-alignItems\:bottom {
+    align-items: flex-end; }
+  .flex > .-xs\:1 {
+    flex-grow: 1; }
+  .flex > .-xs\:2 {
+    flex-grow: 2; }
+  .flex > .-xs\:3 {
+    flex-grow: 3; }
+  .flex > .-xs\:4 {
+    flex-grow: 4; }
+  .flex > .-xs\:5 {
+    flex-grow: 5; }
+  .flex > .-xs\:6 {
+    flex-grow: 6; }
+  @media (min-width: 40rem) {
+    .flex > .-s\:1 {
+      flex-grow: 1; }
+    .flex > .-s\:2 {
+      flex-grow: 2; }
+    .flex > .-s\:3 {
+      flex-grow: 3; }
+    .flex > .-s\:4 {
+      flex-grow: 4; }
+    .flex > .-s\:5 {
+      flex-grow: 5; }
+    .flex > .-s\:6 {
+      flex-grow: 6; } }
+  @media (min-width: 64rem) {
+    .flex > .-m\:1 {
+      flex-grow: 1; }
+    .flex > .-m\:2 {
+      flex-grow: 2; }
+    .flex > .-m\:3 {
+      flex-grow: 3; }
+    .flex > .-m\:4 {
+      flex-grow: 4; }
+    .flex > .-m\:5 {
+      flex-grow: 5; }
+    .flex > .-m\:6 {
+      flex-grow: 6; } }
+  @media (min-width: 90rem) {
+    .flex > .-l\:1 {
+      flex-grow: 1; }
+    .flex > .-l\:2 {
+      flex-grow: 2; }
+    .flex > .-l\:3 {
+      flex-grow: 3; }
+    .flex > .-l\:4 {
+      flex-grow: 4; }
+    .flex > .-l\:5 {
+      flex-grow: 5; }
+    .flex > .-l\:6 {
+      flex-grow: 6; } }
+
+/*
+	Stack children at certain breakpoints.
+*/
+@media (max-width: 39.999rem) {
+  .flex.-xs\:stack {
+    display: block; } }
+
+@media (max-width: 63.999rem) {
+  .flex.-s\:stack {
+    display: block; } }
+
+@media (max-width: 89.999rem) {
+  .flex.-m\:stack {
+    display: block; } }
+
+/*
+	CSS Grid Layout
+*/
+.grid {
+  display: grid; }
+  .grid.-xs\:2 {
+    grid-template-columns: repeat(2, 1fr); }
+  .grid.-xs\:3 {
+    grid-template-columns: repeat(3, 1fr); }
+  .grid.-xs\:4 {
+    grid-template-columns: repeat(4, 1fr); }
+  .grid.-xs\:5 {
+    grid-template-columns: repeat(5, 1fr); }
+  .grid.-xs\:6 {
+    grid-template-columns: repeat(6, 1fr); }
+  @media (min-width: 40rem) {
+    .grid.-s\:2 {
+      grid-template-columns: repeat(2, 1fr); }
+    .grid.-s\:3 {
+      grid-template-columns: repeat(3, 1fr); }
+    .grid.-s\:4 {
+      grid-template-columns: repeat(4, 1fr); }
+    .grid.-s\:5 {
+      grid-template-columns: repeat(5, 1fr); }
+    .grid.-s\:6 {
+      grid-template-columns: repeat(6, 1fr); } }
+  @media (min-width: 64rem) {
+    .grid.-m\:2 {
+      grid-template-columns: repeat(2, 1fr); }
+    .grid.-m\:3 {
+      grid-template-columns: repeat(3, 1fr); }
+    .grid.-m\:4 {
+      grid-template-columns: repeat(4, 1fr); }
+    .grid.-m\:5 {
+      grid-template-columns: repeat(5, 1fr); }
+    .grid.-m\:6 {
+      grid-template-columns: repeat(6, 1fr); } }
+  @media (min-width: 90rem) {
+    .grid.-l\:2 {
+      grid-template-columns: repeat(2, 1fr); }
+    .grid.-l\:3 {
+      grid-template-columns: repeat(3, 1fr); }
+    .grid.-l\:4 {
+      grid-template-columns: repeat(4, 1fr); }
+    .grid.-l\:5 {
+      grid-template-columns: repeat(5, 1fr); }
+    .grid.-l\:6 {
+      grid-template-columns: repeat(6, 1fr); } }
+
+/*
+	Positioning
+*/
+.pos {
+  position: relative; }
+
+/*
+	Wrappers
+	Creates wrapping classes for 200 - 1200 px widths.
+	Ex: .-wrap-200
+*/
+.-wrap\:200 {
+  max-width: 200px;
+  margin: auto; }
+
+.-wrap\:20 {
+  max-width: 20rem;
+  margin: auto; }
+
+.-wrap\:400 {
+  max-width: 400px;
+  margin: auto; }
+
+.-wrap\:40 {
+  max-width: 40rem;
+  margin: auto; }
+
+.-wrap\:600 {
+  max-width: 600px;
+  margin: auto; }
+
+.-wrap\:60 {
+  max-width: 60rem;
+  margin: auto; }
+
+.-wrap\:800 {
+  max-width: 800px;
+  margin: auto; }
+
+.-wrap\:80 {
+  max-width: 80rem;
+  margin: auto; }
+
+.-wrap\:1000 {
+  max-width: 1000px;
+  margin: auto; }
+
+.-wrap\:100 {
+  max-width: 100rem;
+  margin: auto; }
+
+.-wrap\:1200 {
+  max-width: 1200px;
+  margin: auto; }
+
+.-wrap\:120 {
+  max-width: 120rem;
+  margin: auto; }
+
+/*
+	Padding
+*/
+.-pad\:xs {
+  padding: 1rem; }
+
+.-pad\:s {
+  padding: 1rem; }
+
+.-pad\:m {
+  padding: 2rem; }
+
+.-pad\:l {
+  padding: 3rem; }
+
+@media (min-width: 64rem) {
+  .-pad\:xs {
+    padding: 1rem; }
+  .-pad\:s {
+    padding: 2rem; }
+  .-pad\:m {
+    padding: 4rem; }
+  .-pad\:l {
+    padding: 6rem; } }
+
+/*
+	Hide something at specific breakpoints and above
+*/
+.-hide {
+  display: none !important; }
+
+@media (min-width: 40rem) {
+  .-hide\:s {
+    display: none !important; } }
+
+@media (min-width: 64rem) {
+  .-hide\:m {
+    display: none !important; } }
+
+@media (min-width: 90rem) {
+  .-hide\:l {
+    display: none !important; } }
+
+/*
+	Show something at specific breakpoints and above
+*/
+@media (max-width: 39.999rem) {
+  .-show\:s {
+    display: none !important; } }
+
+@media (max-width: 63.999rem) {
+  .-show\:m {
+    display: none !important; } }
+
+@media (max-width: 89.999rem) {
+  .-show\:l {
+    display: none !important; } }
+
+/*
+	Overflow scroll
+*/
+.-scroll\:y {
+  overflow-y: auto;
+  max-width: 100%; }
+
+.-scroll\:x {
+  overflow-x: auto;
+  max-height: 100%; }
+
+/*
+	Pointer Events
+*/
+.-events\:none {
+  pointer-events: none !important; }
+
+.-ada\:only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px -1px 0 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute; }
+
+/* Elements */
+/*
+	Font colors
+*/
+.-fg\:primary1 {
+  color: #ea8925; }
+
+.-fg\:primary2 {
+  color: #017dab; }
+
+.-fg\:secondary1 {
+  color: #686868; }
+
+.-fg\:secondary2 {
+  color: #c9c8c7; }
+
+.-fg\:tertiary1 {
+  color: #e7e7e7; }
+
+.-fg\:tertiary2 {
+  color: #f7f7f7; }
+
+.-fg\:accent1 {
+  color: #ef7521; }
+
+.-fg\:accent2 {
+  color: #2f3136; }
+
+.-fg\:white {
+  color: #fff; }
+
+.-fg\:green {
+  color: #5cb85c; }
+
+.-fg\:red {
+  color: #e50914; }
+
+.-fg\:black {
+  color: #000000; }
+
+.-fg\:almostBlack {
+  color: #100F0F; }
+
+.-fg\:facebook {
+  color: #3b5998; }
+
+.-fg\:flickr {
+  color: #0063db; }
+
+.-fg\:github {
+  color: #4183c4; }
+
+.-fg\:googleplus {
+  color: #dd4b39; }
+
+.-fg\:instagram {
+  color: #517fa4; }
+
+.-fg\:linkedin {
+  color: #007bb6; }
+
+.-fg\:pinterest {
+  color: #cb2027; }
+
+.-fg\:twitter {
+  color: #00aced; }
+
+.-fg\:vimeo {
+  color: #aad450; }
+
+.-fg\:youtube {
+  color: #b00; }
+
+/*
+	Background colors
+*/
+.-bg\:primary1 {
+  background-color: #ea8925; }
+
+.-bg\:primary2 {
+  background-color: #017dab; }
+
+.-bg\:secondary1 {
+  background-color: #686868; }
+
+.-bg\:secondary2 {
+  background-color: #c9c8c7; }
+
+.-bg\:tertiary1 {
+  background-color: #e7e7e7; }
+
+.-bg\:tertiary2 {
+  background-color: #f7f7f7; }
+
+.-bg\:accent1 {
+  background-color: #ef7521; }
+
+.-bg\:accent2 {
+  background-color: #2f3136; }
+
+.-bg\:white {
+  background-color: #fff; }
+
+.-bg\:green {
+  background-color: #5cb85c; }
+
+.-bg\:red {
+  background-color: #e50914; }
+
+.-bg\:black {
+  background-color: #000000; }
+
+.-bg\:almostBlack {
+  background-color: #100F0F; }
+
+.-bg\:facebook {
+  background-color: #3b5998; }
+
+.-bg\:flickr {
+  background-color: #0063db; }
+
+.-bg\:github {
+  background-color: #4183c4; }
+
+.-bg\:googleplus {
+  background-color: #dd4b39; }
+
+.-bg\:instagram {
+  background-color: #517fa4; }
+
+.-bg\:linkedin {
+  background-color: #007bb6; }
+
+.-bg\:pinterest {
+  background-color: #cb2027; }
+
+.-bg\:twitter {
+  background-color: #00aced; }
+
+.-bg\:vimeo {
+  background-color: #aad450; }
+
+.-bg\:youtube {
+  background-color: #b00; }
+
+/*
+	Normalize all Text Elements
+*/
+html {
+  font-size: 16px; }
+
+html,
+input,
+textarea {
+  font-family: "Roboto", "Open Sans", sans-serif;
+  color: #202020; }
+
+figcaption,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+p,
+blockquote,
+td,
+dt,
+dd {
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.5;
+  margin: 0; }
+
+p svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  vertical-align: middle;
+  margin-right: 0.5rem; }
+
+ol,
+ul,
+dl {
+  margin: 0; }
+
+strong,
+dt {
+  font-weight: 700; }
+
+/*
+	Style Text Elements
+*/
+a {
+  color: #ea8925; }
+
+.heading {
+  font-size: 2.3375rem;
+  line-height: 2.3375rem;
+  font-weight: 700; }
+  @media (min-width: 40rem) {
+    .heading {
+      font-size: 3.0375rem;
+      line-height: 3.0375rem; } }
+  @media (min-width: 64rem) {
+    .heading {
+      font-size: 4.225rem;
+      line-height: 4.225rem; } }
+  @media (min-width: 90rem) {
+    .heading {
+      font-size: 4.45rem;
+      line-height: 4.45rem; } }
+
+.subheading {
+  font-size: 1.375rem;
+  line-height: 1.8rem;
+  font-weight: 600; }
+  @media (min-width: 64rem) {
+    .subheading {
+      font-size: 1.5rem; } }
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.1; }
+  @media (min-width: 64rem) {
+    .title {
+      font-size: 2.25rem; } }
+
+.subtitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase; }
+  @media (min-width: 64rem) {
+    .subtitle {
+      font-size: 1.2rem; } }
+
+.intro {
+  font-size: 1.1rem;
+  line-height: 1.8rem; }
+  @media (min-width: 64rem) {
+    .intro {
+      font-size: 1.2rem;
+      line-height: 2rem; } }
+
+.quote {
+  font-size: 1.125rem;
+  line-height: 2rem; }
+  @media (min-width: 64rem) {
+    .quote {
+      font-size: 1.4rem; } }
+
+.code {
+  color: #ea8925; }
+
+.cutline,
+figcaption,
+small {
+  font-size: .85rem;
+  line-height: 1.1rem; }
+
+/*
+	Lists
+*/
+ul.-flatten, ol.-flatten {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; }
+  ul.-flatten > li + li, ol.-flatten > li + li {
+    margin-left: 1rem; }
+
+/*
+	Vertical Rhythm
+*/
+.heading + p,
+.subheading + p,
+.title + p,
+.subtitle + p {
+  margin-top: 1.5rem; }
+
+p + .title,
+p + .subtitle,
+p + p,
+p + ul,
+p + ol,
+p + dl,
+p + blockquote,
+ul + .title,
+ul + .subtitle,
+ul + p,
+ul + ul,
+ul + ol,
+ul + dl,
+ul + blockquote,
+ol + .title,
+ol + .subtitle,
+ol + p,
+ol + ul,
+ol + ol,
+ol + dl,
+ol + blockquote,
+dl + .title,
+dl + .subtitle,
+dl + p,
+dl + ul,
+dl + ol,
+dl + dl,
+dl + blockquote,
+blockquote + .title,
+blockquote + .subtitle,
+blockquote + p,
+blockquote + ul,
+blockquote + ol,
+blockquote + dl,
+blockquote + blockquote {
+  margin-top: 1.5rem; }
+
+dd + dt {
+  margin-top: 1.5rem; }
+
+/*
+	Abbreviated _fyin Element
+*/
+.fyin-abbr {
+  font-size: 1.3125rem;
+  line-height: 1.3125rem;
+  user-select: none; }
+  .fyin-abbr > span:nth-child(1) {
+    font-weight: 300; }
+  .fyin-abbr > span:nth-child(2) {
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s; }
+  .fyin-abbr > span:nth-child(3) {
+    color: #ea8925;
+    text-transform: uppercase;
+    font-weight: bold; }
+  @media (min-width: 64rem) {
+    .fyin-abbr {
+      font-size: 2.1875rem;
+      line-height: 2.1875rem; } }
+
+/*
+	Modifiers for Text Elements
+*/
+.-text\:right {
+  text-align: right; }
+
+.-text\:center {
+  text-align: center; }
+
+.-text\:left {
+  text-align: left; }
+
+/*
+	TODO: come up with a styleguide for buttons
+*/
+button.button,
+input.button,
+a.button {
+  display: inline-block;
+  border: 3px solid;
+  padding: 0.75rem;
+  background: rgba(0, 0, 0, 0.25);
+  outline: none;
+  text-decoration: none;
+  font-size: 1.125rem;
+  line-height: 2rem;
+  color: #fff; }
+  button.button.-flat,
+  input.button.-flat,
+  a.button.-flat {
+    padding: 0.25rem;
+    border: 1px solid transparent;
+    background: none; }
+  button.button:hover,
+  input.button:hover,
+  a.button:hover {
+    border-color: white;
+    background: rgba(0, 0, 0, 0.75); }
+
+/*
+	Media Normalization
+	-------------------
+*/
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
+svg {
+  fill: currentColor; }
+
+/*
+	Aspect Ratios
+	-------------
+	These allow for responsive embedding of video content based on
+	aspect ratio of the media.
+*/
+.ratio {
+  display: block;
+  height: 0;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  /*
+		This allows us to control the ratio between
+		breakpoints, just as we do our flex containers.
+	*/ }
+  .ratio.-size\:1x1 {
+    padding: 0 0 100% 0; }
+  .ratio.-size\:16x9 {
+    padding: 0 0 56.25% 0; }
+  .ratio.-size\:4x3 {
+    padding: 0 0 75% 0; }
+  .ratio > * {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  @media (max-width: 39.999rem) {
+    .ratio.-xs\:1x1 {
+      padding: 0 0 100% 0; }
+    .ratio.-xs\:1x2 {
+      padding: 0 0 200% 0; }
+    .ratio.-xs\:2x1 {
+      padding: 0 0 50% 0; }
+    .ratio.-xs\:4x3 {
+      padding: 0 0 75% 0; }
+    .ratio.-xs\:3x4 {
+      padding: 0 0 133.333% 0; }
+    .ratio.-xs\:16x9 {
+      padding: 0 0 56.25% 0; } }
+  @media (min-width: 40rem) {
+    .ratio.-s\:1x1 {
+      padding: 0 0 100% 0; }
+    .ratio.-s\:1x2 {
+      padding: 0 0 200% 0; }
+    .ratio.-s\:2x1 {
+      padding: 0 0 50% 0; }
+    .ratio.-s\:4x3 {
+      padding: 0 0 75% 0; }
+    .ratio.-s\:3x4 {
+      padding: 0 0 133.333% 0; }
+    .ratio.-s\:16x9 {
+      padding: 0 0 56.25% 0; } }
+  @media (min-width: 64rem) {
+    .ratio.-m\:1x1 {
+      padding: 0 0 100% 0; }
+    .ratio.-m\:1x2 {
+      padding: 0 0 200% 0; }
+    .ratio.-m\:2x1 {
+      padding: 0 0 50% 0; }
+    .ratio.-m\:4x3 {
+      padding: 0 0 75% 0; }
+    .ratio.-m\:3x4 {
+      padding: 0 0 133.333% 0; }
+    .ratio.-m\:16x9 {
+      padding: 0 0 56.25% 0; } }
+  @media (min-width: 90rem) {
+    .ratio.-l\:1x1 {
+      padding: 0 0 100% 0; }
+    .ratio.-l\:1x2 {
+      padding: 0 0 200% 0; }
+    .ratio.-l\:2x1 {
+      padding: 0 0 50% 0; }
+    .ratio.-l\:4x3 {
+      padding: 0 0 75% 0; }
+    .ratio.-l\:3x4 {
+      padding: 0 0 133.333% 0; }
+    .ratio.-l\:16x9 {
+      padding: 0 0 56.25% 0; } }
+
+/*
+	Utility Classes
+	---------------
+	Classes that are useful for the presentation of media.
+*/
+img.-cover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center; }
+
+/* Components */

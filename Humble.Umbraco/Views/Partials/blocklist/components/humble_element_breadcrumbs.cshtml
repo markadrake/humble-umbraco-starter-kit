@@ -1,0 +1,12 @@
+@inherits UmbracoViewPage<BlockListItem>
+@{
+	if (Model == null)
+	{
+		return;
+	}
+
+	var content = (Humble_Element_Breadcrumbs)Model.Content;
+	var settings = Model.Settings;
+}
+
+Breadcrumbs
