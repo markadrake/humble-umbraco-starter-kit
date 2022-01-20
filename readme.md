@@ -8,6 +8,7 @@
 2. [Architecture](#Architecture)
 3. [Credentials](#Credentials)
 4. [Licensing](#)
+5. [Testimonial](#Testimonial])
 
 ## Overview
 
@@ -47,20 +48,10 @@ TBW.
 
 ## Licensing
 
-### Students, Developers, Entrepreneurs:
+This project is currently licensed under MIT. Please note that after it's official release, the license for particular modules may change.
 
-TBW.
+## Testimonial
 
-### Commercial Use Fee:
+“As the most qualified and insightful developer I know, this is the definitive starter kit for Umbraco available.”
 
-|-|-|
-|---|---:|
-|Per Project Fee|$250.00 [USD]
-
-### For Profits:
-
-TBW.
-
-### Non-Profits:
-
-TBW.
+_- Mark Drake_
