@@ -18,30 +18,40 @@ using Umbraco.Extensions;
 
 namespace Umbraco.Cms.Web.Common.PublishedModels
 {
-	/// <summary>Redirects</summary>
-	[PublishedModel("Humble_Document_Redirects")]
-	public partial class Humble_Document_Redirects : PublishedContentModel, IHumble_Composition_DoNotRoute
+	// Mixin Content Type with alias "Humble_Media_HasSEO"
+	/// <summary>Has SEO</summary>
+	public partial interface IHumble_Media_HasSeo : IPublishedContent
+	{
+		/// <summary>SEO Alternate Text</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		string SeoalternateText { get; }
+	}
+
+	/// <summary>Has SEO</summary>
+	[PublishedModel("Humble_Media_HasSEO")]
+	public partial class Humble_Media_HasSeo : PublishedContentModel, IHumble_Media_HasSeo
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
-		public new const string ModelTypeAlias = "Humble_Document_Redirects";
+		public new const string ModelTypeAlias = "Humble_Media_HasSEO";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
-		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+		public new const PublishedItemType ModelItemType = PublishedItemType.Media;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		public new static IPublishedContentType GetModelContentType(IPublishedSnapshotAccessor publishedSnapshotAccessor)
 			=> PublishedModelUtility.GetModelContentType(publishedSnapshotAccessor, ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedSnapshotAccessor publishedSnapshotAccessor, Expression<Func<Humble_Document_Redirects, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedSnapshotAccessor publishedSnapshotAccessor, Expression<Func<Humble_Media_HasSeo, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(publishedSnapshotAccessor), selector);
 #pragma warning restore 0109
 
 		private IPublishedValueFallback _publishedValueFallback;
 
 		// ctor
-		public Humble_Document_Redirects(IPublishedContent content, IPublishedValueFallback publishedValueFallback)
+		public Humble_Media_HasSeo(IPublishedContent content, IPublishedValueFallback publishedValueFallback)
 			: base(content, publishedValueFallback)
 		{
 			_publishedValueFallback = publishedValueFallback;
@@ -50,11 +60,16 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Redirects
+		/// SEO Alternate Text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("redirects")]
-		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel Redirects => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "redirects");
+		[ImplementPropertyType("SEOAlternateText")]
+		public virtual string SeoalternateText => GetSeoalternateText(this, _publishedValueFallback);
+
+		/// <summary>Static getter for SEO Alternate Text</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static string GetSeoalternateText(IHumble_Media_HasSeo that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "SEOAlternateText");
 	}
 }

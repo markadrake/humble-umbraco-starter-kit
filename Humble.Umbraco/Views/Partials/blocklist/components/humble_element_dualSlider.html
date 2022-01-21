@@ -3,14 +3,15 @@
 	- Allows us to render this block in the backoffice.
 	- See for more detail: https://our.umbraco.com/Documentation/Fundamentals/Backoffice/Property-Editors/Built-in-Property-Editors/Block-List-Editor/
 -->
-<div class="dualLayerSlider" 
-	data-guid="{{block.key}}" 
-	ng-click="block.edit()">
+<div class="dualLayerSlider"
+	 ng-controller="humble_element_dualSlider"
+	 data-guid="{{block.key}}">1
 
-	<div class="bg">
+	<div class="bg"
+		 ng-click="block.edit()">
 		<div class="focus">
 			<div class="sequenced">
-				<!--<section ng-repeat="slide in block.data.slides.contentData" style="background-image:url({{slide.backgroundImage[0]}})"></section>-->
+				<section ng-repeat="image in images" style="background-image:url({{image}})"></section>
 			</div>
 		</div>
 	</div>
@@ -23,7 +24,7 @@
 					<h1 class="title" ng-if="slide.heading">{{slide.heading}}</h1>
 					<hr />
 					<p ng-if="slide.copy">{{slide.copy}}</p>
-				</section>		  
+				</section>
 			</div>
 		</div>
 		<div class="pagination">
@@ -34,12 +35,12 @@
 </div>
 
 <script>
-	window._queue.onLoad.push(function () {
-		try {
-			var el = document.querySelector(".dualLayerSlider[data-guid='{{block.key}}']");
-			window.app.dualLayerSlider(el);
-		} catch (e) {
-			console.log(e);
-		}
-	});
+(function () {
+	try {
+		var el = document.querySelector(".dualLayerSlider[data-guid='{{block.key}}']");
+		window.app.dualLayerSlider(el);
+	} catch (e) {
+		console.log(e);
+	}
+})();
 </script>

@@ -18,15 +18,9 @@ using Umbraco.Extensions;
 
 namespace Umbraco.Cms.Web.Common.PublishedModels
 {
-	// Mixin Content Type with alias "Humble_Composition_DoNotRoute"
-	/// <summary>DO NOT ROUTE</summary>
-	public partial interface IHumble_Composition_DoNotRoute : IPublishedElement
-	{
-	}
-
 	/// <summary>DO NOT ROUTE</summary>
 	[PublishedModel("Humble_Composition_DoNotRoute")]
-	public partial class Humble_Composition_DoNotRoute : PublishedElementModel, IHumble_Composition_DoNotRoute
+	public partial class Humble_Composition_DoNotRoute : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant

@@ -26,7 +26,7 @@
 	Padding
 */
 .-pad\:xs {
-	padding: 1rem;
+	padding: 0.5rem;
 }
 
 .-pad\:s {
@@ -39,6 +39,10 @@
 
 .-pad\:l {
 	padding: 3rem;
+}
+
+.-pad\:xl {
+	padding: 4rem;
 }
 
 @include breakpoint-m {
@@ -56,5 +60,9 @@
 
 	.-pad\:l {
 		padding: 6rem;
+	}
+
+	.-pad\:xl {
+		padding: 8rem;
 	}
 }

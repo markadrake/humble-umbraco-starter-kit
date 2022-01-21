@@ -10,5 +10,21 @@
   {
     "outputFile": "assets/critical.css",
     "inputFile": "assets/critical.scss"
+  },
+  {
+    "outputFile": "App_Plugins/Humble.Umbraco.PropertyEditors/SingleRowLayout/singleRowLayout.css",
+    "inputFile": "App_Plugins/Humble.Umbraco.PropertyEditors/SingleRowLayout/singleRowLayout.scss"
+  },
+  {
+    "outputFile": "App_Plugins/Humble.Umbraco.PropertyEditors/Spacing/spacing.css",
+    "inputFile": "App_Plugins/Humble.Umbraco.PropertyEditors/Spacing/spacing.scss"
+  },
+  {
+    "outputFile": "App_Plugins/Humble.Umbraco.PropertyEditors/PaddingPicker/paddingPicker.css",
+    "inputFile": "App_Plugins/Humble.Umbraco.PropertyEditors/PaddingPicker/paddingPicker.scss"
+  },
+  {
+    "outputFile": "App_Plugins/Humble.Umbraco.PropertyEditors/ColorPicker/colorPicker.css",
+    "inputFile": "App_Plugins/Humble.Umbraco.PropertyEditors/ColorPicker/colorPicker.scss"
   }
 ]

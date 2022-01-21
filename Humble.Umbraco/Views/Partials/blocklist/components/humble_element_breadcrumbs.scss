@@ -1,2 +1,18 @@
-﻿body {
+﻿.breadcrumbs {
+	margin: 0;
+	padding: 0;
+	display: block;
+
+	li {
+		display: inline-block;
+
+		+ li {
+			margin-left: 0.5rem;
+
+			&:before {
+				content: "❯";
+				padding-right: 0.5rem;
+			}
+		}
+	}
 }

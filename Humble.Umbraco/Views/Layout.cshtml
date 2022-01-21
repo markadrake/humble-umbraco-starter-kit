@@ -1,9 +1,10 @@
-﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+﻿@using Humble.Umbraco.UI.TagHelpers.Models
+@using Umbraco.Cms.Web.Common.PublishedModels;
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 @{
 	Layout = null;
 
-	var root = Model.AncestorOrSelf(0);
+	var root = (Humble_Document_WebApplication) Model.AncestorOrSelf(1);
 	var currentPage = Umbraco.AssignedContentItem;
 	var currentCulture = System.Threading.Thread.CurrentThread.CurrentCulture;
 }
@@ -24,6 +25,29 @@
 	@RenderSection("BodyOpen", false)
 
 	@RenderBody()
+
+	@{
+		var pictureConfig = new Picture()
+		{
+			ImageAlt = "myAltText",
+			DefaultImageCropAlias = "myCropAlias",
+			DefaultImageFormats = "png webp",
+			DefaultMedia = root.Media,
+			Sources = new List<PictureSource>()
+			{
+				new PictureSource()
+				{
+					CssMediaQuery = "screen and (max-width: 1023px)",
+				},
+				new PictureSource()
+				{
+					CssMediaQuery = "screen and (min-width: 1024px)",
+					ImageCropAlias = "myCropAlias2"
+				}
+			}
+		};
+	}
+	<picture config="pictureConfig" tabs="2" />
 
 	<noscript>
 		<link rel="stylesheet" href="/assets/app.min.css">

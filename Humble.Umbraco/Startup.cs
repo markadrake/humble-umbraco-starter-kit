@@ -45,7 +45,7 @@ namespace HumbleUmbraco
 #pragma warning disable IDE0022 // Use expression body for methods
             services
                 .AddWebMarkupMin(options => { 
-                    options.AllowMinificationInDevelopmentEnvironment = true;
+                    //options.AllowMinificationInDevelopmentEnvironment = true;
                     options.AllowCompressionInDevelopmentEnvironment = true;
                 })
                 .AddHtmlMinification()

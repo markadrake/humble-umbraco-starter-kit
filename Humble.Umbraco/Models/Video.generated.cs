@@ -20,7 +20,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>Video</summary>
 	[PublishedModel("video")]
-	public partial class Video : PublishedContentModel
+	public partial class Video : PublishedContentModel, IHumble_Media_HasCopyright
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -64,5 +64,21 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("umbracoFile")]
 		public virtual string UmbracoFile => this.Value<string>(_publishedValueFallback, "umbracoFile");
+
+		///<summary>
+		/// Copyright Info
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("copyrightInfo")]
+		public virtual string CopyrightInfo => global::Umbraco.Cms.Web.Common.PublishedModels.Humble_Media_HasCopyright.GetCopyrightInfo(this, _publishedValueFallback);
+
+		///<summary>
+		/// Copyright URL Address
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("copyrightURLAddress")]
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link> CopyrightUrladdress => global::Umbraco.Cms.Web.Common.PublishedModels.Humble_Media_HasCopyright.GetCopyrightUrladdress(this, _publishedValueFallback);
 	}
 }

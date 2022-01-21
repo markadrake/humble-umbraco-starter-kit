@@ -18,30 +18,45 @@ using Umbraco.Extensions;
 
 namespace Umbraco.Cms.Web.Common.PublishedModels
 {
-	/// <summary>Humble Property Editors</summary>
-	[PublishedModel("Humble_Testing_PropertyEditors")]
-	public partial class Humble_Testing_PropertyEditors : PublishedContentModel
+	// Mixin Content Type with alias "Humble_Media_HasCopyright"
+	/// <summary>Has Copyright</summary>
+	public partial interface IHumble_Media_HasCopyright : IPublishedContent
+	{
+		/// <summary>Copyright Info</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		string CopyrightInfo { get; }
+
+		/// <summary>Copyright URL Address</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link> CopyrightUrladdress { get; }
+	}
+
+	/// <summary>Has Copyright</summary>
+	[PublishedModel("Humble_Media_HasCopyright")]
+	public partial class Humble_Media_HasCopyright : PublishedContentModel, IHumble_Media_HasCopyright
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
-		public new const string ModelTypeAlias = "Humble_Testing_PropertyEditors";
+		public new const string ModelTypeAlias = "Humble_Media_HasCopyright";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
-		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+		public new const PublishedItemType ModelItemType = PublishedItemType.Media;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		public new static IPublishedContentType GetModelContentType(IPublishedSnapshotAccessor publishedSnapshotAccessor)
 			=> PublishedModelUtility.GetModelContentType(publishedSnapshotAccessor, ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedSnapshotAccessor publishedSnapshotAccessor, Expression<Func<Humble_Testing_PropertyEditors, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedSnapshotAccessor publishedSnapshotAccessor, Expression<Func<Humble_Media_HasCopyright, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(publishedSnapshotAccessor), selector);
 #pragma warning restore 0109
 
 		private IPublishedValueFallback _publishedValueFallback;
 
 		// ctor
-		public Humble_Testing_PropertyEditors(IPublishedContent content, IPublishedValueFallback publishedValueFallback)
+		public Humble_Media_HasCopyright(IPublishedContent content, IPublishedValueFallback publishedValueFallback)
 			: base(content, publishedValueFallback)
 		{
 			_publishedValueFallback = publishedValueFallback;
@@ -50,43 +65,29 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Color Picker
+		/// Copyright Info
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("colorPicker")]
-		public virtual object ColorPicker => this.Value(_publishedValueFallback, "colorPicker");
+		[ImplementPropertyType("copyrightInfo")]
+		public virtual string CopyrightInfo => GetCopyrightInfo(this, _publishedValueFallback);
+
+		/// <summary>Static getter for Copyright Info</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static string GetCopyrightInfo(IHumble_Media_HasCopyright that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "copyrightInfo");
 
 		///<summary>
-		/// Padding Picker
+		/// Copyright URL Address
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("paddingPicker")]
-		public virtual object PaddingPicker => this.Value(_publishedValueFallback, "paddingPicker");
+		[ImplementPropertyType("copyrightURLAddress")]
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link> CopyrightUrladdress => GetCopyrightUrladdress(this, _publishedValueFallback);
 
-		///<summary>
-		/// 9 Point Positioning
-		///</summary>
+		/// <summary>Static getter for Copyright URL Address</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("pointPositioning")]
-		public virtual object PointPositioning => this.Value(_publishedValueFallback, "pointPositioning");
-
-		///<summary>
-		/// Single Row Layout
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("sing")]
-		public virtual global::Newtonsoft.Json.Linq.JToken Sing => this.Value<global::Newtonsoft.Json.Linq.JToken>(_publishedValueFallback, "sing");
-
-		///<summary>
-		/// Spacing
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.2.0+763cb70e677ac0c85557b19b5df09eccfa1b9dfb")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("spacing")]
-		public virtual global::Newtonsoft.Json.Linq.JToken Spacing => this.Value<global::Newtonsoft.Json.Linq.JToken>(_publishedValueFallback, "spacing");
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link> GetCopyrightUrladdress(IHumble_Media_HasCopyright that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link>>(publishedValueFallback, "copyrightURLAddress");
 	}
 }
