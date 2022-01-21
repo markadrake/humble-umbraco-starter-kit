@@ -1,14 +1,27 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>net5.0</TargetFramework>
-        <ContentTargetFolders>.</ContentTargetFolders>
-        <Product>MyPropertyEditor</Product>
-        <PackageId>MyPropertyEditor</PackageId>
-        <Title>MyPropertyEditor</Title>
-        <Description>...</Description>
-        <Product>...</Product>
-        <PackageTags>umbraco plugin package</PackageTags>
-		<VersionPrefix>1.0.0</VersionPrefix>
+		<TargetFramework>net5.0</TargetFramework>
+		<ContentTargetFolders>.</ContentTargetFolders>
+		<Product>Humble.Umbraco.PropertyEditors</Product>
+		<PackageId>Humble.Umbraco.PropertyEditors</PackageId>
+		<Title>Humble.Umbraco.PropertyEditors</Title>
+		<Description>Customize the appearance of your content nodes in Umbraco 9 by simple right clicking any content node in the tree and choosing "Set Icon".</Description>
+		<Summary>Customize the appearance of your content nodes in Umbraco 9 by simple right clicking any content node in the tree and choosing "Set Icon".</Summary>
+		<Product>...</Product>
+		<PackageTags>umbraco umbraco9</PackageTags>
+		<RootNamespace>Humble.Umbraco.PropertyEditors</RootNamespace>
+		<Authors>humble themarkdrake</Authors>
+		<Company />
+		<PackageProjectUrl>https://github.com/markadrake/humble-umbraco-starter-kit</PackageProjectUrl>
+		<PackageReadmeFile>readme.nuget.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/markadrake/humble-umbraco-starter-kit</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<AssemblyVersion>$(VersionPrefix)</AssemblyVersion>
+		<FileVersion>$(VersionPrefix)</FileVersion>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<Copyright>Copyright 2022 by Mark Drake</Copyright>
+		<VersionPrefix>9.2.0</VersionPrefix>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>		
     </PropertyGroup>
 
     <ItemGroup>
@@ -17,19 +30,43 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Content Include="App_Plugins\**\*.*">
+        <Content Include="App_Plugins\Humble.Umbraco.PropertyEditors\**\*.*">
             <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
             <CopyToPublishDirectory>Always</CopyToPublishDirectory>
         </Content>
         <None Include="build\**\*.*">
             <Pack>True</Pack>
-            <PackagePath>build</PackagePath>
-        </None>
+			<PackagePath>buildTransitive</PackagePath>
+		</None>
     </ItemGroup>
+
+	<ItemGroup>
+		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\9PtPositioning\9pt.html" />
+		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\9PtPositioning\9pt.min.css" />
+		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\9PtPositioning\9pt.js" />
+		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\ColorPicker\colorPicker.html" />
+		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\ColorPicker\colorPicker.min.css" />
+		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\ColorPicker\colorPicker.js" />
+		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\PaddingPicker\paddingPicker.html" />
+		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\PaddingPicker\paddingPicker.min.css" />
+		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\PaddingPicker\paddingPicker.js" />
+		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\SingleRowLayout\singleRowLayout.html" />
+		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\SingleRowLayout\singleRowLayout.min.css" />
+		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\SingleRowLayout\singleRowLayout.js" />
+		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\Spacing\spacing.min.css" />
+		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\readme.nuget.md" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<ProjectCapability Include="DynamicDependentFile" />
 		<ProjectCapability Include="DynamicFileNesting" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="readme.nuget.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
 	</ItemGroup>
 
 </Project>

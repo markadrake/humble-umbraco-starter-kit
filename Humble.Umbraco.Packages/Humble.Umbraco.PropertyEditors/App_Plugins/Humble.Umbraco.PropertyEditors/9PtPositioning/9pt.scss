@@ -1,0 +1,41 @@
+﻿.position-label {
+	display: inline-block;
+	vertical-align: top;
+	height: 4.5rem;
+	line-height: 4.5rem;
+	margin-left: 1rem;
+	padding: 0 1rem;
+	background: #f9f9f9;
+	width: 200px;
+	text-align: center;
+}
+
+.position-selector {
+	display: inline-block;
+	vertical-align: top;
+	background: #efefef;
+	font-size: 0;
+	line-height: 0;
+	width: 4.5rem;
+	
+	> div {
+		display: inline-block;
+		box-sizing: border-box;
+		background: #efefef;
+		width: 1.5rem;
+		height: 1.5rem;
+		border: 2px solid #fff;
+		transition: all linear 0.225s;
+
+		&:hover {
+			cursor: pointer;
+			opacity: 1;
+			background: #333;
+		}
+
+		&.-active {
+			transition: all linear 0.155s;
+			background: green !important;
+		}
+	}
+}

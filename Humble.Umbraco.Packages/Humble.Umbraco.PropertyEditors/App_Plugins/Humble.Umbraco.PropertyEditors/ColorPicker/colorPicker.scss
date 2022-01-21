@@ -1,0 +1,44 @@
+﻿@import "../../../assets/design-system/_config.scss";
+
+.humble_umbraco_propertyEditors_colorPicker {
+	/*
+		Size, Shape, Spacing for each color option.
+	*/
+	.squares {
+		width: 400px;
+
+		> div {
+			display: inline-block;
+			width: 50px;
+			height: 50px;
+			box-sizing: border-box;
+			margin: 6px;
+			transition: all linear 0.225s;
+			/*
+				Active State - this color is selected.
+			*/
+			&.-active {
+				opacity: 1;
+				border: 1px dashed rgba(255, 255, 255, 1);
+				box-shadow: 0 0 4px rgba(0,0,0,0.4);
+			}
+			/*
+				Not Active State - a color is selected, but not this one.
+			*/
+			&.-not-active {
+				opacity: 0.25;
+			}
+			/*
+				Hover State - this color might be selected.
+			*/
+			&:hover {
+				box-shadow: 0 0 4px rgba(0,0,0,0.4);
+				opacity: 1;
+			}
+		}
+	}
+	/*
+		Import styles without affecting other areas of Umbraco
+	*/
+	@import "../../../assets/design-system/_colors.scss";
+}

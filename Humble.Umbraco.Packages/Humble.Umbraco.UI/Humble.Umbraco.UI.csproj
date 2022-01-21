@@ -8,16 +8,16 @@
         <Description>...</Description>
         <Product>...</Product>
         <PackageTags>umbraco plugin package</PackageTags>
-        <RootNamespace>HumbleUmbraco.UI</RootNamespace>
+        <RootNamespace>Humble.Umbraco.UI</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Umbraco.Cms.Web.Website" Version="9.2.0"/>
-        <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="9.2.0"/>
+        <PackageReference Include="Umbraco.Cms.Web.Website" Version="9.2.0" />
+        <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="9.2.0" />
     </ItemGroup>
 
     <ItemGroup>
-        <Content Include="App_Plugins\HumbleUmbraco.UI\**\*.*">
+        <Content Include="App_Plugins\Humble.Umbraco.UI\**\*.*">
             <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
             <CopyToPublishDirectory>Always</CopyToPublishDirectory>
         </Content>

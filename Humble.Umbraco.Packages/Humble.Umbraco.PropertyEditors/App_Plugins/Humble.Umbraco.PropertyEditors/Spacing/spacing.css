@@ -1,0 +1,148 @@
+﻿.humble_umbraco_propertyEditors_spacing {
+  position: relative;
+  width: 15.5rem;
+  height: 10.5rem;
+  user-select: none;
+  font-family: "Open Sans", sans-serif;
+  overflow: hidden;
+  /*
+
+  */
+  /*
+
+  */
+  /*
+  	Typography
+  */
+  /*
+  	Hover States
+  */
+  /*
+  	Modal For Size Input
+  */
+}
+.humble_umbraco_propertyEditors_spacing svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.humble_umbraco_propertyEditors_spacing svg path.input {
+  cursor: pointer;
+}
+.humble_umbraco_propertyEditors_spacing svg path.input:hover {
+  fill: #a1f7a1 !important;
+}
+.humble_umbraco_propertyEditors_spacing div {
+  box-sizing: border-box;
+}
+.humble_umbraco_propertyEditors_spacing div.-active {
+  opacity: 1;
+}
+.humble_umbraco_propertyEditors_spacing .margins {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.humble_umbraco_propertyEditors_spacing .padding {
+  width: 9rem;
+  height: 6rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.humble_umbraco_propertyEditors_spacing span {
+  display: block;
+  text-align: center;
+  width: 3rem;
+  height: 2rem;
+  line-height: 2rem;
+  border: none;
+  padding: 0;
+  position: absolute;
+  cursor: pointer;
+  font-size: 12px;
+  transition: 0.175s opacity ease-in;
+}
+.humble_umbraco_propertyEditors_spacing span.title {
+  font-weight: bold;
+  font-size: 8px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+.humble_umbraco_propertyEditors_spacing span.top {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.humble_umbraco_propertyEditors_spacing span.right {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.humble_umbraco_propertyEditors_spacing span.bottom {
+  right: 50%;
+  bottom: 0;
+  transform: translateX(50%);
+}
+.humble_umbraco_propertyEditors_spacing span.left {
+  bottom: 50%;
+  left: 0;
+  transform: translateY(50%);
+}
+.humble_umbraco_propertyEditors_spacing.-active-margins .padding > span {
+  opacity: 0.1;
+}
+.humble_umbraco_propertyEditors_spacing.-active-padding .margins > span {
+  opacity: 0.1;
+}
+.humble_umbraco_propertyEditors_spacing .modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.975);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2 ease-in;
+}
+.humble_umbraco_propertyEditors_spacing .modal.-active {
+  opacity: 1;
+  pointer-events: all;
+}
+.humble_umbraco_propertyEditors_spacing .modal input {
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  width: 9rem;
+  padding-right: 3rem;
+  height: 2rem;
+  transform: translate(-50%, -50%);
+  border: 2px solid;
+  text-align: right;
+}
+.humble_umbraco_propertyEditors_spacing .modal select {
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3rem;
+  height: 2rem;
+  background: transparent;
+  transform: translate(-50%, -50%);
+  margin-left: 3rem;
+  border: none;
+  outline: none;
+}

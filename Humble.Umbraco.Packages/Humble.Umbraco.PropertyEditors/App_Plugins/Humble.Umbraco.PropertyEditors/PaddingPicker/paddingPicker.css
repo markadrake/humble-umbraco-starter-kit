@@ -1,0 +1,31 @@
+﻿.humble_umbraco_propertyEditors_paddingPicker .squares > div {
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 6px;
+  text-align: center;
+  transition: all linear 0.225s;
+  opacity: 0.25;
+  outline: none;
+  border: 1px solid #2e2246;
+  padding: 4px;
+  vertical-align: middle;
+  background: #f3f3f3;
+}
+.humble_umbraco_propertyEditors_paddingPicker .squares > div.-active {
+  opacity: 1;
+  border: 1px solid green;
+  background: #b2ffb2;
+}
+.humble_umbraco_propertyEditors_paddingPicker .squares > div:hover {
+  opacity: 1;
+}
+.humble_umbraco_propertyEditors_paddingPicker .squares > div:nth-child(2) {
+  padding: 1rem;
+}
+.humble_umbraco_propertyEditors_paddingPicker .squares > div:nth-child(3) {
+  padding: 2rem;
+}
+.humble_umbraco_propertyEditors_paddingPicker .squares > div:nth-child(4) {
+  padding: 4rem;
+}

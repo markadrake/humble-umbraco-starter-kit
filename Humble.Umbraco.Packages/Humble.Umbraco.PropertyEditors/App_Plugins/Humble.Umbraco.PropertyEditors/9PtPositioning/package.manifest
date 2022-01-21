@@ -1,0 +1,28 @@
+{
+	"propertyEditors": [
+		{
+			"name": "9 Pt Positioning (Humble)",
+			"alias": "Humble.Umbraco.ProeprtyEditors.NinePtPositioning",
+			"editor": {
+				"valueType": "STRING",
+				"view": "~/app_plugins/humble.umbraco.propertyEditors/9PtPositioning/9pt.html"
+			},
+			"prevalues": {
+				"fields": [
+					{
+						"label": "Default Position",
+						"description": "This is the default position you'd like selected.",
+						"key": "defaultValue",
+						"view": "textarea"
+					}
+				]
+			}
+		}
+	],
+	"css": [
+		"~/app_plugins/humble.umbraco.propertyEditors/9PtPositioning/9pt.min.css"
+	],
+	"javascript": [
+		"~/app_plugins/humble.umbraco.propertyEditors/9PtPositioning/9pt.js"
+	]
+}

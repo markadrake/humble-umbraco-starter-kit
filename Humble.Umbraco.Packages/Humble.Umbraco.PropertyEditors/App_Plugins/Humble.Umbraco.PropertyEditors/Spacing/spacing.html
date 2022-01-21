@@ -1,0 +1,107 @@
+﻿<div class="humble_umbraco_propertyEditors_spacing" 
+	 ng-controller="humble_umbraco_propertyEditors_spacing" 
+	 ng-class="[{'-active-margins': margins.active }, {'-active-padding': padding.active}]">
+	
+	<svg ng-mouseleave="highlight(null)">
+
+		<!-- Line -->
+		<path d="M 50 34 H 198 V 134 H 50 V 34" 
+			  stroke="#f6f4f4" 
+			  stroke-width="4" 
+			  fill="transparent" 
+			  ng-mouseenter="highlight(null)" />
+
+		<!-- Center -->
+		<rect x="100" 
+			  y="68" 
+			  width="48" 
+			  height="32" 
+			  fill="#000000cc" 
+			  ng-mouseenter="highlight(null)" />
+
+		<!-- Margins -->
+		<path class="input" 
+			  d="M 0 0 L 248 0 L 200 32 L 48 32 L 0 0" 
+			  fill="#00000005" 
+			  ng-click="activate('margins', 'top')" 
+			  ng-dblclick="setOrUnset('margins', 'top')" 
+			  ng-mouseenter="highlight('margins')" />
+		<path class="input" d="M 248 0 L 200 32 V 136 L 248 168" 
+			  fill="#00000010" 
+			  ng-click="activate('margins', 'right')" 
+			  ng-dblclick="setOrUnset('margins', 'right')" 
+			  ng-mouseenter="highlight('margins')" />
+		<path class="input" d="M 48 136 L 200 136 L 248 168 L 0 168" 
+			  fill="#00000005" 
+			  ng-click="activate('margins', 'bottom')" 
+			  ng-dblclick="setOrUnset('margins', 'bottom')" 
+			  ng-mouseenter="highlight('margins')" />
+		<path class="input" d="M 0 0 L 48 32 V 136 L 0 168" 
+			  fill="#00000010" 
+			  ng-click="activate('margins', 'left')" 
+			  ng-dblclick="setOrUnset('margins', 'left')" 
+			  ng-mouseenter="highlight('margins')" />
+
+		<!-- Padding -->
+		<path class="input" d="M 52 36 L 196 36 L 148 68 L 100 68" 
+			  fill="#00000005" 
+			  ng-click="activate('padding', 'top')" 
+			  ng-dblclick="setOrUnset('padding', 'top')" 
+			  ng-mouseenter="highlight('padding')" />
+		<path class="input" d="M 196 36 L 196 132 L 148 100 L 148 68" 
+			  fill="#00000010" 
+			  ng-click="activate('padding', 'right')" 
+			  ng-dblclick="setOrUnset('padding', 'right')" 
+			  ng-mouseenter="highlight('padding')" />
+		<path class="input" d="M 100 100 L 148 100 L 196 132 L 52 132" 
+			  fill="#00000005" 
+			  ng-click="activate('padding', 'bottom')" 
+			  ng-dblclick="setOrUnset('padding', 'bottom')" 
+			  ng-mouseenter="highlight('padding')" />
+		<path class="input" d="M 52 36 L 100 68 L 100 100 L 52 132" 
+			  fill="#00000010" 
+			  ng-click="activate('padding', 'left')" 
+			  ng-dblclick="setOrUnset('padding', 'left')" 
+			  ng-mouseenter="highlight('padding')" />
+
+		<!-- Border -->
+		<path d="M 0 0 H 248 V 168 H 0 V 0" 
+			  stroke="#f6f4f4" 
+			  stroke-width="2" 
+			  fill="transparent" 
+			  style="pointer-events: none;" />
+	</svg>
+
+	<div class="margins" 
+		 ng-class="{'-active': margins.active}">
+		<span class="title">Margins</span>
+		<span class="top">{{margins.top}}</span>
+		<span class="right">{{margins.right}}</span>
+		<span class="bottom">{{margins.bottom}}</span>
+		<span class="left">{{margins.left}}</span>
+		<div class="padding" 
+			 ng-class="{'-active': padding.active}">
+			<span class="title">Padding</span>
+			<span class="top">{{padding.top}}</span>
+			<span class="right">{{padding.right}}</span>
+			<span class="bottom">{{padding.bottom}}</span>
+			<span class="left">{{padding.left}}</span>
+		</div>
+	</div>
+
+	<div class="modal" 
+		 ng-class="{'-active': state.modal}">
+		<input type="text" 
+			   ng-model="size" 
+			   ng-change="interpretSize()" 
+			   ng-keypress="interpretSize($event)" />
+		<select ng-model="dimension">
+			<option>px</option>
+			<option>%</option>
+			<option>em</option>
+			<option>rem</option>
+			<option>vw</option>
+			<option>vh</option>
+		</select>
+	</div>
+</div>

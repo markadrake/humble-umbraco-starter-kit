@@ -1,0 +1,29 @@
+﻿.humble_umbraco_propertyEditors_singleRowLayout {
+  user-select: none;
+  outline: none;
+}
+.humble_umbraco_propertyEditors_singleRowLayout .flex {
+  margin: 1rem 0;
+  width: 320px;
+  height: 44px;
+  line-height: 44px;
+  transition: all linear 0.225s;
+  opacity: 0.25;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+}
+.humble_umbraco_propertyEditors_singleRowLayout .flex > div {
+  border: 1px solid #2e2246;
+  background-color: #f3f3f3;
+}
+.humble_umbraco_propertyEditors_singleRowLayout .flex > div:first-child {
+  margin-right: 8px;
+}
+.humble_umbraco_propertyEditors_singleRowLayout .flex:hover, .humble_umbraco_propertyEditors_singleRowLayout .flex.-active {
+  opacity: 1;
+}
+.humble_umbraco_propertyEditors_singleRowLayout .flex:hover > div, .humble_umbraco_propertyEditors_singleRowLayout .flex.-active > div {
+  background-color: #b2ffb2;
+  border-color: green;
+}

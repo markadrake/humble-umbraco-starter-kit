@@ -1,0 +1,15 @@
+﻿<div ng-controller="humble_umbraco_propertyEditors_ninePtPositioningController"
+	 class="humble_umbraco_propertyEditors_ninePtPositioningController">
+	<!--
+		9 Pt Positioning
+	-->
+	<div class="position-selector">
+		<div ng-repeat="(key, value) in positions"
+			 ng-class="isActive(value)"
+			 ng-click="setValue(value)">
+		</div>
+	</div>
+	<div class="position-label">
+		{{model.value}}
+	</div>
+</div>

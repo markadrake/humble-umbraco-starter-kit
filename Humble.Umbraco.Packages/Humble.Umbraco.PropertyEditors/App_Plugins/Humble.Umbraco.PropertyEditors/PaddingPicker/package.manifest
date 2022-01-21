@@ -1,0 +1,20 @@
+{
+	"propertyEditors": [
+		{
+			"name": "Padding Picker (Humble)",
+			"alias": "Humble.Umbraco.PropertyEditors.PaddingPicker",
+			"editor": {
+				"valueType": "STRING",
+				"view": "/app_plugins/humble.umbraco.propertyEditors/paddingPicker/paddingPicker.html"
+			},
+			"prevalues": {
+			}
+		}
+	],
+	"css": [
+		"/app_plugins/humble.umbraco.propertyEditors/paddingPicker/paddingPicker.min.css"
+	],
+	"javascript": [
+		"/app_plugins/humble.umbraco.propertyEditors/paddingPicker/paddingPicker.js"
+	]
+}

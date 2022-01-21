@@ -1,0 +1,13 @@
+﻿<div ng-controller="humble_umbraco_propertyEditors_paddingPicker"
+	 class="humble_umbraco_propertyEditors_paddingPicker">
+
+	<div class="squares">
+		<div ng-repeat="(key, value) in paddings"
+			 class="-pad-all"
+			 ng-class="[isActive(value), value]"
+			 ng-click="setValue(value)">
+			{{key}}
+		</div>
+	</div>
+
+</div>

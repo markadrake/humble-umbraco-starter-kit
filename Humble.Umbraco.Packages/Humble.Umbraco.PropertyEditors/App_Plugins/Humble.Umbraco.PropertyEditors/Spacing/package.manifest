@@ -1,0 +1,20 @@
+﻿{
+	"propertyEditors": [
+		{
+			"name": "Spacing (Humble)",
+			"alias": "Humble.Umbraco.PropertyEditors.Spacing",
+			"editor": {
+				"valueType": "JSON",
+				"view": "/app_plugins/humble.umbraco.propertyEditors/spacing/spacing.html"
+			},
+			"prevalues": {
+			}
+		}
+	],
+	"css": [
+		"/app_plugins/humble.umbraco.propertyEditors/spacing/spacing.min.css"
+	],
+	"javascript": [
+		"/app_plugins/humble.umbraco.propertyEditors/spacing/spacing.js"
+	]
+}

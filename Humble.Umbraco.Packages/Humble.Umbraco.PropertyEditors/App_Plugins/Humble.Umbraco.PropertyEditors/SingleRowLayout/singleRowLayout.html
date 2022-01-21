@@ -1,0 +1,17 @@
+﻿<div ng-controller="humble_umbraco_propertyEditors_singleRowLayout"
+	 class="humble_umbraco_propertyEditors_singleRowLayout">
+
+	<p><em>Select a row layout:</em></p>
+
+	<div class="umb-column">
+		<div ng-repeat="row in rowLayouts"
+			 ng-click="setValue(row)"
+			 ng-class="{'-active': row.isActive}"
+			 class="flex">
+			<div ng-repeat="col in row"
+				 style="{{col.style}}"
+				 ng-class="col.class">{{col.name}}</div>
+		</div>
+	</div>
+
+</div>

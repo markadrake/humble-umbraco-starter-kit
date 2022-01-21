@@ -1,0 +1,20 @@
+{
+	"propertyEditors": [
+		{
+			"name": "Color Picker (Humble)",
+			"alias": "Humble.Umbraco.PropertyEditors.ColorPicker",
+			"editor": {
+				"valueType": "STRING",
+				"view": "/app_plugins/humble.umbraco.propertyEditors/colorPicker/colorPicker.html"
+			},
+			"prevalues": {
+			}
+		}
+	],
+	"css": [
+		"/app_plugins/humble.umbraco.propertyEditors/colorPicker/colorPicker.min.css"
+	],
+	"javascript": [
+		"/app_plugins/humble.umbraco.propertyEditors/colorPicker/colorPicker.js"
+	]
+}

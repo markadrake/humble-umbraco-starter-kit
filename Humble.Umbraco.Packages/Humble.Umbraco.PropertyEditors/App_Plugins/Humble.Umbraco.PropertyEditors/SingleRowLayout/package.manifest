@@ -1,0 +1,20 @@
+{
+	"propertyEditors": [
+		{
+			"name": "Single Row Layout (Humble)",
+			"alias": "Humble.Umbraco.PropertyEditors.SingleRowLayout",
+			"editor": {
+				"valueType": "JSON",
+				"view": "/app_plugins/humble.umbraco.propertyEditors/singleRowLayout/singleRowLayout.html"
+			},
+			"prevalues": {
+			}
+		}
+	],
+	"css": [
+		"/app_plugins/humble.umbraco.propertyEditors/singleRowLayout/singleRowLayout.min.css"
+	],
+	"javascript": [
+		"/app_plugins/humble.umbraco.propertyEditors/singleRowLayout/singleRowLayout.js"
+	]
+}

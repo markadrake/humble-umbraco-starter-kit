@@ -1,0 +1,32 @@
+﻿<div ng-controller="humble_umbraco_propertyEditors_colorPicker"
+	 class="humble_umbraco_propertyEditors_colorPicker">
+	<div class="squares umb-column">
+		<!--
+			Color Options
+		-->
+		<div ng-repeat="(key, value) in brandColors"
+			 class="-bg:{{value}}"
+			 ng-class="isActive(value)"
+			 ng-click="setValue(value)"
+			 ng-mouseover="setText(key)"
+			 ng-mouseleave="setText('')"
+			 title="{{key}}">
+		</div>
+		<div ng-repeat="(key, value) in socialColors"
+			 class="-bg:{{value}}"
+			 ng-class="isActive(value)"
+			 ng-click="setValue(value)"
+			 ng-mouseover="setText(key)"
+			 ng-mouseleave="setText('')"
+			 title="{{key}}">
+		</div>
+		<div ng-repeat="(key, value) in otherColors"
+			 class="-bg:{{value}}"
+			 ng-class="isActive(value)"
+			 ng-click="setValue(value)"
+			 ng-mouseover="setText(key)"
+			 ng-mouseleave="setText('')"
+			 title="{{key}}">
+		</div>
+	</div>
+</div>
