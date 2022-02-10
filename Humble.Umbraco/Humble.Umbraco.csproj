@@ -5,9 +5,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Our.Umbraco.Matryoshka" Version="0.7.0" />
-        <PackageReference Include="Umbraco.Cms" Version="9.2.0" />
-        <PackageReference Include="uSync" Version="9.0.1" />
+        <PackageReference Include="Our.Umbraco.Matryoshka" Version="0.8.0" />
+        <PackageReference Include="Umbraco.Cms" Version="9.3.0" />
+        <PackageReference Include="uSync" Version="9.1.0" />
         <PackageReference Include="WebMarkupMin.AspNetCore5" Version="2.11.0" />
     </ItemGroup>
 

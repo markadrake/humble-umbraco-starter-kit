@@ -14,6 +14,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D57F821F-2D78-4E3C-9A9D-4D46C1810CF4}"
 	ProjectSection(SolutionItems) = preProject
 		.filenesting.json = .filenesting.json
+		.gitignore = .gitignore
 		readme.md = readme.md
 	EndProjectSection
 EndProject
@@ -27,6 +28,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 	ProjectSection(SolutionItems) = preProject
 		readme.md = readme.md
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Humble.Umbraco.ImageSharp2", "Humble.Umbraco.Packages\Humble.Umbraco.ImageSharp2\Humble.Umbraco.ImageSharp2.csproj", "{31AB0079-70FE-44DD-8D43-2CC0F75B943E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -58,6 +61,10 @@ Global
 		{F97242D9-D8FE-4FD2-AECD-B2367EAE1DFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F97242D9-D8FE-4FD2-AECD-B2367EAE1DFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F97242D9-D8FE-4FD2-AECD-B2367EAE1DFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31AB0079-70FE-44DD-8D43-2CC0F75B943E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31AB0079-70FE-44DD-8D43-2CC0F75B943E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31AB0079-70FE-44DD-8D43-2CC0F75B943E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31AB0079-70FE-44DD-8D43-2CC0F75B943E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,6 +75,7 @@ Global
 		{09A6CE0E-B4A6-4881-A96E-DA03256C1F9C} = {46774B56-D02A-4E25-972B-BC0B5443FC14}
 		{68626A4C-3C5E-4D19-8272-8737506A3137} = {46774B56-D02A-4E25-972B-BC0B5443FC14}
 		{F97242D9-D8FE-4FD2-AECD-B2367EAE1DFA} = {46774B56-D02A-4E25-972B-BC0B5443FC14}
+		{31AB0079-70FE-44DD-8D43-2CC0F75B943E} = {46774B56-D02A-4E25-972B-BC0B5443FC14}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F0A5EF84-2D31-4F02-9A33-4FC3B05F11D9}
