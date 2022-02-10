@@ -37,12 +37,12 @@ msbuild.wrn
 .vs/
 
 # Umbraco
-HumbleUmbraco/App_Plugins/
-HumbleUmbraco/uSync/
-HumbleUmbraco/umbraco
-HumbleUmbraco/wwwroot/umbraco/
-HumbleUmbraco/umbraco/Data/TEMP/
-HumbleUmbraco/umbraco/Logs/
+Humble.Umbraco/App_Plugins/
+Humble.Umbraco/uSync/
+Humble.Umbraco/umbraco
+Humble.Umbraco/wwwroot/umbraco/
+Humble.Umbraco/umbraco/Data/TEMP/
+Humble.Umbraco/umbraco/Logs/
 
 # Nodejs
 node_modules/

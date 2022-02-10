@@ -10,13 +10,13 @@ function startUpDynamicContentController($q, $timeout, $scope, dashboardResource
 				"name": "Breakpoints",
 				"icon": "icon-width",
 				"view": "/App_Plugins/Chameleon/Sections/Dashboards/breakpoints.html",
+				"active": true
 			},
 			{
 				"alias": "humble.dashboard.colors",
 				"name": "Colors",
 				"icon": "icon-palette",
 				"view": "/App_Plugins/Chameleon/Sections/Dashboards/colors.html",
-				"active": true
 			},
 			{
 				"alias": "humble.dashboard.typography",

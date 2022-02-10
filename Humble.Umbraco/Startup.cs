@@ -9,6 +9,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.FileProviders;
 using System.IO;
 using WebMarkupMin.AspNetCore5;
+using Umbraco.Cms.Web.Website.Controllers;
+using Humble.Umbraco.Controllers;
 
 namespace HumbleUmbraco
 {
@@ -59,6 +61,12 @@ namespace HumbleUmbraco
                 .AddComposers()
                 .Build();
 #pragma warning restore IDE0022 // Use expression body for methods
+
+            // Register our custom render controller
+            services.Configure<UmbracoRenderingDefaultsOptions>(c =>
+            {
+                c.DefaultControllerType = typeof(JsonRenderController);
+            });
 
         }
 

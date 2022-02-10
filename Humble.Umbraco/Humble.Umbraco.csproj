@@ -11,7 +11,6 @@
         <PackageReference Include="WebMarkupMin.AspNetCore5" Version="2.11.0" />
     </ItemGroup>
 
-    <Import Project="..\Humble.Umbraco.Packages\Humble.Umbraco.PropertyEditors\build\Humble.Umbraco.PropertyEditors.targets" />
     <ItemGroup>
         <ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.API\Humble.Umbraco.API.csproj" />
         <ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.ContentNodeIcons\Humble.Umbraco.ContentNodeIcons.csproj" />
@@ -26,6 +25,10 @@
 
 	<Import Project="..\Humble.Umbraco.Packages\Humble.Umbraco.ContentNodeIcons\build\Humble.Umbraco.ContentNodeIcons.targets" />
 
+	<Import Project="..\Humble.Umbraco.Packages\Humble.Umbraco.PropertyEditors\build\Humble.Umbraco.PropertyEditors.targets" />
+	<ItemGroup>
+		<ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.PropertyEditors\Humble.Umbraco.PropertyEditors.csproj" />
+	</ItemGroup>
 
 	<ItemGroup>
         <Compile Remove="umbraco\Data\**" />
@@ -73,6 +76,129 @@
       <_ContentIncludedByDefault Remove="compilerconfig.json" />
     </ItemGroup>
     <ItemGroup>
+      <Content Include="App_Plugins\Humble.Umbraco.PropertyEditors\9PtPositioning\9pt.css">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      </Content>
+      <Content Include="App_Plugins\Humble.Umbraco.PropertyEditors\9PtPositioning\9pt.html">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      </Content>
+      <Content Include="App_Plugins\Humble.Umbraco.PropertyEditors\9PtPositioning\9pt.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      </Content>
+      <Content Include="App_Plugins\Humble.Umbraco.PropertyEditors\9PtPositioning\9pt.min.css">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      </Content>
+      <Content Include="App_Plugins\Humble.Umbraco.PropertyEditors\9PtPositioning\9pt.scss">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      </Content>
+      <Content Include="App_Plugins\Humble.Umbraco.PropertyEditors\9PtPositioning\package.manifest">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      </Content>
+      <Content Include="App_Plugins\Humble.Umbraco.PropertyEditors\ColorPicker\colorPicker.css">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      </Content>
+      <Content Include="App_Plugins\Humble.Umbraco.PropertyEditors\ColorPicker\colorPicker.html">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      </Content>
+      <Content Include="App_Plugins\Humble.Umbraco.PropertyEditors\ColorPicker\colorPicker.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      </Content>
+      <Content Include="App_Plugins\Humble.Umbraco.PropertyEditors\ColorPicker\colorPicker.min.css">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      </Content>
+      <Content Include="App_Plugins\Humble.Umbraco.PropertyEditors\ColorPicker\colorPicker.scss">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      </Content>
+      <Content Include="App_Plugins\Humble.Umbraco.PropertyEditors\ColorPicker\package.manifest">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      </Content>
+      <Content Include="App_Plugins\Humble.Umbraco.PropertyEditors\PaddingPicker\package.manifest">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      </Content>
+      <Content Include="App_Plugins\Humble.Umbraco.PropertyEditors\PaddingPicker\paddingPicker.css">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      </Content>
+      <Content Include="App_Plugins\Humble.Umbraco.PropertyEditors\PaddingPicker\paddingPicker.html">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      </Content>
+      <Content Include="App_Plugins\Humble.Umbraco.PropertyEditors\PaddingPicker\paddingPicker.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      </Content>
+      <Content Include="App_Plugins\Humble.Umbraco.PropertyEditors\PaddingPicker\paddingPicker.min.css">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      </Content>
+      <Content Include="App_Plugins\Humble.Umbraco.PropertyEditors\PaddingPicker\paddingPicker.scss">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      </Content>
+      <Content Include="App_Plugins\Humble.Umbraco.PropertyEditors\SingleRowLayout\package.manifest">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      </Content>
+      <Content Include="App_Plugins\Humble.Umbraco.PropertyEditors\SingleRowLayout\singleRowLayout.css">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      </Content>
+      <Content Include="App_Plugins\Humble.Umbraco.PropertyEditors\SingleRowLayout\singleRowLayout.html">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      </Content>
+      <Content Include="App_Plugins\Humble.Umbraco.PropertyEditors\SingleRowLayout\singleRowLayout.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      </Content>
+      <Content Include="App_Plugins\Humble.Umbraco.PropertyEditors\SingleRowLayout\singleRowLayout.min.css">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      </Content>
+      <Content Include="App_Plugins\Humble.Umbraco.PropertyEditors\SingleRowLayout\singleRowLayout.scss">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      </Content>
+      <Content Include="App_Plugins\Humble.Umbraco.PropertyEditors\Spacing\package.manifest">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      </Content>
+      <Content Include="App_Plugins\Humble.Umbraco.PropertyEditors\Spacing\spacing.css">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      </Content>
+      <Content Include="App_Plugins\Humble.Umbraco.PropertyEditors\Spacing\spacing.html">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      </Content>
+      <Content Include="App_Plugins\Humble.Umbraco.PropertyEditors\Spacing\spacing.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      </Content>
+      <Content Include="App_Plugins\Humble.Umbraco.PropertyEditors\Spacing\spacing.min.css">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      </Content>
+      <Content Include="App_Plugins\Humble.Umbraco.PropertyEditors\Spacing\spacing.scss">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      </Content>
+    </ItemGroup>
+    <ItemGroup>
+      <None Include="App_Plugins\Humble\package.manifest" />
       <None Include="compilerconfig.json" />
     </ItemGroup>
     <ItemGroup>
@@ -99,9 +225,6 @@
         <SubType>Code</SubType>
       </TypeScriptCompile>
       <TypeScriptCompile Include="Views\Partials\blocklist\components\humble_element_breadcrumbs.ts" />
-    </ItemGroup>
-    <ItemGroup>
-      <Folder Include="App_Plugins\" />
     </ItemGroup>
 
     <!--Set this to true ModelsBuilder mode is not PureLive -->
