@@ -13,7 +13,6 @@
 
     <ItemGroup>
         <ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.API\Humble.Umbraco.API.csproj" />
-        <ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.Cloudflare\Humble.Umbraco.Cloudflare.csproj" />
         <ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.ContentNodeIcons\Humble.Umbraco.ContentNodeIcons.csproj" />
         <ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.UI\Humble.Umbraco.UI.csproj" />
         <ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.PropertyEditors\Humble.Umbraco.PropertyEditors.csproj" />
