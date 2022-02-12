@@ -1,0 +1,27 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+    <PropertyGroup>
+        <HumbleUmbracoCloudflareContentFilesPath>$(MSBuildThisFileDirectory)..\App_Plugins\Humble.Umbraco.Cloudflare\**\*.*</HumbleUmbracoCloudflareContentFilesPath>
+    </PropertyGroup>
+
+    <Target Name="CopyHumbleUmbracoCloudflareAssets" BeforeTargets="Build">
+        <ItemGroup>
+            <HumbleUmbracoCloudflareContentFiles Include="$(HumbleUmbracoCloudflareContentFilesPath)" />
+        </ItemGroup>
+        <Message Text="Copying Humble.Umbraco.Cloudflare files: $(HumbleUmbracoCloudflareContentFilesPath) - #@(HumbleUmbracoCloudflareContentFiles->Count()) files"  Importance="high" />
+        <Copy
+            SourceFiles="@(HumbleUmbracoCloudflareContentFiles)"
+            DestinationFiles="@(HumbleUmbracoCloudflareContentFiles->'$(MSBuildProjectDirectory)\App_Plugins\Humble.Umbraco.Cloudflare\%(RecursiveDir)%(Filename)%(Extension)')"
+            SkipUnchangedFiles="true" />
+
+    </Target>
+
+    <Target Name="ClearHumbleUmbracoCloudflareAssets" BeforeTargets="Clean">
+        <ItemGroup>
+            <HumbleUmbracoCloudflareDir Include="$(MSBuildProjectDirectory)\App_Plugins\Humble.Umbraco.Cloudflare\" />
+        </ItemGroup>
+        <Message Text="Clear old Humble.Umbraco.Cloudflare data"  Importance="high" />
+        <RemoveDir Directories="@(HumbleUmbracoCloudflareDir)"  />
+    </Target>
+
+</Project>

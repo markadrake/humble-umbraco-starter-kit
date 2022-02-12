@@ -1,0 +1,27 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+    <PropertyGroup>
+        <ChameleonContentFilesPath>$(MSBuildThisFileDirectory)..\App_Plugins\Chameleon\**\*.*</ChameleonContentFilesPath>
+    </PropertyGroup>
+
+    <Target Name="CopyChameleonAssets" BeforeTargets="Build">
+        <ItemGroup>
+            <ChameleonContentFiles Include="$(ChameleonContentFilesPath)" />
+        </ItemGroup>
+        <Message Text="Copying Chameleon files: $(ChameleonContentFilesPath) - #@(ChameleonContentFiles->Count()) files"  Importance="high" />
+        <Copy
+            SourceFiles="@(ChameleonContentFiles)"
+            DestinationFiles="@(ChameleonContentFiles->'$(MSBuildProjectDirectory)\App_Plugins\Chameleon\%(RecursiveDir)%(Filename)%(Extension)')"
+            SkipUnchangedFiles="true" />
+
+    </Target>
+
+    <Target Name="ClearChameleonAssets" BeforeTargets="Clean">
+        <ItemGroup>
+            <ChameleonDir Include="$(MSBuildProjectDirectory)\App_Plugins\Chameleon\" />
+        </ItemGroup>
+        <Message Text="Clear old Chameleon data"  Importance="high" />
+        <RemoveDir Directories="@(ChameleonDir)"  />
+    </Target>
+
+</Project>
