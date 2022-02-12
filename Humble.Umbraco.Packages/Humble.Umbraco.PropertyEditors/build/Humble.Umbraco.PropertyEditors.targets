@@ -1,27 +1,27 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
     <PropertyGroup>
-        <MyPropertyEditorContentFilesPath>$(MSBuildThisFileDirectory)..\App_Plugins\Humble.Umbraco.PropertyEditor\**\*.*</MyPropertyEditorContentFilesPath>
+        <MyPropertyEditorsContentFilesPath>$(MSBuildThisFileDirectory)..\App_Plugins\Humble.Umbraco.PropertyEditors\**\*.*</MyPropertyEditorsContentFilesPath>
     </PropertyGroup>
 
-    <Target Name="CopyMyPropertyEditorAssets" BeforeTargets="Build">
+    <Target Name="CopyMyPropertyEditorsAssets" BeforeTargets="Build">
         <ItemGroup>
-            <MyPropertyEditorContentFiles Include="$(MyPropertyEditorContentFilesPath)" />
+            <MyPropertyEditorsContentFiles Include="$(MyPropertyEditorsContentFilesPath)" />
         </ItemGroup>
-        <Message Text="Copying Humble.Umbraco.PropertyEditors files: $(MyPropertyEditorContentFilesPath) - #@(MyPropertyEditorContentFiles->Count()) files"  Importance="high" />
+        <Message Text="Copying Humble.Umbraco.PropertyEditors files: $(MyPropertyEditorsContentFilesPath) - #@(MyPropertyEditorsContentFiles->Count()) files"  Importance="high" />
         <Copy
-            SourceFiles="@(MyPropertyEditorContentFiles)"
-            DestinationFiles="@(MyPropertyEditorContentFiles->'$(MSBuildProjectDirectory)\App_Plugins\Humble.Umbraco.PropertyEditor\%(RecursiveDir)%(Filename)%(Extension)')"
+            SourceFiles="@(MyPropertyEditorsContentFiles)"
+            DestinationFiles="@(MyPropertyEditorsContentFiles->'$(MSBuildProjectDirectory)\App_Plugins\Humble.Umbraco.PropertyEditors\%(RecursiveDir)%(Filename)%(Extension)')"
             SkipUnchangedFiles="true" />
 
     </Target>
 
-    <Target Name="ClearMyPropertyEditorAssets" BeforeTargets="Clean">
+    <Target Name="ClearMyPropertyEditorsAssets" BeforeTargets="Clean">
         <ItemGroup>
-            <MyPropertyEditorDir Include="$(MSBuildProjectDirectory)\App_Plugins\Humble.Umbraco.PropertyEditor\" />
+            <MyPropertyEditorsDir Include="$(MSBuildProjectDirectory)\App_Plugins\Humble.Umbraco.PropertyEditors\" />
         </ItemGroup>
         <Message Text="Clear old Humble.Umbraco.PropertyEditors data"  Importance="high" />
-        <RemoveDir Directories="@(MyPropertyEditorDir)"  />
+        <RemoveDir Directories="@(MyPropertyEditorsDir)"  />
     </Target>
 
 </Project>
