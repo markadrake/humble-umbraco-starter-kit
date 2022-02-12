@@ -18,4 +18,4 @@ function controller($scope, validationMessageService) {
 	$scope.model.onValueChanged = $scope.change;
 	$scope.change();
 }
-angular.module("umbraco").controller("HumbleUmbraco.PropertyEditors.Hint", controller);
+angular.module("umbraco").controller("humble_umbraco_propertyEditors_hint", controller);

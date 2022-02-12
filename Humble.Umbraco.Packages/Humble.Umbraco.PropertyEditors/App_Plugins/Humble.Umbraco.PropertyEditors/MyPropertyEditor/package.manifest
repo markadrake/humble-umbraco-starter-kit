@@ -6,7 +6,7 @@
 			"icon": "icon-help",
 			"group": "Humble",
 			"editor": {
-				"view": "~/App_Plugins/HumbleUmbraco.PropertyEditors/MyPropertyEditor/hint.html",
+				"view": "~/App_Plugins/Humble.Umbraco.PropertyEditors/MyPropertyEditor/hint.html",
                 "hideLabel": true,
 				"valueType": "JSON"
 			},
@@ -29,9 +29,9 @@
 		}
 	],
 	"javascript": [
-		"~/App_Plugins/HumbleUmbraco.PropertyEditors/MyPropertyEditor/hint.js"
+		"~/App_Plugins/Humble.Umbraco.PropertyEditors/MyPropertyEditor/hint.js"
 	],
 	"css": [
-		"~/App_Plugins/HumbleUmbraco.PropertyEditors/MyPropertyEditor/hint.css"
+		"~/App_Plugins/Humble.Umbraco.PropertyEditors/MyPropertyEditor/hint.css"
 	]
 }
