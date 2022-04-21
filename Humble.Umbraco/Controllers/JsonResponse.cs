@@ -77,6 +77,9 @@ namespace Humble.Umbraco.Controllers
 
 		private void SetValue(BlockListModel Model)
 		{
+			if (Model == null) return;
+			if (!Model.Any()) return;
+
 			List<IPublishedElement> settings = new List<IPublishedElement>();
 			List<object> content = new List<object>();
 
@@ -86,7 +89,11 @@ namespace Humble.Umbraco.Controllers
 				content.Add(GetValue(item.Content));
 			}
 
-			Value = content;
+			Value = new
+			{
+				settings,
+				content
+			};
 		}
 
 		private void SetValue(Image Model)
@@ -107,12 +114,19 @@ namespace Humble.Umbraco.Controllers
 		{
 			var m = Model;
 
-			return new
+			var o = new
 			{
 				Key = m.Key,
 				ContentType = m.ContentType.Alias,
-				Properties = m.Properties.Select(p => p.GetValue())
+				Properties = m.Properties.Select(p => p.GetValue().ToString())
 			};
+
+			return o;
+		}
+
+		private object GetValue(IPublishedProperty Model)
+		{
+			return Model.GetValue();
 		}
 	}
 

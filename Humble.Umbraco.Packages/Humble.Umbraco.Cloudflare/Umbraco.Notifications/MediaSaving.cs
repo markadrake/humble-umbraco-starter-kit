@@ -8,7 +8,7 @@ using Umbraco.Cms.Core.Notifications;
 
 namespace Humble.Umbraco.Cloudflare.Umbraco.Notifications
 {
-	internal class MediaSaved : INotificationAsyncHandler<MediaSavedNotification>
+	internal class MediaSaving : INotificationAsyncHandler<MediaSavingNotification>
 	{
 
 		private readonly MediaFileManager _mediaFileManager;
@@ -17,18 +17,18 @@ namespace Humble.Umbraco.Cloudflare.Umbraco.Notifications
 		/// Find the correct implementation for IFileSystem via MediaFileManager.
 		/// </summary>
 		/// <param name="mediaFileManager"></param>
-		public MediaSaved(MediaFileManager mediaFileManager)
+		public MediaSaving(MediaFileManager mediaFileManager)
 		{
 			_mediaFileManager = mediaFileManager;
 		}
 
 		/// <summary>
-		/// Called each time media is saved in the backoffice.
+		/// Called prior to media being saved in the backoffice.
 		/// </summary>
 		/// <param name="notification"></param>
 		/// <param name="cancellationToken"></param>
 		/// <returns></returns>
-		public Task HandleAsync(MediaSavedNotification notification, CancellationToken cancellationToken)
+		public Task HandleAsync(MediaSavingNotification notification, CancellationToken cancellationToken)
 		{
 			foreach (var node in notification.SavedEntities)
 			{
@@ -40,6 +40,5 @@ namespace Humble.Umbraco.Cloudflare.Umbraco.Notifications
 
 			return Task.CompletedTask;
 		}
-
 	}
 }

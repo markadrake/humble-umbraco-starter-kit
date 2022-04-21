@@ -15,7 +15,8 @@ namespace Humble.Umbraco.Cloudflare.Umbraco.Notifications
 		public void Compose(IUmbracoBuilder builder)
 		{
 			builder.AddNotificationAsyncHandler<ContentPublishedNotification, ContentPublished>();
-			//builder.AddNotificationAsyncHandler<MediaSavedNotification, MediaSaved>();
+			builder.AddNotificationAsyncHandler<MediaSavedNotification, MediaSaved>();
+			builder.AddNotificationAsyncHandler<MediaSavingNotification, MediaSaving>();
 		}
 	}
 }

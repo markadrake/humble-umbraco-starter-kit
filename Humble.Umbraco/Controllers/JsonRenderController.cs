@@ -32,11 +32,14 @@ namespace Humble.Umbraco.Controllers
 
 			if(IsJsonRequest())
 			{
-				var myObj = new JsonResponse(new ContentModel(CurrentPage));
-				return new OkObjectResult(myObj);
+				var o = new JsonResponse(new ContentModel(CurrentPage));
+				return Json(o);
 
-				//return new JsonResult(new ContentModel(CurrentPage), new JsonSerializerOptions() {
-				//	WriteIndented = true,
+				//var myObj = new JsonResponse(new ContentModel(CurrentPage));
+				//return new OkObjectResult(myObj);
+
+				//return Json(CurrentPage, new JsonSerializerOptions
+				//{
 				//	ReferenceHandler = ReferenceHandler.Preserve
 				//});
 

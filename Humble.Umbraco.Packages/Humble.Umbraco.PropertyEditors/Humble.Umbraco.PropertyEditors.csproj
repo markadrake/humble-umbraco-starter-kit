@@ -25,8 +25,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Umbraco.Cms.Web.Website" Version="9.3.0" />
-        <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="9.3.0" />
+        <PackageReference Include="Umbraco.Cms.Web.Website" Version="9.4.3" />
+        <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="9.4.3" />
     </ItemGroup>
 
     <ItemGroup>
@@ -67,6 +67,10 @@
 	    <Pack>True</Pack>
 	    <PackagePath>\</PackagePath>
 	  </None>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="App_Plugins\Humble.Umbraco.PropertyEditors\RTEWithBackgroundColor\" />
 	</ItemGroup>
 
 </Project>
