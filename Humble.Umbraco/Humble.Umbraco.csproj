@@ -6,8 +6,8 @@
 
     <ItemGroup>
         <PackageReference Include="Our.Umbraco.Matryoshka" Version="0.8.0" />
-        <PackageReference Include="Umbraco.Cms" Version="9.4.3" />
-        <PackageReference Include="uSync" Version="9.3.2" />
+        <PackageReference Include="Umbraco.Cms" Version="9.5.0" />
+        <PackageReference Include="uSync" Version="9.4.0" />
         <PackageReference Include="WebMarkupMin.AspNetCore5" Version="2.11.0" />
     </ItemGroup>
 
@@ -26,22 +26,22 @@
 	<Import Project="..\Humble.Umbraco.Packages\Humble.Umbraco.ContentNodeIcons\build\Humble.Umbraco.ContentNodeIcons.targets" />
 	<Import Project="..\Humble.Umbraco.Packages\Humble.Umbraco.PropertyEditors\build\Humble.Umbraco.PropertyEditors.targets" />
 	<ItemGroup>
-		<ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.PropertyEditors\Humble.Umbraco.PropertyEditors.csproj"/>
+		<ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.PropertyEditors\Humble.Umbraco.PropertyEditors.csproj" />
 	</ItemGroup>
 	<ItemGroup>
-		<Compile Remove="umbraco\Data\**"/>
-		<Compile Remove="umbraco\logs\**"/>
-		<Compile Remove="umbraco\MediaCache\**"/>
+		<Compile Remove="umbraco\Data\**" />
+		<Compile Remove="umbraco\logs\**" />
+		<Compile Remove="umbraco\MediaCache\**" />
 	</ItemGroup>
 	<ItemGroup>
-		<EmbeddedResource Remove="umbraco\Data\**"/>
-		<EmbeddedResource Remove="umbraco\logs\**"/>
-		<EmbeddedResource Remove="umbraco\MediaCache\**"/>
+		<EmbeddedResource Remove="umbraco\Data\**" />
+		<EmbeddedResource Remove="umbraco\logs\**" />
+		<EmbeddedResource Remove="umbraco\MediaCache\**" />
 	</ItemGroup>
 	<ItemGroup>
-		<None Remove="umbraco\Data\**"/>
-		<None Remove="umbraco\logs\**"/>
-		<None Remove="umbraco\MediaCache\**"/>
+		<None Remove="umbraco\Data\**" />
+		<None Remove="umbraco\logs\**" />
+		<None Remove="umbraco\MediaCache\**" />
 		<None Include="config\**\*.*">
 			<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
 			<CopyToPublishDirectory>Always</CopyToPublishDirectory>
@@ -52,26 +52,26 @@
 		</None>
 	</ItemGroup>
 	<ItemGroup>
-		<Content Remove="umbraco\Data\**"/>
-		<Content Remove="umbraco\logs\**"/>
-		<Content Remove="umbraco\MediaCache\**"/>
+		<Content Remove="umbraco\Data\**" />
+		<Content Remove="umbraco\logs\**" />
+		<Content Remove="umbraco\MediaCache\**" />
 	</ItemGroup>
 	<ItemGroup>
-		<Content Remove="compilerconfig.json"/>
+		<Content Remove="compilerconfig.json" />
 	</ItemGroup>
 	<ItemGroup>
-		<None Remove="assets\lazyload.ts"/>
-		<None Remove="Views\Partials\blocklist\components\humble_element_breadcrumbs.ts"/>
-		<None Remove="Views\Partials\blocklist\components\humble_element_card.ts"/>
-		<None Remove="Views\Partials\blocklist\components\humble_element_dualSlider.ts"/>
-		<None Remove="Views\Partials\blocklist\components\humble_element_html.ts"/>
-		<None Remove="Views\Partials\blocklist\components\humble_element_image.ts"/>
-		<None Remove="Views\Partials\blocklist\components\humble_element_richText.ts"/>
-		<None Remove="Views\Partials\blocklist\components\humble_element_spacer.ts"/>
-		<None Remove="Views\Partials\blocklist\components\humble_element_video.ts"/>
+		<None Remove="assets\lazyload.ts" />
+		<None Remove="Views\Partials\blocklist\components\humble_element_breadcrumbs.ts" />
+		<None Remove="Views\Partials\blocklist\components\humble_element_card.ts" />
+		<None Remove="Views\Partials\blocklist\components\humble_element_dualSlider.ts" />
+		<None Remove="Views\Partials\blocklist\components\humble_element_html.ts" />
+		<None Remove="Views\Partials\blocklist\components\humble_element_image.ts" />
+		<None Remove="Views\Partials\blocklist\components\humble_element_richText.ts" />
+		<None Remove="Views\Partials\blocklist\components\humble_element_spacer.ts" />
+		<None Remove="Views\Partials\blocklist\components\humble_element_video.ts" />
 	</ItemGroup>
 	<ItemGroup>
-		<_ContentIncludedByDefault Remove="compilerconfig.json"/>
+		<_ContentIncludedByDefault Remove="compilerconfig.json" />
 	</ItemGroup>
 	<ItemGroup>
 		<Content Include="App_Plugins\Humble.Umbraco.PropertyEditors\9PtPositioning\9pt.css">
@@ -196,11 +196,11 @@
 		</Content>
 	</ItemGroup>
 	<ItemGroup>
-		<None Include="App_Plugins\Humble\package.manifest"/>
-		<None Include="compilerconfig.json"/>
+		<None Include="App_Plugins\Humble\package.manifest" />
+		<None Include="compilerconfig.json" />
 	</ItemGroup>
 	<ItemGroup>
-		<TypeScriptCompile Include="assets\lazyload.ts"/>
+		<TypeScriptCompile Include="assets\lazyload.ts" />
 		<TypeScriptCompile Include="Views\Partials\blocklist\components\humble_element_video.ts">
 			<SubType>Code</SubType>
 		</TypeScriptCompile>
@@ -222,7 +222,7 @@
 		<TypeScriptCompile Include="Views\Partials\blocklist\components\humble_element_card.ts">
 			<SubType>Code</SubType>
 		</TypeScriptCompile>
-		<TypeScriptCompile Include="Views\Partials\blocklist\components\humble_element_breadcrumbs.ts"/>
+		<TypeScriptCompile Include="Views\Partials\blocklist\components\humble_element_breadcrumbs.ts" />
 	</ItemGroup>
 	<!--Set this to true ModelsBuilder mode is not PureLive -->
 	<PropertyGroup>
