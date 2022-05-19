@@ -1,32 +1,30 @@
 <Project Sdk="Microsoft.NET.Sdk">
-    <PropertyGroup>
-        <TargetFramework>net5.0</TargetFramework>
-        <ContentTargetFolders>.</ContentTargetFolders>
-        <Product>Humble.Umbraco.ImageSharp2</Product>
-        <PackageId>Humble.Umbraco.ImageSharp2</PackageId>
-        <Title>Humble.Umbraco.ImageSharp2</Title>
-        <Description>...</Description>
-        <Product>...</Product>
-        <PackageTags>umbraco plugin package</PackageTags>
-        <RootNamespace>Humble.Umbraco.ImageSharp2</RootNamespace>
-    </PropertyGroup>
-
-    <ItemGroup>
-        <PackageReference Include="SixLabors.ImageSharp.Web" Version="2.0.0-alpha.0.18" />
-        <PackageReference Include="Umbraco.Cms.Core" Version="9.3.0" />
-        <PackageReference Include="Umbraco.Cms.Web.Common" Version="9.3.0" />
-        <PackageReference Include="Umbraco.Cms.Web.Website" Version="9.3.0" />
-        <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="9.3.0" />
-    </ItemGroup>
-
-    <ItemGroup>
-        <Content Include="App_Plugins\Humble.Umbraco.ImageSharp2\**\*.*">
-            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-            <CopyToPublishDirectory>Always</CopyToPublishDirectory>
-        </Content>
-        <None Include="build\**\*.*">
-            <Pack>True</Pack>
-            <PackagePath>buildTransitive</PackagePath>
-        </None>
-    </ItemGroup>
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<ContentTargetFolders>.</ContentTargetFolders>
+		<Product>Humble.Umbraco.ImageSharp2</Product>
+		<PackageId>Humble.Umbraco.ImageSharp2</PackageId>
+		<Title>Humble.Umbraco.ImageSharp2</Title>
+		<Description>...</Description>
+		<Product>...</Product>
+		<PackageTags>umbraco plugin package</PackageTags>
+		<RootNamespace>Humble.Umbraco.ImageSharp2</RootNamespace>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="SixLabors.ImageSharp.Web" Version="1.0.5"/>
+		<PackageReference Include="Umbraco.Cms.Core" Version="9.4.1"/>
+		<PackageReference Include="Umbraco.Cms.Web.Common" Version="9.4.1"/>
+		<PackageReference Include="Umbraco.Cms.Web.Website" Version="9.4.1"/>
+		<PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="9.4.1"/>
+	</ItemGroup>
+	<ItemGroup>
+		<Content Include="App_Plugins\Humble.Umbraco.ImageSharp2\**\*.*">
+			<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+			<CopyToPublishDirectory>Always</CopyToPublishDirectory>
+		</Content>
+		<None Include="build\**\*.*">
+			<Pack>True</Pack>
+			<PackagePath>buildTransitive</PackagePath>
+		</None>
+	</ItemGroup>
 </Project>

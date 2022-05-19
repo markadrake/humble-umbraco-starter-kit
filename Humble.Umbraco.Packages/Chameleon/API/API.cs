@@ -20,7 +20,9 @@ namespace Chameleon.Api {
 			// Failure condition: cannot find Umbraco content by key
 
 			// TODO: Lookup content in Umbraco
-			return new JsonResult(new { });
+			return new JsonResult(new { 
+				Name = "test"
+			});
 		}
 
 		private JsonResult Response(bool Success, dynamic Data)

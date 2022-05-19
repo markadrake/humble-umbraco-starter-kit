@@ -1,25 +1,25 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-    <PropertyGroup>
-        <TargetFramework>net5.0</TargetFramework>
-        <ContentTargetFolders>.</ContentTargetFolders>
-        <Product>Humble.Umbraco.ContentNodeIcons</Product>
-        <PackageId>Humble.Umbraco.ContentNodeIcons</PackageId>
-        <Title>Humble.Umbraco.ContentNodeIcons</Title>
-        <Description>Customize the appearance of your content nodes in Umbraco 9 by simple right clicking any content node in the tree and choosing "Set Icon".</Description>
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<ContentTargetFolders>.</ContentTargetFolders>
+		<Product>Humble.Umbraco.ContentNodeIcons</Product>
+		<PackageId>Humble.Umbraco.ContentNodeIcons</PackageId>
+		<Title>Humble.Umbraco.ContentNodeIcons</Title>
+		<Description>Customize the appearance of your content nodes in Umbraco 9 by simple right clicking any content node in the tree and choosing "Set Icon".</Description>
 		<Summary>Customize the appearance of your content nodes in Umbraco 9 by simple right clicking any content node in the tree and choosing "Set Icon".</Summary>
-        <Product>...</Product>
-        <PackageTags>umbraco umbraco9</PackageTags>
-        <RootNamespace>Humble.Umbraco.ContentNodeIcons</RootNamespace>
-        <Authors>humble themarkdrake</Authors>
-        <Company />
-        <PackageProjectUrl>https://github.com/markadrake/humble-umbraco-starter-kit</PackageProjectUrl>
-        <PackageReadmeFile>readme.nuget.md</PackageReadmeFile>
-        <RepositoryUrl>https://github.com/markadrake/humble-umbraco-starter-kit</RepositoryUrl>
-        <RepositoryType>git</RepositoryType>
-        <AssemblyVersion>$(VersionPrefix)</AssemblyVersion>
-        <FileVersion>$(VersionPrefix)</FileVersion>
-        <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <Copyright>Copyright 2022 by Mark Drake</Copyright>
+		<Product>...</Product>
+		<PackageTags>umbraco umbraco9</PackageTags>
+		<RootNamespace>Humble.Umbraco.ContentNodeIcons</RootNamespace>
+		<Authors>humble themarkdrake</Authors>
+		<Company/>
+		<PackageProjectUrl>https://github.com/markadrake/humble-umbraco-starter-kit</PackageProjectUrl>
+		<PackageReadmeFile>readme.nuget.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/markadrake/humble-umbraco-starter-kit</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<AssemblyVersion>$(VersionPrefix)</AssemblyVersion>
+		<FileVersion>$(VersionPrefix)</FileVersion>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<Copyright>Copyright 2022 by Mark Drake</Copyright>
 		<VersionPrefix>9.2.0</VersionPrefix>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     </PropertyGroup>

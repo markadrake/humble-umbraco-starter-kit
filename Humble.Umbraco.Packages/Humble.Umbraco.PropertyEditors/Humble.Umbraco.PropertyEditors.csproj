@@ -1,5 +1,5 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-    <PropertyGroup>
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
 		<TargetFramework>net5.0</TargetFramework>
 		<ContentTargetFolders>.</ContentTargetFolders>
 		<Product>Humble.Umbraco.PropertyEditors</Product>
@@ -11,7 +11,7 @@
 		<PackageTags>umbraco umbraco9</PackageTags>
 		<RootNamespace>Humble.Umbraco.PropertyEditors</RootNamespace>
 		<Authors>humble themarkdrake</Authors>
-		<Company />
+		<Company/>
 		<PackageProjectUrl>https://github.com/markadrake/humble-umbraco-starter-kit</PackageProjectUrl>
 		<PackageReadmeFile>readme.nuget.md</PackageReadmeFile>
 		<RepositoryUrl>https://github.com/markadrake/humble-umbraco-starter-kit</RepositoryUrl>
@@ -38,35 +38,32 @@
             <Pack>True</Pack>
 			<PackagePath>buildTransitive</PackagePath>
 		</None>
-    </ItemGroup>
-
-	<ItemGroup>
-		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\9PtPositioning\9pt.html" />
-		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\9PtPositioning\9pt.min.css" />
-		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\9PtPositioning\9pt.js" />
-		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\ColorPicker\colorPicker.html" />
-		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\ColorPicker\colorPicker.min.css" />
-		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\ColorPicker\colorPicker.js" />
-		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\PaddingPicker\paddingPicker.html" />
-		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\PaddingPicker\paddingPicker.min.css" />
-		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\PaddingPicker\paddingPicker.js" />
-		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\SingleRowLayout\singleRowLayout.html" />
-		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\SingleRowLayout\singleRowLayout.min.css" />
-		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\SingleRowLayout\singleRowLayout.js" />
-		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\Spacing\spacing.min.css" />
-		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\readme.nuget.md" />
 	</ItemGroup>
-
 	<ItemGroup>
-		<ProjectCapability Include="DynamicDependentFile" />
-		<ProjectCapability Include="DynamicFileNesting" />
+		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\9PtPositioning\9pt.html"/>
+		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\9PtPositioning\9pt.min.css"/>
+		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\9PtPositioning\9pt.js"/>
+		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\ColorPicker\colorPicker.html"/>
+		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\ColorPicker\colorPicker.min.css"/>
+		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\ColorPicker\colorPicker.js"/>
+		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\PaddingPicker\paddingPicker.html"/>
+		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\PaddingPicker\paddingPicker.min.css"/>
+		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\PaddingPicker\paddingPicker.js"/>
+		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\SingleRowLayout\singleRowLayout.html"/>
+		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\SingleRowLayout\singleRowLayout.min.css"/>
+		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\SingleRowLayout\singleRowLayout.js"/>
+		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\Spacing\spacing.min.css"/>
+		<None Remove="App_Plugins\Humble.Umbraco.PropertyEditors\readme.nuget.md"/>
 	</ItemGroup>
-
 	<ItemGroup>
-	  <None Update="readme.nuget.md">
-	    <Pack>True</Pack>
-	    <PackagePath>\</PackagePath>
-	  </None>
+		<ProjectCapability Include="DynamicDependentFile"/>
+		<ProjectCapability Include="DynamicFileNesting"/>
+	</ItemGroup>
+	<ItemGroup>
+		<None Update="readme.nuget.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
 	</ItemGroup>
 
 	<ItemGroup>

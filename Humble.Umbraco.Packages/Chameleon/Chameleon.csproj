@@ -38,8 +38,26 @@
     </ItemGroup>
 
 	<ItemGroup>
-		<ProjectCapability Include="DynamicDependentFile" />
-		<ProjectCapability Include="DynamicFileNesting" />
+		<PackageReference Include="Umbraco.Cms.Web.Website" Version="9.4.1"/>
+		<PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="9.4.1"/>
 	</ItemGroup>
-
+	<ItemGroup>
+		<Content Include="App_Plugins\Chameleon\**\*.*">
+			<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+			<CopyToPublishDirectory>Always</CopyToPublishDirectory>
+		</Content>
+		<None Include="build\**\*.*">
+			<Pack>True</Pack>
+			<PackagePath>build</PackagePath>
+		</None>
+	</ItemGroup>
+	<ItemGroup>
+		<None Remove="App_Plugins\Chameleon\Filters\package.manifest"/>
+		<None Remove="App_Plugins\Chameleon\Filters\trustAs.js"/>
+		<None Remove="App_Plugins\Chameleon\Sections\Dashboards\default.scss"/>
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectCapability Include="DynamicDependentFile"/>
+		<ProjectCapability Include="DynamicFileNesting"/>
+	</ItemGroup>
 </Project>
