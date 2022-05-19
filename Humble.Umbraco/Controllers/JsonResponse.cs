@@ -70,7 +70,7 @@ namespace Humble.Umbraco.Controllers
 					SetValue(p.GetValue() as BlockListModel);
 					break;
 				case "Umbraco.MediaPicker":
-					SetValue(p.GetValue() as Image);
+					// SetValue(p.GetValue() as Image);
 					break;
 			}
 		}
@@ -96,19 +96,19 @@ namespace Humble.Umbraco.Controllers
 			};
 		}
 
-		private void SetValue(Image Model)
-		{
-			var m = Model;
+		// private void SetValue(Image Model)
+		// {
+		// 	var m = Model;
 
-			Value = new
-			{
-				Copyright = m.CopyrightInfo,
-				ContentType = m.ContentType.Alias,
-				File = m.UmbracoFile,
-				Width = m.UmbracoWidth,
-				Height = m.UmbracoHeight
-			};
-		}
+		// 	Value = new
+		// 	{
+		// 		Copyright = m.CopyrightInfo,
+		// 		ContentType = m.ContentType.Alias,
+		// 		File = m.UmbracoFile,
+		// 		Width = m.UmbracoWidth,
+		// 		Height = m.UmbracoHeight
+		// 	};
+		// }
 
 		private object GetValue(IPublishedElement Model)
 		{
