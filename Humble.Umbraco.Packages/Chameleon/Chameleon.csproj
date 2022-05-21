@@ -16,8 +16,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Umbraco.Cms.Web.Website" Version="9.4.3" />
-        <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="9.4.3" />
+        <PackageReference Include="Umbraco.Cms.Web.Website" Version="9.5.0" />
+        <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="9.5.0" />
     </ItemGroup>
 
     <ItemGroup>
@@ -38,8 +38,8 @@
     </ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Umbraco.Cms.Web.Website" Version="9.4.1"/>
-		<PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="9.4.1"/>
+		<PackageReference Include="Umbraco.Cms.Web.Website" Version="9.5.0" />
+		<PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="9.5.0" />
 	</ItemGroup>
 	<ItemGroup>
 		<Content Include="App_Plugins\Chameleon\**\*.*">
@@ -52,12 +52,12 @@
 		</None>
 	</ItemGroup>
 	<ItemGroup>
-		<None Remove="App_Plugins\Chameleon\Filters\package.manifest"/>
-		<None Remove="App_Plugins\Chameleon\Filters\trustAs.js"/>
-		<None Remove="App_Plugins\Chameleon\Sections\Dashboards\default.scss"/>
+		<None Remove="App_Plugins\Chameleon\Filters\package.manifest" />
+		<None Remove="App_Plugins\Chameleon\Filters\trustAs.js" />
+		<None Remove="App_Plugins\Chameleon\Sections\Dashboards\default.scss" />
 	</ItemGroup>
 	<ItemGroup>
-		<ProjectCapability Include="DynamicDependentFile"/>
-		<ProjectCapability Include="DynamicFileNesting"/>
+		<ProjectCapability Include="DynamicDependentFile" />
+		<ProjectCapability Include="DynamicFileNesting" />
 	</ItemGroup>
 </Project>
