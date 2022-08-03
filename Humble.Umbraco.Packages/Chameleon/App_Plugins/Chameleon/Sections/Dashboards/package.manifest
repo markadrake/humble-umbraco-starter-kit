@@ -3,7 +3,7 @@
         {
             "alias": "humble.default",
             "view":  "/App_Plugins/Chameleon/Sections/Dashboards/default.html",
-            "sections":  [ "humble" ],
+            "sections":  [ "designSystem" ],
             "weight": -10
         }
     ],

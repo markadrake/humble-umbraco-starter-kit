@@ -1,8 +1,8 @@
 {
     "sections": [
         {
-            "alias": "humble",
-            "name": "Humble"
+            "alias": "designSystem",
+            "name": "designSystem"
         }
     ]
 }

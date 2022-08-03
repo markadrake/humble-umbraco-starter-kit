@@ -8,6 +8,8 @@ using Umbraco.Cms.Core.Services;
 using Umbraco.Cms.Infrastructure.Migrations;
 using Umbraco.Cms.Infrastructure.Migrations.Upgrade;
 using Umbraco.Cms.Infrastructure.Persistence.DatabaseAnnotations;
+using Umbraco.Cms.Infrastructure.Scoping;
+using IScopeProvider = Umbraco.Cms.Infrastructure.Scoping.IScopeProvider;
 
 namespace Humble.Umbraco.ContentNodeIcons.Database
 {
@@ -24,14 +26,16 @@ namespace Humble.Umbraco.ContentNodeIcons.Database
 	public class ContentNodeIconsComponent : IComponent
 	{
 		private readonly IScopeProvider _scopeProvider;
+		private readonly IScopeAccessor _scopeAccessor;
 		private readonly IMigrationBuilder _migrationBuilder;
 		private readonly IKeyValueService _keyValueService;
 		private readonly ILoggerFactory _loggerFactory;
 		private readonly IRuntimeState _runtimeState;
 
-		public ContentNodeIconsComponent(IScopeProvider scopeProvider, IMigrationBuilder migrationBuilder, IKeyValueService keyValueService, ILoggerFactory loggerFactory, IRuntimeState runtimeState)
+		public ContentNodeIconsComponent(IScopeProvider scopeProvider, IScopeAccessor scopeAccessor, IMigrationBuilder migrationBuilder, IKeyValueService keyValueService, ILoggerFactory loggerFactory, IRuntimeState runtimeState)
 		{
 			_scopeProvider = scopeProvider;
+			_scopeAccessor = scopeAccessor;
 			_migrationBuilder = migrationBuilder;
 			_keyValueService = keyValueService;
 			_loggerFactory = loggerFactory;
@@ -48,7 +52,7 @@ namespace Humble.Umbraco.ContentNodeIcons.Database
 			// Create a migration plan for a specific project/feature
 			// We can then track that latest migration state/step for this project/feature
 			var migrationPlan = new MigrationPlan("HumbleUmbraco.ContentNodeIcons");
-			var migrationPlanExecutor = new MigrationPlanExecutor(_scopeProvider, _loggerFactory, _migrationBuilder);
+			var migrationPlanExecutor = new MigrationPlanExecutor(_scopeProvider, _scopeAccessor, _loggerFactory, _migrationBuilder);
 
 			// This is the steps we need to take
 			// Each step in the migration adds a unique value
