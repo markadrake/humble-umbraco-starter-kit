@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Umbraco.Cms.Core.Cache;
 using Umbraco.Cms.Core.Composing;
 using Umbraco.Cms.Core.DependencyInjection;
-using Umbraco.Cms.Core.Scoping;
+using Umbraco.Cms.Infrastructure.Scoping;
 
 namespace Humble.Umbraco.ContentNodeIcons.Api
 {

@@ -4,6 +4,15 @@ Customize the appearance of your content nodes in Umbraco 9 by simply right clic
 
 ## Release History
 
+### Version 10.1.0
+
+> Highlights:
+>
+> 1. Tested and ready for Umbraco v10.1.0.
+>
+> Fixes:
+> 1. Replace obsolete IScopeProvider reference. 
+
 ### Version 9.2.0
 
 > Highlights:

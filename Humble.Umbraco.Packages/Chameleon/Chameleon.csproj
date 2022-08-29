@@ -16,8 +16,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Umbraco.Cms.Web.Website" Version="10.0.1" />
-        <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="10.0.1" />
+        <PackageReference Include="Umbraco.Cms.Web.Website" Version="10.1.0" />
+        <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="10.1.0" />
     </ItemGroup>
 
     <ItemGroup>
@@ -38,6 +38,22 @@
     </ItemGroup>
 
 	<ItemGroup>
+		<Content Include="App_Plugins\Chameleon\**\*.*">
+			<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+			<CopyToPublishDirectory>Always</CopyToPublishDirectory>
+		</Content>
+		<None Include="build\**\*.*">
+			<Pack>True</Pack>
+			<PackagePath>build</PackagePath>
+		</None>
+	</ItemGroup>
+	<ItemGroup>
+		<None Remove="App_Plugins\Chameleon\Filters\package.manifest" />
+		<None Remove="App_Plugins\Chameleon\Filters\trustAs.js" />
+		<None Remove="App_Plugins\Chameleon\Sections\Dashboards\default.scss" />
+	</ItemGroup>
+	<ItemGroup>
+>>>>>>> 8fcdc8a (release of contentNodeIcons 10.1.0, upgrade to 10.1.0 across all projects)
 		<ProjectCapability Include="DynamicDependentFile" />
 		<ProjectCapability Include="DynamicFileNesting" />
 	</ItemGroup>
