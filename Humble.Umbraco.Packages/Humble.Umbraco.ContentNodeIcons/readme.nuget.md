@@ -1,6 +1,6 @@
 ﻿# Content Node Icons
 
-Customize the appearance of your content nodes in Umbraco 9 by simply right clicking any content node in the tree and choosing "Set Icon".
+Customize the appearance of your content nodes in Umbraco by simply right clicking any content node in the tree and choosing "Set Icon".
 
 ## Release History
 
