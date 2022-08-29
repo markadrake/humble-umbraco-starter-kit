@@ -53,7 +53,6 @@
 		<None Remove="App_Plugins\Chameleon\Sections\Dashboards\default.scss" />
 	</ItemGroup>
 	<ItemGroup>
->>>>>>> 8fcdc8a (release of contentNodeIcons 10.1.0, upgrade to 10.1.0 across all projects)
 		<ProjectCapability Include="DynamicDependentFile" />
 		<ProjectCapability Include="DynamicFileNesting" />
 	</ItemGroup>
