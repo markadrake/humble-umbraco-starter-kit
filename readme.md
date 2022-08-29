@@ -8,21 +8,22 @@
 2. [Architecture](#Architecture)
 3. [Credentials](#Credentials)
 4. [Licensing](#)
-5. [Testimonial](#Testimonial])
+5. [Testimonials](#Testimonials])
 
 ## Overview
 
-|Package|Standalone|Use Case
----|---|---
-HumbleUmbraco.PropertyEditors|Standalone|Provides a set of property editors useful for content authors.
-HumbleUmbraco.ContentNodeIcons|Standalone|Assign new color + icon combinations to any content node.
-HumbleUmbraco.UI|No|
-HumbleUmbraco.API|Standalone|Automagically interfaces with your database(s) and accepts GraphQL requests and returns JSON responses.
-HumbleUmbraco|No|The full starter kit. Includes all packages (as dependencies) and sample content.
+|Package|Standalone|Use Case|Ready
+---|---|---|---
+Humble.Umbraco|No|The full starter kit. Includes all packages (as dependencies) and sample content.|x
+Humble.Umbraco.API|Standalone|Automagically interfaces with your database(s) and accepts GraphQL requests and returns JSON responses.|x
+Humble.Umbraco.Cloudflare|Standalone|Through use of the Cloudflare API, will invalidate cache when content is saved.|x
+Humble.Umbraco.ContentNodeIcons|Standalone|Assign new color + icon combinations to any content node.|x
+Humble.Umbraco.PropertyEditors|Standalone|Provides a set of property editors useful for content authors.|x
+Humble.Umbraco.UI|No|Allows for customization and control over a design system.|x
 
 ## Architecture
 
-TBW.
+TBD
 
 ## Credentials
 
@@ -50,8 +51,8 @@ TBW.
 
 This project is currently licensed under MIT. Please note that after it's official release, the license for particular modules may change.
 
-## Testimonial
+## Testimonials
 
-“As the most qualified and insightful developer I know, this is the definitive starter kit for Umbraco available.”
+ï¿½As the most qualified and insightful developer I know, this is the definitive starter kit for Umbraco available.ï¿½
 
 _- Mark Drake_
