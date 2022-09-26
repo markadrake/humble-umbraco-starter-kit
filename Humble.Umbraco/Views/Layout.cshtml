@@ -1,5 +1,6 @@
 ﻿@using Humble.Umbraco.UI.TagHelpers.Models
-@using Umbraco.Cms.Web.Common.PublishedModels;
+@using Umbraco.Cms.Web.Common.PublishedModels
+@using Umbraco.Extensions
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 @{
 	Layout = null;
@@ -22,6 +23,7 @@
 	@RenderSection("HeadClose", false)
 </head>
 <body>
+
 	@RenderSection("BodyOpen", false)
 
 	@RenderBody()
@@ -47,6 +49,7 @@
 			}
 		};
 	}
+	
 	@* <picture config="pictureConfig" tabs="2" /> *@
 
 	<noscript>
@@ -55,5 +58,6 @@
 	<script src="~/assets/app.js" async defer></script>
 
 	@RenderSection("BodyClose", false)
+
 </body>
 </html>

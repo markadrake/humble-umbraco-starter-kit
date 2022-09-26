@@ -96,5 +96,13 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("spacing")]
 		public virtual global::Newtonsoft.Json.Linq.JToken Spacing => this.Value<global::Newtonsoft.Json.Linq.JToken>(_publishedValueFallback, "spacing");
+
+		///<summary>
+		/// Web Component
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.1.0+3972538")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("webComponent")]
+		public virtual global::Newtonsoft.Json.Linq.JToken WebComponent => this.Value<global::Newtonsoft.Json.Linq.JToken>(_publishedValueFallback, "webComponent");
 	}
 }

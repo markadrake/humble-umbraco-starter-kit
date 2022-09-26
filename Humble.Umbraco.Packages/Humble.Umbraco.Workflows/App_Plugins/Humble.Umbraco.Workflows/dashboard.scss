@@ -1,0 +1,16 @@
+.humble_umbraco_automation {
+	position: absolute;
+	inset: 0;
+
+	&_workflows {
+		position: absolute;
+		inset: 0 0 0 auto;
+		width: 20rem;
+		background: black;
+	}
+
+	&_designer {
+		position: absolute;
+		inset: 0 20rem 0 0;
+	}
+}

@@ -1,0 +1,45 @@
+{
+	"Triggers": {
+		"Umbraco": {
+			"Content": [
+				"New Saved",
+				"Saved",
+				"Published",
+				"Deleted"
+			],
+			"Media": [
+				"New Saved",
+				"Saved",
+				"Deleted"
+			],
+			"Members": [
+				"New",
+				"Saved",
+				"Locked Out",
+				"Deleted"
+			],
+			"Users": [
+				"New",
+				"Saved",
+				"Locked Out",
+				"Deleted"
+			]
+		},
+		"Umbraco Forms": [
+			"Submission",
+			"Approval"
+		]
+	},
+	"Actions": {
+		"Umbraco": [
+			"Update Content"
+		],
+		"Umbraco Forms": [
+			"Update Submission Data"
+		],
+		"Email": [
+			"Send an Email"
+		]
+	}
+
+}

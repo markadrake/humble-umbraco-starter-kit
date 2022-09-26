@@ -15,11 +15,11 @@
 |Package|Standalone|Use Case|Ready
 ---|---|---|---
 Humble.Umbraco|No|The full starter kit. Includes all packages (as dependencies) and sample content.|x
-Humble.Umbraco.API|Standalone|Automagically interfaces with your database(s) and accepts GraphQL requests and returns JSON responses.|x
-Humble.Umbraco.Cloudflare|Standalone|Through use of the Cloudflare API, will invalidate cache when content is saved.|x
-Humble.Umbraco.ContentNodeIcons|Standalone|Assign new color + icon combinations to any content node.|x
-Humble.Umbraco.PropertyEditors|Standalone|Provides a set of property editors useful for content authors.|x
-Humble.Umbraco.UI|No|Allows for customization and control over a design system.|x
+_Humble.Umbraco_<br>BlockListPreviews|Standalone|Allows for block list views to be rendered from their razor templates. Includes the benefit of Shadow DOM and custom stylesheets.|x
+_Humble.Umbraco_<br>Cloudflare|Standalone|Clear Cloudflare cache when content changes are detected. Allows Umbraco Users to manually clear cache without giving them access to Cloudflare directly.|x
+_Humble.Umbraco_<br>ContentNodeIcons|Standalone|Assign new color + icon combinations to any content node, regardless of the document type.|x
+_Humble.Umbraco_<br>PropertyEditors|Standalone|Provides a set of property editors useful to both content authors and developers.|x
+_Humble.Umbraco_<br>UI|No|Allows for customization and control over a design system.|x
 
 ## Architecture
 

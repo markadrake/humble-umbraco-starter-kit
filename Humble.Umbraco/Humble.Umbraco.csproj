@@ -11,7 +11,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.API\Humble.Umbraco.API.csproj" />
+        <ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.BlockListPreviews\Humble.Umbraco.BlockListPreviews.csproj" />
         <ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.Cloudflare\Humble.Umbraco.Cloudflare.csproj" />
         <ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.ContentNodeIcons\Humble.Umbraco.ContentNodeIcons.csproj" />
         <ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.UI\Humble.Umbraco.UI.csproj" />

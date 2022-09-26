@@ -1,0 +1,26 @@
+{
+    "sections": [
+        {
+            "alias": "humble_automation",
+            "name": "Automation"
+        }
+    ],
+    "dashboards":  [
+        {
+            "alias": "humble_automation_dashboard",
+            "view":  "/App_Plugins/Humble/Backoffice/Sections/Automation/dashboard.html",
+            "sections":  [ "humble_automation" ],
+            "weight": -10,
+            "access": [
+                { "deny": "translator" },
+                { "grant": "admin" }
+            ]
+        }
+    ],
+	"javascript": [
+		"/app_plugins/humble/backoffice/sections/automation/dashboard.js"
+	],
+	"css": [
+		"/app_plugins/humble/backoffice/sections/automation/dashboard.css"
+	]
+}
