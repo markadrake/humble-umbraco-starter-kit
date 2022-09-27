@@ -5,19 +5,40 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Umbraco.Cms" Version="10.1.0" />
-        <PackageReference Include="uSync" Version="10.1.0" />
-        <PackageReference Include="WebMarkupMin.AspNetCore5" Version="2.11.0" />
+        <PackageReference Include="Umbraco.Cms" Version="10.2.1" />
+        <PackageReference Include="uSync" Version="10.2.1" />
+        <PackageReference Include="WebMarkupMin.AspNetCore5" Version="2.12.0" />
     </ItemGroup>
 
-    <ItemGroup>
-        <ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.BlockListPreviews\Humble.Umbraco.BlockListPreviews.csproj" />
-        <ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.Cloudflare\Humble.Umbraco.Cloudflare.csproj" />
-        <ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.ContentNodeIcons\Humble.Umbraco.ContentNodeIcons.csproj" />
-        <ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.UI\Humble.Umbraco.UI.csproj" />
-        <ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.PropertyEditors\Humble.Umbraco.PropertyEditors.csproj" />
-        <ProjectReference Include="..\Humble.Umbraco.Packages\Chameleon\Chameleon.csproj" />
-    </ItemGroup>
+	<Import Project="..\Humble.Umbraco.Packages\Humble.Umbraco.BlockListPreviews\build\Humble.Umbraco.BlockListPreviews.targets"/>
+	<ItemGroup>
+		<ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.BlockListPreviews\Humble.Umbraco.BlockListPreviews.csproj"/>
+	</ItemGroup>
+
+	<Import Project="..\Humble.Umbraco.Packages\Humble.Umbraco.Cloudflare\build\Humble.Umbraco.Cloudflare.targets"/>
+	<ItemGroup>
+		<ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.Cloudflare\Humble.Umbraco.Cloudflare.csproj"/>
+	</ItemGroup>
+
+	<Import Project="..\Humble.Umbraco.Packages\Humble.Umbraco.ContentNodeIcons\build\Humble.Umbraco.ContentNodeIcons.targets"/>
+	<ItemGroup>
+		<ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.ContentNodeIcons\Humble.Umbraco.ContentNodeIcons.csproj"/>
+	</ItemGroup>
+
+	<Import Project="..\Humble.Umbraco.Packages\Humble.Umbraco.UI\build\Humble.Umbraco.UI.targets"/>
+	<ItemGroup>
+		<ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.UI\Humble.Umbraco.UI.csproj"/>
+	</ItemGroup>
+
+	<Import Project="..\Humble.Umbraco.Packages\Humble.Umbraco.PropertyEditors\build\Humble.Umbraco.PropertyEditors.targets"/>
+	<ItemGroup>
+		<ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.PropertyEditors\Humble.Umbraco.PropertyEditors.csproj"/>
+	</ItemGroup>
+
+	<Import Project="..\Humble.Umbraco.Packages\Chameleon\build\Chameleon.targets"/>
+	<ItemGroup>
+		<ProjectReference Include="..\Humble.Umbraco.Packages\Chameleon\Chameleon.csproj"/>
+	</ItemGroup>
 
 	<ItemGroup>
 		<Compile Remove="umbraco\Data\**" />
