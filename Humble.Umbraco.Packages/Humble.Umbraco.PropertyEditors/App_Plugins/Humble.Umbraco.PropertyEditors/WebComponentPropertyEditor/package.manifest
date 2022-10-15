@@ -1,0 +1,15 @@
+{
+	"propertyEditors": [
+		{
+			"alias": "webComponentPropertyEditor",
+			"name": "Web Component Property Editor",
+			"editor": {
+				"valueType": "JSON",
+				"view": "/app_plugins/humble.umbraco.propertyeditors/webComponentPropertyEditor/webComponentPropertyEditor.html"
+			},
+		}
+	],
+	"javascript": [
+		"/app_plugins/humble.umbraco.propertyeditors/webComponentPropertyEditor/webComponentPropertyEditorWrapper.js"
+	]
+}

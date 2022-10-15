@@ -3,7 +3,7 @@
 
 	function previewResource($http, umbRequestHelper) {
 
-		var apiUrl = "https://localhost:44307/umbraco/backoffice/api/blockpreviewapi/previewMarkup";
+		var apiUrl = "https://localhost:44307/umbraco/backoffice/api/blocklistpreviews/previewMarkup";
 
 		var resource = {
 			getPreview: getPreview
