@@ -2,9 +2,9 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ContentTargetFolders>.</ContentTargetFolders>
-    <Product>Humble.Umbraco.BlockListPreviews</Product>
-    <PackageId>Humble.Umbraco.BlockListPreviews</PackageId>
-    <Title>Humble.Umbraco.BlockListPreviews</Title>
+    <Product>Humble.Umbraco.RazorBlockPreview</Product>
+    <PackageId>Humble.Umbraco.RazorBlockPreview</PackageId>
+    <Title>Humble.Umbraco.RazorBlockPreview</Title>
     <Description>...</Description>
     <PackageTags>umbraco plugin package</PackageTags>
   </PropertyGroup>
@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="App_Plugins\Humble.Umbraco.BlockListPreviews\**">
+    <Content Include="App_Plugins\Humble.Umbraco.RazorBlockPreview\**">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>Always</CopyToPublishDirectory>
     </Content>

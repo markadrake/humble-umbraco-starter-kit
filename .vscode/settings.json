@@ -11,5 +11,11 @@
 	"emmet.includeLanguages": {
 		"razor": "html",
 		"aspnetcorerazor": "html"
+	},
+	"explorer.fileNesting.enabled": true,
+	"explorer.fileNesting.patterns": {
+		"*.cshtml": "${capture}.ts, ${capture}.js, ${capture}.js.map, ${capture}.scss, ${capture}.css, ${capture}.min.css",
+		"pubspec.yaml": "pubspec.lock,pubspec_overrides.yaml,.packages,.flutter-plugins,.flutter-plugins-dependencies,.metadata",
+		"*.dart": "${capture}.g.dart"
 	}
 }

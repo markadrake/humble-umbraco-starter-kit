@@ -4,6 +4,12 @@ Customize the appearance of your content nodes in Umbraco by simply right clicki
 
 ## Release History
 
+### Version 10.1.1
+
+> Highlights:
+>
+> 1. Adding the `umbraco-marketplace` tag for inclusion in the new Umbraco Marketplace.
+
 ### Version 10.1.0
 
 > Highlights:

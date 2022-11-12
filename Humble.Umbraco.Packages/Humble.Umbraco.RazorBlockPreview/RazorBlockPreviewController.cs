@@ -28,11 +28,11 @@ namespace Humble.Umbraco
     /// <summary>
     /// Represents the block preview api controller.
     /// </summary>
-    public class BlockListPreviewsController : UmbracoAuthorizedJsonController
+    public class RazorBlockPreviewController : UmbracoAuthorizedJsonController
     {
         private readonly IPublishedRouter _publishedRouter;
         private readonly BlockEditorConverter _blockEditorConverter;
-        private readonly ILogger<BlockListPreviewsController> _logger;
+        private readonly ILogger<RazorBlockPreviewController> _logger;
         private readonly IUmbracoContextAccessor _umbracoContextAccessor;
         private readonly IVariationContextAccessor _variationContextAccessor;
         private readonly IRazorViewEngine _razorViewEngine;
@@ -41,14 +41,14 @@ namespace Humble.Umbraco
         private readonly IPublishedValueFallback _publishedValueFallback;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="BlockListPreviewsController"/> class.
+        /// Initializes a new instance of the <see cref="RazorBlockPreviewController"/> class.
         /// </summary>
         /// <param name="publishedRouter">A <see cref="IPublishedRouter"/> instance.</param>
         /// <param name="blockEditorConverter">A <see cref="_blockEditorConverter"/> instance.</param>
         /// <param name="umbracoContextAccessor">A <see cref="IUmbracoContextAccessor"/> instance.</param>
         /// <param name="logger">A <see cref="ILogger{T}"/> instance.</param>
         /// <param name="variationContextAccessor">A <see cref="IVariationContextAccessor"/> instance.</param>
-        public BlockListPreviewsController(IPublishedRouter publishedRouter, BlockEditorConverter blockEditorConverter, IUmbracoContextAccessor umbracoContextAccessor, ILogger<BlockListPreviewsController> logger, IVariationContextAccessor variationContextAccessor, IRazorViewEngine razorViewEngine, ITempDataProvider tempDataProvider, ITypeFinder typeFinder, IPublishedValueFallback publishedValueFallback)
+        public RazorBlockPreviewController(IPublishedRouter publishedRouter, BlockEditorConverter blockEditorConverter, IUmbracoContextAccessor umbracoContextAccessor, ILogger<RazorBlockPreviewController> logger, IVariationContextAccessor variationContextAccessor, IRazorViewEngine razorViewEngine, ITempDataProvider tempDataProvider, ITypeFinder typeFinder, IPublishedValueFallback publishedValueFallback)
         {
             _publishedRouter = publishedRouter;
             _blockEditorConverter = blockEditorConverter;

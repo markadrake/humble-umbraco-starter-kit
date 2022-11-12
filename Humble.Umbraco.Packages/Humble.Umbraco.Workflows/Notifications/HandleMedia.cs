@@ -15,33 +15,23 @@ public class HandleMedia :
 	INotificationHandler<MediaDeletedVersionsNotification>
 {
 	public void Handle(MediaSavingNotification notification) {
-		throw new System.NotImplementedException();
 	}
 	public void Handle(MediaSavedNotification notification) {
-		throw new System.NotImplementedException();
 	}
 	public void Handle(MediaMovingNotification notification) {
-		throw new System.NotImplementedException();
 	}
 	public void Handle(MediaMovedNotification notification) {
-		throw new System.NotImplementedException();
 	}
 	public void Handle(MediaMovingToRecycleBinNotification notification) {
-		throw new System.NotImplementedException();
 	}
 	public void Handle(MediaMovedToRecycleBinNotification notification) {
-		throw new System.NotImplementedException();
 	}
 	public void Handle(MediaDeletingNotification notification) {
-		throw new System.NotImplementedException();
 	}
 	public void Handle(MediaDeletedNotification notification) {
-		throw new System.NotImplementedException();
 	}
 	public void Handle(MediaDeletingVersionsNotification notification) {
-		throw new System.NotImplementedException();
 	}
 	public void Handle(MediaDeletedVersionsNotification notification) {
-		throw new System.NotImplementedException();
 	}
 }

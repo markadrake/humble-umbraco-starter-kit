@@ -1,0 +1,7 @@
+﻿{
+	"javascript": [
+		"~/app_plugins/humble.umbraco.razorblockpreview/blockPreview.controller.js",
+		"~/app_plugins/humble.umbraco.razorblockpreview/blockPreview.resource.js",
+		"~/app_plugins/humble.umbraco.razorblockpreview/blockPreview.webComponent.js"
+	]
+}

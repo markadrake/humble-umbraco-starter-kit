@@ -8,7 +8,7 @@
     "dashboards":  [
         {
             "alias": "humble_automation_dashboard",
-            "view":  "/App_Plugins/Humble/Backoffice/Sections/Automation/dashboard.html",
+            "view":  "/App_Plugins/Humble.Umbraco.Workflows/dashboard.html",
             "sections":  [ "humble_automation" ],
             "weight": -10,
             "access": [
@@ -18,9 +18,9 @@
         }
     ],
 	"javascript": [
-		"/app_plugins/humble/backoffice/sections/automation/dashboard.js"
+		"/app_plugins/Humble.Umbraco.Workflows/dashboard.js"
 	],
 	"css": [
-		"/app_plugins/humble/backoffice/sections/automation/dashboard.css"
+		"/app_plugins/Humble.Umbraco.Workflows/dashboard.css"
 	]
 }

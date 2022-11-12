@@ -8,7 +8,7 @@
 		<Description>Customize the appearance of your content nodes in Umbraco 10 by simple right clicking any content node in the tree and choosing "Set Icon".</Description>
 		<Summary>Customize the appearance of your content nodes in Umbraco 10 by simple right clicking any content node in the tree and choosing "Set Icon".</Summary>
 		<Product>...</Product>
-		<PackageTags>umbraco</PackageTags>
+		<PackageTags>umbraco umbraco-marketplace</PackageTags>
 		<RootNamespace>Humble.Umbraco.ContentNodeIcons</RootNamespace>
 		<Authors>humble themarkdrake</Authors>
 		<Company />
@@ -20,7 +20,7 @@
 		<FileVersion>$(VersionPrefix)</FileVersion>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<Copyright>Copyright 2022 by Mark Drake</Copyright>
-		<VersionPrefix>10.1.0</VersionPrefix>
+		<VersionPrefix>10.1.1</VersionPrefix>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     </PropertyGroup>
 
