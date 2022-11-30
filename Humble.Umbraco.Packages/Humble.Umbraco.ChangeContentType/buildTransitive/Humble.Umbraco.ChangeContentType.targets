@@ -1,0 +1,21 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <HumbleUmbracoChangeContentTypeContentFilesPath>$(MSBuildThisFileDirectory)..\App_Plugins\Humble.Umbraco.ChangeContentType\**\*.*</HumbleUmbracoChangeContentTypeContentFilesPath>
+  </PropertyGroup>
+
+  <Target Name="CopyHumbleUmbracoChangeContentTypeAssets" BeforeTargets="Build">
+    <ItemGroup>
+      <HumbleUmbracoChangeContentTypeContentFiles Include="$(HumbleUmbracoChangeContentTypeContentFilesPath)" />
+    </ItemGroup>
+    <Message Text="Copying Humble.Umbraco.ChangeContentType files: $(HumbleUmbracoChangeContentTypeContentFilesPath) - #@(HumbleUmbracoChangeContentTypeContentFiles->Count()) files" Importance="high" />
+    <Copy SourceFiles="@(HumbleUmbracoChangeContentTypeContentFiles)" DestinationFiles="@(HumbleUmbracoChangeContentTypeContentFiles->'$(MSBuildProjectDirectory)\App_Plugins\Humble.Umbraco.ChangeContentType\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+  </Target>
+
+  <Target Name="ClearHumbleUmbracoChangeContentTypeAssets" BeforeTargets="Clean">
+    <ItemGroup>
+      <HumbleUmbracoChangeContentTypeDir Include="$(MSBuildProjectDirectory)\App_Plugins\Humble.Umbraco.ChangeContentType\" />
+    </ItemGroup>
+    <Message Text="Clear old Humble.Umbraco.ChangeContentType data" Importance="high" />
+    <RemoveDir Directories="@(HumbleUmbracoChangeContentTypeDir)" />
+  </Target>
+</Project>

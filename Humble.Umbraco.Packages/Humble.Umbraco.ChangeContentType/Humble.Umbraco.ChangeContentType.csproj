@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ContentTargetFolders>.</ContentTargetFolders>
+    <Product>Humble.Umbraco.ChangeContentType</Product>
+    <PackageId>Humble.Umbraco.ChangeContentType</PackageId>
+    <Title>Humble.Umbraco.ChangeContentType</Title>
+    <Description>...</Description>
+    <PackageTags>umbraco plugin package</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Umbraco.Cms.Web.Website" Version="10.3.2" />
+    <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="10.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="App_Plugins\Humble.Umbraco.ChangeContentType\**" ExcludeFromSingleFile="true" CopyToPublishDirectory="Always" />
+    <None Include="buildTransitive\**" Pack="true" PackagePath="buildTransitive" />
+  </ItemGroup>
+</Project>
