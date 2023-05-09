@@ -5,7 +5,7 @@
 @{
 	Layout = null;
 
-	var root = (Humble_Document_WebApplication) Model.AncestorOrSelf(1);
+	var root = (Humble_WebApplication) Model.AncestorOrSelf(1);
 	var currentPage = Umbraco.AssignedContentItem;
 	var currentCulture = System.Threading.Thread.CurrentThread.CurrentCulture;
 }

@@ -29,6 +29,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Humble.Umbraco.Cloudflare", "Humble.Umbraco.Packages\Humble.Umbraco.Cloudflare\Humble.Umbraco.Cloudflare.csproj", "{B0A37098-7F0B-49E8-A0F6-D68DD2D087DD}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Humble.Umbraco.RazorBlockPreview", "Humble.Umbraco.Packages\Humble.Umbraco.RazorBlockPreview\Humble.Umbraco.RazorBlockPreview.csproj", "{42695AA4-ECF2-4496-B3C1-84072856DCF4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Humble.Umbraco.ChangeContentType", "Humble.Umbraco.Packages\Humble.Umbraco.ChangeContentType\Humble.Umbraco.ChangeContentType.csproj", "{0587D86C-C86E-4AE1-85BE-C98CB4D67090}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Humble.Umbraco.StructuredData", "Humble.Umbraco.Packages\Humble.Umbraco.StructuredData\Humble.Umbraco.StructuredData.csproj", "{A7C00A3F-5425-4CE0-9571-6DB0930F1E54}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Humble.Umbraco.Workflows", "Humble.Umbraco.Packages\Humble.Umbraco.Workflows\Humble.Umbraco.Workflows.csproj", "{C7174123-7711-4CA5-A01F-E29DF315E0B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +67,22 @@ Global
 		{B0A37098-7F0B-49E8-A0F6-D68DD2D087DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0A37098-7F0B-49E8-A0F6-D68DD2D087DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0A37098-7F0B-49E8-A0F6-D68DD2D087DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42695AA4-ECF2-4496-B3C1-84072856DCF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42695AA4-ECF2-4496-B3C1-84072856DCF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42695AA4-ECF2-4496-B3C1-84072856DCF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42695AA4-ECF2-4496-B3C1-84072856DCF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0587D86C-C86E-4AE1-85BE-C98CB4D67090}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0587D86C-C86E-4AE1-85BE-C98CB4D67090}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0587D86C-C86E-4AE1-85BE-C98CB4D67090}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0587D86C-C86E-4AE1-85BE-C98CB4D67090}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7C00A3F-5425-4CE0-9571-6DB0930F1E54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7C00A3F-5425-4CE0-9571-6DB0930F1E54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7C00A3F-5425-4CE0-9571-6DB0930F1E54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7C00A3F-5425-4CE0-9571-6DB0930F1E54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7174123-7711-4CA5-A01F-E29DF315E0B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7174123-7711-4CA5-A01F-E29DF315E0B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7174123-7711-4CA5-A01F-E29DF315E0B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7174123-7711-4CA5-A01F-E29DF315E0B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +93,10 @@ Global
 		{09A6CE0E-B4A6-4881-A96E-DA03256C1F9C} = {46774B56-D02A-4E25-972B-BC0B5443FC14}
 		{F97242D9-D8FE-4FD2-AECD-B2367EAE1DFA} = {46774B56-D02A-4E25-972B-BC0B5443FC14}
 		{B0A37098-7F0B-49E8-A0F6-D68DD2D087DD} = {46774B56-D02A-4E25-972B-BC0B5443FC14}
+		{42695AA4-ECF2-4496-B3C1-84072856DCF4} = {46774B56-D02A-4E25-972B-BC0B5443FC14}
+		{0587D86C-C86E-4AE1-85BE-C98CB4D67090} = {46774B56-D02A-4E25-972B-BC0B5443FC14}
+		{A7C00A3F-5425-4CE0-9571-6DB0930F1E54} = {46774B56-D02A-4E25-972B-BC0B5443FC14}
+		{C7174123-7711-4CA5-A01F-E29DF315E0B1} = {46774B56-D02A-4E25-972B-BC0B5443FC14}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F0A5EF84-2D31-4F02-9A33-4FC3B05F11D9}

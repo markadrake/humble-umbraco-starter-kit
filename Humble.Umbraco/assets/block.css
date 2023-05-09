@@ -1,6 +1,5 @@
 ﻿@charset "UTF-8";
-/* Configuration, Mixins, and Functions */
-/*
+/* Configuration, Mixins, and Functions */ /*
 	A function to split a string on periods (.) to
 	access a SASS map through a familiar syntax.
 */
@@ -375,19 +374,15 @@ body {
   .-pad\:xs {
     padding: 1rem;
   }
-
   .-pad\:s {
     padding: 2rem;
   }
-
   .-pad\:m {
     padding: 4rem;
   }
-
   .-pad\:l {
     padding: 6rem;
   }
-
   .-pad\:xl {
     padding: 8rem;
   }
@@ -1089,8 +1084,7 @@ img.-cover {
 }
 
 /* Components */
-/* Configuration, Mixins, and Functions */
-/*
+/* Configuration, Mixins, and Functions */ /*
 	A function to split a string on periods (.) to
 	access a SASS map through a familiar syntax.
 */

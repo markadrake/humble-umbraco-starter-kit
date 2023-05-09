@@ -45,7 +45,7 @@ class RazorBlockPreview extends HTMLElement {
 	handleStylesheetChange(oldValue, newValue) {
 
 		// Exit: no value provided for stylesheet.
-		if(!newValue) return;
+		if (!newValue || newValue === "{{model.stylesheet}}") return;
 
 		// Apply external styles to the shadow DOM
 		const linkElem = document.createElement("link");

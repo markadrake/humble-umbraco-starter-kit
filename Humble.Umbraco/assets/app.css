@@ -1,6 +1,5 @@
 ﻿@charset "UTF-8";
-/* Configuration, Mixins, and Functions */
-/*
+/* Configuration, Mixins, and Functions */ /*
 	A function to split a string on periods (.) to
 	access a SASS map through a familiar syntax.
 */

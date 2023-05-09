@@ -1,0 +1,30 @@
+@inherits UmbracoViewPage<BlockListItem>
+@{
+	// Exit: no model provided.
+	if (Model == null)
+	{
+		return;
+	}
+
+	// Strongly typed models.
+	var content = (Humble_Ui_Breadcrumbs)Model.Content;
+	var settings = Model.Settings;
+
+	// Build the crumbs.
+	var currentPage = Umbraco.AssignedContentItem;
+	var crumbs = currentPage.Ancestors().Reverse();
+}
+
+<ul class="breadcrumbs">
+	@foreach (var item in crumbs)
+	{
+		<li>
+			<a href="@(item.Url())">
+				@(item.Name)
+			</a>
+		</li>
+	}
+	<li>
+		@(Umbraco.AssignedContentItem.Name)
+	</li>
+</ul>

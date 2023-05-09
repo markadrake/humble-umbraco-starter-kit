@@ -6,7 +6,7 @@ window["app"] = {};
  * Dual Layer Slider
  * - Register the component so we can use across the site.
  */
-import DualLayerSlider from "../Views/Partials/blocklist/components/humble_element_dualSlider";
+import DualLayerSlider from "../Views/Partials/blocklist/components/humble_ui_dualSlider";
 window["app"]["dualLayerSlider"] = DualLayerSlider;
 
 /*

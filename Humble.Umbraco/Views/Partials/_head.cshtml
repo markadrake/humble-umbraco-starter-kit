@@ -1,6 +1,6 @@
 ﻿@inherits UmbracoViewPage
 @{
-	Humble_Composition_HasWebApplicationSettings settings = (Humble_Composition_HasWebApplicationSettings)Model.Root().FirstChildOfType("humble_document_websiteSettings");
+	Humble_Compositions_HasWebApplicationSettings settings = (Humble_Compositions_HasWebApplicationSettings)Model.Root().FirstChildOfType("humble_document_websiteSettings");
 	//var request = HttpContext.Current.Request;
 	var currentPage = Umbraco.AssignedContentItem;
 	var isRoot = currentPage.AncestorOrSelf(1).Id == currentPage.Id;

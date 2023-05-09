@@ -3,7 +3,7 @@
 
 	function razorBlockPreviewResource($http, umbRequestHelper) {
 
-		var apiUrl = "https://localhost:44307/umbraco/backoffice/api/razorblockpreview/previewMarkup";
+		var apiUrl = "/umbraco/backoffice/api/razorblockpreview/previewMarkup";
 
 		var resource = {
 			getPreview: getPreview

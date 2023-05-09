@@ -2,13 +2,13 @@
 @import "./design-system/config";
 
 /* Features, Grid Editors, Block Editors */
-@import "../Views/Partials/blocklist/components/humble_element_breadcrumbs.scss";
-@import "../Views/Partials/blocklist/components/humble_element_card.scss";
-@import "../Views/Partials/blocklist/components/humble_element_dualSlider.scss";
-@import "../Views/Partials/blocklist/components/humble_element_html.scss";
-@import "../Views/Partials/blocklist/components/humble_element_image.scss";
-@import "../Views/Partials/blocklist/components/humble_element_richText.scss";
-@import "../Views/Partials/blocklist/components/humble_element_spacer.scss";
-@import "../Views/Partials/blocklist/components/humble_element_video.scss";
+@import "../Views/Partials/blocklist/components/humble_ui_breadcrumbs.scss";
+@import "../Views/Partials/blocklist/components/humble_ui_card.scss";
+@import "../Views/Partials/blocklist/components/humble_ui_dualSlider.scss";
+@import "../Views/Partials/blocklist/components/humble_ui_html.scss";
+@import "../Views/Partials/blocklist/components/humble_ui_image.scss";
+@import "../Views/Partials/blocklist/components/humble_ui_richText.scss";
+@import "../Views/Partials/blocklist/components/humble_ui_spacer.scss";
+@import "../Views/Partials/blocklist/components/humble_ui_video.scss";
 
 /* Specific Templates */
