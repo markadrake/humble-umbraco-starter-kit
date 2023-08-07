@@ -10,9 +10,9 @@
 			"request": "launch",
 			"preLaunchTask": "build",
 			// If you have changed target frameworks, make sure to update the program path.
-			"program": "${workspaceFolder}/HumbleUmbraco/bin/Debug/net6.0/HumbleUmbraco.dll",
+			"program": "${workspaceFolder}/Humble.Umbraco/bin/Debug/net6.0/Humble.Umbraco.dll",
 			"args": [],
-			"cwd": "${workspaceFolder}/HumbleUmbraco",
+			"cwd": "${workspaceFolder}/Humble.Umbraco",
 			"stopAtEntry": false,
 			// Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
 			"serverReadyAction": {
@@ -24,13 +24,13 @@
 			},
 			"sourceFileMap": {
 				"/Views": "${workspaceFolder}/Views"
-			}
+			},
+			"requireExactSource": false,
 		},
 		{
 			"name": ".NET Core Attach",
 			"type": "coreclr",
-			"request": "attach",
-			"processId": "${command:pickProcess}"
+			"request": "attach"
 		}
 	]
 }

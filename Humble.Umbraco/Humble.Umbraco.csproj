@@ -5,49 +5,55 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Umbraco.Cms" Version="10.2.1" />
+        <PackageReference Include="Diplo.GodMode" Version="10.3.0" />
+        <PackageReference Include="Umbraco.Cms" Version="10.6.1" />
         <PackageReference Include="uSync" Version="10.2.1" />
         <PackageReference Include="WebMarkupMin.AspNetCore5" Version="2.12.0" />
     </ItemGroup>
 
-	<Import Project="..\Humble.Umbraco.Packages\Humble.Umbraco.RazorBlockPreview\build\Humble.Umbraco.RazorBlockPreview.targets"/>
+	<Import Project="..\Humble.Umbraco.Packages\Humble.Umbraco.RazorBlockPreview\build\Humble.Umbraco.RazorBlockPreview.targets" />
 	<ItemGroup>
-		<ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.RazorBlockPreview\Humble.Umbraco.RazorBlockPreview.csproj"/>
+		<ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.RazorBlockPreview\Humble.Umbraco.RazorBlockPreview.csproj" />
 	</ItemGroup>
 
-	<Import Project="..\Humble.Umbraco.Packages\Humble.Umbraco.Cloudflare\build\Humble.Umbraco.Cloudflare.targets"/>
+	<Import Project="..\Humble.Umbraco.Packages\Humble.Umbraco.Cloudflare\build\Humble.Umbraco.Cloudflare.targets" />
 	<ItemGroup>
-		<ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.Cloudflare\Humble.Umbraco.Cloudflare.csproj"/>
+		<ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.Cloudflare\Humble.Umbraco.Cloudflare.csproj" />
 	</ItemGroup>
 
-	<Import Project="..\Humble.Umbraco.Packages\Humble.Umbraco.ContentNodeIcons\build\Humble.Umbraco.ContentNodeIcons.targets"/>
+	<Import Project="..\Humble.Umbraco.Packages\Humble.Umbraco.ContentNodeIcons\build\Humble.Umbraco.ContentNodeIcons.targets" />
 	<ItemGroup>
-		<ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.ContentNodeIcons\Humble.Umbraco.ContentNodeIcons.csproj"/>
+		<ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.ContentNodeIcons\Humble.Umbraco.ContentNodeIcons.csproj" />
 	</ItemGroup>
 
-	<Import Project="..\Humble.Umbraco.Packages\Humble.Umbraco.UI\build\Humble.Umbraco.UI.targets"/>
+	<Import Project="..\Humble.Umbraco.Packages\Humble.Umbraco.UI\build\Humble.Umbraco.UI.targets" />
 	<ItemGroup>
-		<ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.UI\Humble.Umbraco.UI.csproj"/>
+		<ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.UI\Humble.Umbraco.UI.csproj" />
 	</ItemGroup>
 
-	<Import Project="..\Humble.Umbraco.Packages\Humble.Umbraco.PropertyEditors\build\Humble.Umbraco.PropertyEditors.targets"/>
+	<Import Project="..\Humble.Umbraco.Packages\Humble.Umbraco.PropertyEditors\build\Humble.Umbraco.PropertyEditors.targets" />
 	<ItemGroup>
-		<ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.PropertyEditors\Humble.Umbraco.PropertyEditors.csproj"/>
+		<ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.PropertyEditors\Humble.Umbraco.PropertyEditors.csproj" />
 	</ItemGroup>
 
-	<Import Project="..\Humble.Umbraco.Packages\Chameleon\build\Chameleon.targets"/>
+	<Import Project="..\Humble.Umbraco.Packages\Chameleon\build\Chameleon.targets" />
 	<ItemGroup>
-		<ProjectReference Include="..\Humble.Umbraco.Packages\Chameleon\Chameleon.csproj"/>
+		<ProjectReference Include="..\Humble.Umbraco.Packages\Chameleon\Chameleon.csproj" />
 	</ItemGroup>
 
-	<Import Project="..\Humble.Umbraco.Packages\Humble.Umbraco.Workflows\build\Humble.Umbraco.Workflows.targets"/>
+	<Import Project="..\Humble.Umbraco.Packages\Humble.Umbraco.Workflows\build\Humble.Umbraco.Workflows.targets" />
 	<ItemGroup>
-		<ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.Workflows\Humble.Umbraco.Workflows.csproj"/>
+		<ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.Workflows\Humble.Umbraco.Workflows.csproj" />
 	</ItemGroup>
 
-	<Import Project="..\Humble.Umbraco.Packages\Humble.Umbraco.StructuredData\build\Humble.Umbraco.StructuredData.targets"/>
+	<Import Project="..\Humble.Umbraco.Packages\Humble.Umbraco.StructuredData\build\Humble.Umbraco.StructuredData.targets" />
 	<ItemGroup>
-		<ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.StructuredData\Humble.Umbraco.StructuredData.csproj"/>
+		<ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.StructuredData\Humble.Umbraco.StructuredData.csproj" />
+	</ItemGroup>
+
+	<Import Project="..\Humble.Umbraco.Packages\Humble.Umbraco.NamingConventions\build\Humble.Umbraco.NamingConventions.targets" />
+	<ItemGroup>
+		<ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.NamingConventions\Humble.Umbraco.NamingConventions.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

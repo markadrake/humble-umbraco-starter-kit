@@ -56,3 +56,5 @@ This project is currently licensed under MIT. Please note that after it's offici
 �As the most qualified and insightful developer I know, this is the definitive starter kit for Umbraco available.�
 
 _- Mark Drake_
+
+> demo@nextplayer | umb123

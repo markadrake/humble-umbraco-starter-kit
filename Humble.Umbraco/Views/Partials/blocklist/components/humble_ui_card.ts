@@ -1,1 +1,1 @@
-﻿import "./humble_ui_card.scss";
+import "./humble_ui_card.scss";
