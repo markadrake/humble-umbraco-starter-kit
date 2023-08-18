@@ -16,6 +16,22 @@ Key attributes of Umbraco Autopilot include:
 
 <br><br>
 
+# Get Started Now
+
+1. Add the `Humble.Umbraco.Autopilot` nuget package to your Umbraco project. You may use the Nuget Package Manager, or any console or command line:
+
+```
+dotnet add package Humble.Umbraco.Autopilot
+```
+
+2. A new section, `Humble`, should appear in the Umbraco Backoffice. Click it.
+
+3. Find `Autopilot` in the section tree. Click it.
+
+4. Build your first workflow!
+
+<br><br>
+
 ## Integrations
 
 ### Application Lifecycle
