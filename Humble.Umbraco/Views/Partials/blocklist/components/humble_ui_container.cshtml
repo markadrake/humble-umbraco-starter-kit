@@ -1,2 +1,18 @@
+@inherits UmbracoViewPage<BlockListItem>
+@{
+	if (Model == null)
+	{
+		return;
+	}
 
-@Html.GetBlockListHtml(content.Content)
+	var content = (Humble_Ui_Container)Model.Content;
+	var settings = Model.Settings;
+}
+
+@if(!string.IsNullOrEmpty(content.BackgroundColor)) {
+	<div style="background:#@(content.BackgroundColor)">
+		@Html.GetBlockListHtml(content.Content)
+	</div>
+} else {
+	@Html.GetBlockListHtml(content.Content)
+}

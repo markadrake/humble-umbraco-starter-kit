@@ -25,6 +25,18 @@ _Humble.Umbraco_<br>UI|No|Allows for customization and control over a design sys
 
 TBD
 
+## Upgrades
+
+```
+dotnet add package Diplo.GodMode -v '10.*'
+dotnet add package Umbraco.Cms -v '10.*'
+dotnet add package uSync -v '10.*'
+
+dotnet add package Umbraco.Cms -v '10.*'
+dotnet add package Umbraco.Cms -v '10.*'
+dotnet add package Umbraco.Cms -v '10.*'
+```
+
 ## Credentials
 
 <table>
