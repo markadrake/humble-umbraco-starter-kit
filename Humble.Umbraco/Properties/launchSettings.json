@@ -17,10 +17,10 @@
     },
     "Umbraco.Web.UI.NetCore": {
       "commandName": "Project",
+      "applicationUrl": "https://localhost:44307;http://localhost:47012",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "applicationUrl": "https://localhost:44307;http://localhost:47012"
+      }
     }
   }
 }

@@ -53,7 +53,7 @@ namespace HumbleUmbraco
                 .AddHtmlMinification()
                 .AddXmlMinification()
                 .AddHttpCompression();
-
+            
             services
                 .AddUmbraco(_env, _config)
                 .AddBackOffice()

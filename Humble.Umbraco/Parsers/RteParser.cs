@@ -19,7 +19,7 @@ namespace Humble.Umbraco.Parsers
 			// Exit: string contents are null or empty
 			if (Html == null) return Html;
 
-			// Exit: no current asigned content item
+			// Exit: no assigned content item
 			if (Content == null) return Html;
 
 			// Find matches

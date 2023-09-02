@@ -13,6 +13,7 @@
 
 	<Import Project="..\Humble.Umbraco.Packages\Humble.Umbraco.RazorBlockPreview\build\Humble.Umbraco.RazorBlockPreview.targets" />
 	<ItemGroup>
+		<ProjectReference Include="..\Humble.Umbraco.Packages\Humble.RCL\Humble.RCL.csproj" />
 		<ProjectReference Include="..\Humble.Umbraco.Packages\Humble.Umbraco.RazorBlockPreview\Humble.Umbraco.RazorBlockPreview.csproj" />
 	</ItemGroup>
 
@@ -84,4 +85,5 @@
 	<PropertyGroup>
 		<RazorCompileOnBuild>false</RazorCompileOnBuild>
 	</PropertyGroup>
+	<PropertyGroup Condition=" '$(RunConfiguration)' == 'Umbraco.Web.UI.NetCore' " />
 </Project>

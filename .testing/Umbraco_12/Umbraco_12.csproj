@@ -26,4 +26,5 @@
     <RazorCompileOnPublish>false</RazorCompileOnPublish>
   </PropertyGroup>
   
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Umbraco.Web.UI' " />
 </Project>
