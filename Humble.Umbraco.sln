@@ -43,6 +43,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Umbraco_10", ".testing\Umbr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Umbraco_12", ".testing\Umbraco_12\Umbraco_12.csproj", "{5B36BA76-E0EF-4520-978F-55E3C13ED916}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Humble.Umbraco.NamingConventions", "Humble.Umbraco.Packages\Humble.Umbraco.NamingConventions\Humble.Umbraco.NamingConventions.csproj", "{7A12A70D-4167-406F-B89E-D496B00ACADE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Humble.RCL", "Humble.Umbraco.Packages\Humble.RCL\Humble.RCL.csproj", "{1B7D7EAA-8632-491B-9588-F430B20BDC24}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -97,6 +101,14 @@ Global
 		{5B36BA76-E0EF-4520-978F-55E3C13ED916}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B36BA76-E0EF-4520-978F-55E3C13ED916}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B36BA76-E0EF-4520-978F-55E3C13ED916}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A12A70D-4167-406F-B89E-D496B00ACADE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A12A70D-4167-406F-B89E-D496B00ACADE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A12A70D-4167-406F-B89E-D496B00ACADE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A12A70D-4167-406F-B89E-D496B00ACADE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B7D7EAA-8632-491B-9588-F430B20BDC24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B7D7EAA-8632-491B-9588-F430B20BDC24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B7D7EAA-8632-491B-9588-F430B20BDC24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B7D7EAA-8632-491B-9588-F430B20BDC24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -113,6 +125,8 @@ Global
 		{C7174123-7711-4CA5-A01F-E29DF315E0B1} = {46774B56-D02A-4E25-972B-BC0B5443FC14}
 		{A3F697D6-0EFF-4E28-BF5B-8257A4E397D0} = {B0AC1BBF-9853-40FA-8A89-90174EA13EA5}
 		{5B36BA76-E0EF-4520-978F-55E3C13ED916} = {B0AC1BBF-9853-40FA-8A89-90174EA13EA5}
+		{7A12A70D-4167-406F-B89E-D496B00ACADE} = {46774B56-D02A-4E25-972B-BC0B5443FC14}
+		{1B7D7EAA-8632-491B-9588-F430B20BDC24} = {46774B56-D02A-4E25-972B-BC0B5443FC14}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F0A5EF84-2D31-4F02-9A33-4FC3B05F11D9}

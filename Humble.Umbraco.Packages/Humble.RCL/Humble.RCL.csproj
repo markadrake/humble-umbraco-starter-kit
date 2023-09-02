@@ -3,7 +3,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <StaticWebAssetBasePath>App_Plugins/Humble.RCL</StaticWebAssetBasePath>
+    <StaticWebAssetBasePath>/</StaticWebAssetBasePath>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -14,9 +14,14 @@
     <PackageTags>umbraco plugin package</PackageTags>
   </PropertyGroup>
 
-
   <ItemGroup>
     <PackageReference Include="Umbraco.Cms.Web.Website" Version="10.6.1" />
     <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="10.6.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\App_Plugins\Humble\test.cshtml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 </Project>
