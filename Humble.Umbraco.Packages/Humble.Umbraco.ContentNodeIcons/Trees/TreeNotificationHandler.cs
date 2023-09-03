@@ -17,91 +17,89 @@ using Umbraco.Cms.Web.Common.ModelBinders;
 using Umbraco.Cms.Core.Composing;
 using Umbraco.Cms.Core.DependencyInjection;
 
-namespace Humble.Umbraco.ContentNodeIcons.Trees
+namespace Humble.Umbraco.ContentNodeIcons.Trees;
+
+public class TreeNotificationComposer : IComposer
 {
-	public class TreeNotificationComposer : IComposer
+	public void Compose(IUmbracoBuilder builder) {
+		builder.AddNotificationHandler<TreeNodesRenderingNotification, TreeNodesRenderingNotificationHandler>();
+		builder.AddNotificationHandler<MenuRenderingNotification, MenuRenderingNotificationHandler>();
+	}
+}
+
+// Hijack the rendering of each content node to customize the icon shown.
+public class TreeNodesRenderingNotificationHandler : INotificationHandler<TreeNodesRenderingNotification>
+{
+
+	private readonly IContentNodeIconsService _contentNodeIconsService;
+
+	public TreeNodesRenderingNotificationHandler(IContentNodeIconsService contentNodeIconsService)
 	{
-		public void Compose(IUmbracoBuilder builder) {
-			builder.AddNotificationHandler<TreeNodesRenderingNotification, TreeNodesRenderingNotificationHandler>();
-			builder.AddNotificationHandler<MenuRenderingNotification, MenuRenderingNotificationHandler>();
-		}
+		_contentNodeIconsService = contentNodeIconsService;
 	}
 
-	// Hijack the rendering of each content node to customize the icon shown.
-	public class TreeNodesRenderingNotificationHandler : INotificationHandler<TreeNodesRenderingNotification>
+	public void Handle(TreeNodesRenderingNotification notification)
 	{
 
-		private readonly IContentNodeIconsService _contentNodeIconsService;
-
-		public TreeNodesRenderingNotificationHandler(IContentNodeIconsService contentNodeIconsService)
+		if (notification.TreeAlias.Equals(Constants.Trees.Content))
 		{
-			_contentNodeIconsService = contentNodeIconsService;
-		}
+			var customIcons = _contentNodeIconsService.GetIcons();
 
-		public void Handle(TreeNodesRenderingNotification notification)
-		{
-
-			if (notification.TreeAlias.Equals(Constants.Trees.Content))
+			foreach (TreeNode treeNode in notification.Nodes)
 			{
-				var customIcons = _contentNodeIconsService.GetIcons();
-
-				foreach (TreeNode treeNode in notification.Nodes)
+				int nodeId = Convert.ToInt32(treeNode.Id);
+				if (nodeId <= 0)
 				{
-					int nodeId = Convert.ToInt32(treeNode.Id);
-					if (nodeId <= 0)
-					{
-						continue;
-					}
-
-					var node = customIcons.Where(x => x.ContentId.Equals(nodeId)).FirstOrDefault();
-					if (node == null)
-					{
-						continue;
-					}
-
-					treeNode.Icon = $"{node.Icon} {node.IconColor}";
+					continue;
 				}
+
+				var node = customIcons.Where(x => x.ContentId.Equals(nodeId)).FirstOrDefault();
+				if (node == null)
+				{
+					continue;
+				}
+
+				treeNode.Icon = $"{node.Icon} {node.IconColor}";
 			}
 		}
 	}
+}
 
-	// Provide a new context menu option.
-	public class MenuRenderingNotificationHandler : INotificationHandler<MenuRenderingNotification>
+// Provide a new context menu option.
+public class MenuRenderingNotificationHandler : INotificationHandler<MenuRenderingNotification>
+{
+
+	private readonly IContentNodeIconsService _contentNodeIconsService;
+
+	public MenuRenderingNotificationHandler(IContentNodeIconsService contentNodeIconsService)
+	{
+		_contentNodeIconsService = contentNodeIconsService;
+	}
+
+	public void Handle(MenuRenderingNotification notification)
 	{
 
-		private readonly IContentNodeIconsService _contentNodeIconsService;
-
-		public MenuRenderingNotificationHandler(IContentNodeIconsService contentNodeIconsService)
+		// Only for the Content tree and never for the root content node.
+		// -1 = Root
+		// -20 = Recycle Bin
+		if (notification.TreeAlias.Equals(Constants.Trees.Content) && 
+		    Int32.Parse(notification.NodeId) >= 1)
 		{
-			_contentNodeIconsService = contentNodeIconsService;
-		}
+			var indexPos = notification.Menu.Items.Count;
 
-		public void Handle(MenuRenderingNotification notification)
-		{
+			// Set Icon
+			var setMenuItem = new MenuItem("setIcon", "Set Icon");
+			setMenuItem.AdditionalData.Add("actionView", "/app_plugins/Humble.Umbraco.ContentNodeIcons/set.html");
+			setMenuItem.Icon = "favorite";
+			setMenuItem.OpensDialog = true;
+			notification.Menu.Items.Insert(indexPos, setMenuItem);
 
-			// Only for the Content tree and never for the root content node.
-			// -1 = Root
-			// -20 = Recycle Bin
-			if (notification.TreeAlias.Equals(Constants.Trees.Content) && 
-				Int32.Parse(notification.NodeId) >= 1)
-			{
-				var indexPos = notification.Menu.Items.Count;
-
-				// Set Icon
-				var setMenuItem = new MenuItem("setIcon", "Set Icon");
-				setMenuItem.AdditionalData.Add("actionView", "/app_plugins/Humble.Umbraco.ContentNodeIcons/set.html");
-				setMenuItem.Icon = "favorite";
-				setMenuItem.OpensDialog = true;
-				notification.Menu.Items.Insert(indexPos, setMenuItem);
-
-				// Remove Icon
-				var unsetMenuItem = new MenuItem("unsetIcon", "Unset Icon");
-				unsetMenuItem.AdditionalData.Add("actionView", "/app_plugins/Humble.Umbraco.ContentNodeIcons/unset.html");
-				unsetMenuItem.Icon = "wrong";
-				unsetMenuItem.OpensDialog = true;
-				notification.Menu.Items.Insert(indexPos + 1, unsetMenuItem);
-			}
+			// Remove Icon
+			var unsetMenuItem = new MenuItem("unsetIcon", "Unset Icon");
+			unsetMenuItem.AdditionalData.Add("actionView", "/app_plugins/Humble.Umbraco.ContentNodeIcons/unset.html");
+			unsetMenuItem.Icon = "wrong";
+			unsetMenuItem.OpensDialog = true;
+			notification.Menu.Items.Insert(indexPos + 1, unsetMenuItem);
 		}
 	}
-
 }

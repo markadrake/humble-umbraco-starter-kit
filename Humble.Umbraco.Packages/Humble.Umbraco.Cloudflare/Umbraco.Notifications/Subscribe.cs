@@ -8,15 +8,14 @@ using Umbraco.Cms.Core.Composing;
 using Umbraco.Cms.Core.DependencyInjection;
 using Umbraco.Cms.Core.Notifications;
 
-namespace Humble.Umbraco.Cloudflare.Umbraco.Notifications
+namespace Humble.Umbraco.Cloudflare.Umbraco.Notifications;
+
+internal class Subscribe : IComposer
 {
-	internal class Subscribe : IComposer
+	public void Compose(IUmbracoBuilder builder)
 	{
-		public void Compose(IUmbracoBuilder builder)
-		{
-			builder.AddNotificationAsyncHandler<ContentPublishedNotification, ContentPublished>();
-			builder.AddNotificationAsyncHandler<MediaSavedNotification, MediaSaved>();
-			builder.AddNotificationAsyncHandler<MediaSavingNotification, MediaSaving>();
-		}
+		builder.AddNotificationAsyncHandler<ContentPublishedNotification, ContentPublished>();
+		builder.AddNotificationAsyncHandler<MediaSavedNotification, MediaSaved>();
+		builder.AddNotificationAsyncHandler<MediaSavingNotification, MediaSaving>();
 	}
 }

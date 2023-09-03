@@ -26,4 +26,8 @@
             <PackagePath>buildTransitive</PackagePath>
         </None>
     </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="App_Plugins\Humble.Umbraco.UI\Backoffice\Icons\" />
+    </ItemGroup>
 </Project>

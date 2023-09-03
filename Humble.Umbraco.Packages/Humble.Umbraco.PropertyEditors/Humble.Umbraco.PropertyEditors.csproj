@@ -66,8 +66,4 @@
 		</None>
 	</ItemGroup>
 
-	<ItemGroup>
-	  <Folder Include="App_Plugins\Humble.Umbraco.PropertyEditors\RTEWithBackgroundColor\" />
-	</ItemGroup>
-
 </Project>

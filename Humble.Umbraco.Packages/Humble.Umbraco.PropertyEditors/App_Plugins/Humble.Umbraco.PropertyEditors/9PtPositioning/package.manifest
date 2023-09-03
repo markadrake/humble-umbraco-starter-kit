@@ -2,7 +2,7 @@
 	"propertyEditors": [
 		{
 			"name": "9 Pt Positioning (Humble)",
-			"alias": "Humble.Umbraco.ProeprtyEditors.NinePtPositioning",
+			"alias": "Humble.Umbraco.PropertyEditors.NinePtPositioning",
 			"editor": {
 				"valueType": "STRING",
 				"view": "~/app_plugins/humble.umbraco.propertyEditors/9PtPositioning/9pt.html"

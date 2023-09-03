@@ -1,0 +1,17 @@
+{
+	"propertyEditors": [
+		{
+			"name": "Gist Picker (Humble)",
+			"alias": "Humble.Umbraco.PropertyEditors.GistPicker",
+			"editor": {
+				"valueType": "STRING",
+				"view": "~/app_plugins/humble.umbraco.propertyEditors/gistPicker/gistPicker.html"
+			}
+		}
+	],
+	"css": [
+	],
+	"javascript": [
+		"~/app_plugins/humble.umbraco.propertyEditors/gistPicker/gistPicker.js"
+	]
+}

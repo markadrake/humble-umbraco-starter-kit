@@ -1,0 +1,16 @@
+<!-- HTML code -->
+<div ng-controller="GistPickerController">
+    <input type="text" ng-model="gistUrl" placeholder="Enter Gist URL or ID" />
+    <button type="button" ng-click="fetchGistMetaData()">Fetch Gist Metadata</button>
+
+    <div ng-if="gistMetaData">
+        <h3>Gist Metadata</h3>
+        <p>Number of Files: {{numFiles}}</p>
+        <div ng-if="numFiles > 1">
+            <p>Select File:</p>
+            <select ng-model="selectedFile" ng-options="filename for (filename, file) in gistMetaData.files">
+                <option value="">All Files</option>
+            </select>
+        </div>
+    </div>
+</div>

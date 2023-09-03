@@ -1,6 +1,7 @@
 using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Humble.Umbraco.UI.Extensions;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using Microsoft.Extensions.DependencyInjection;
 using Umbraco.Cms.Core.Models.PublishedContent;
@@ -14,6 +15,11 @@ namespace Humble.Umbraco.UI.TagHelpers;
 [HtmlTargetElement("humble-parser", TagStructure = TagStructure.NormalOrSelfClosing)]
 public class HumbleParserTagHelper : TagHelper
 {
+    /// <summary>
+    /// Gets or sets the content. 
+    /// Although this accepts any object, it should be either of type 'string' or 'IHtmlEncodedString'.
+    /// </summary>
+    public object Content { get; set; }
     private readonly IUmbracoContextAccessor _umbracoContextAccessor;
     private readonly UmbracoHelper _umbracoHelper;
     
@@ -22,47 +28,24 @@ public class HumbleParserTagHelper : TagHelper
         _umbracoContextAccessor = umbracoContextAccessor;
         _umbracoHelper = umbracoHelper;
     }
-
-    public IHtmlEncodedString Content { get; set; }
     
     public override void Process(TagHelperContext context, TagHelperOutput output)
     {
         output.TagName = null;
         var umbracoContext = _umbracoContextAccessor.GetRequiredUmbracoContext();
         var contentService = umbracoContext.Content;
-
-        if (contentService == null)
+        if (contentService == null) return;
+        
+        IPublishedContent content = umbracoContext?.PublishedRequest?.PublishedContent;
+        if (Content is string stringContent)
         {
-            return;
+            var newContents = stringContent.Parse(content);
+            output.Content.SetHtmlContent(newContents);
         }
-
-        IPublishedContent content = _umbracoHelper.AssignedContentItem; // Set this based on your requirements
-
-        var replacePattern = new Regex(@"{{([a-zA-Z]+)}}", RegexOptions.IgnoreCase | RegexOptions.IgnorePatternWhitespace);
-        var newContents = Content.ToString();
-
-        var matches = replacePattern.Matches(newContents);
-
-        foreach (Match match in matches)
+        else if (Content is IHtmlEncodedString htmlContent)
         {
-            string key = match.Groups[1].Value;
-            var typeProperty = content.GetType().GetProperty(key, BindingFlags.IgnoreCase | BindingFlags.Instance | BindingFlags.Public);
-
-            if (typeProperty != null)
-            {
-                newContents = newContents.Replace(match.Value, typeProperty.GetValue(content, null).ToString());
-                continue;
-            }
-
-            var contentProperty = content.GetProperty(key);
-            if (contentProperty == null) continue;
-
-            var value = contentProperty.GetValue();
-            if (value == null) continue;
-
-            newContents = newContents.Replace(match.Value, value.ToString());
+            var newContents = htmlContent.Parse(content);
+            output.Content.SetHtmlContent(newContents.ToHtmlString());
         }
-
-        output.Content.SetHtmlContent(newContents);
     }
 }
