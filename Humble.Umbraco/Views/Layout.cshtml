@@ -28,27 +28,27 @@
 
 	@RenderBody()
 
-	@{
-		var pictureConfig = new Picture()
-		{
-			ImageAlt = "myAltText",
-			DefaultImageCropAlias = "myCropAlias",
-			DefaultImageFormats = "png webp",
-			DefaultMedia = root.Media,
-			Sources = new List<PictureSource>()
-			{
-				new PictureSource()
-				{
-					CssMediaQuery = "screen and (max-width: 1023px)",
-				},
-				new PictureSource()
-				{
-					CssMediaQuery = "screen and (min-width: 1024px)",
-					ImageCropAlias = "myCropAlias2"
-				}
-			}
-		};
-	}
+	@* @{ *@
+	@* 	var pictureConfig = new Picture() *@
+	@* 	{ *@
+	@* 		ImageAlt = "myAltText", *@
+	@* 		DefaultImageCropAlias = "myCropAlias", *@
+	@* 		DefaultImageFormats = "png webp", *@
+	@* 		DefaultMedia = root.Media, *@
+	@* 		Sources = new List<PictureSource>() *@
+	@* 		{ *@
+	@* 			new PictureSource() *@
+	@* 			{ *@
+	@* 				CssMediaQuery = "screen and (max-width: 1023px)", *@
+	@* 			}, *@
+	@* 			new PictureSource() *@
+	@* 			{ *@
+	@* 				CssMediaQuery = "screen and (min-width: 1024px)", *@
+	@* 				ImageCropAlias = "myCropAlias2" *@
+	@* 			} *@
+	@* 		} *@
+	@* 	}; *@
+	@* } *@
 	
 	@* <picture config="pictureConfig" tabs="2" /> *@
 
@@ -58,6 +58,9 @@
 	<script src="~/assets/app.js" async defer></script>
 
 	@RenderSection("BodyClose", false)
+
+	<humble-icon name="x" />
+	<humble-sprite />
 
 </body>
 </html>

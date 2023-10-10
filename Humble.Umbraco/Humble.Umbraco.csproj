@@ -80,6 +80,12 @@
 			<CopyToPublishDirectory>Always</CopyToPublishDirectory>
 		</None>
 	</ItemGroup>
+	<ItemGroup>
+	  <Content Include="App_Plugins\test\socialMediaProperty.html">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+	  </Content>
+	</ItemGroup>
 
 	<!--Set this to true ModelsBuilder mode is not PureLive -->
 	<PropertyGroup>

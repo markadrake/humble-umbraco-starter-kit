@@ -1,4 +1,0 @@
-```
-<humble-parser 
-    content="@yourHtmlEncodedString" />
-```

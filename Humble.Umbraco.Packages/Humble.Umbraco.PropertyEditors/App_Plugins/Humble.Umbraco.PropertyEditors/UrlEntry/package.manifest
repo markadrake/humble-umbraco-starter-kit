@@ -1,0 +1,20 @@
+{
+    "propertyEditors": [
+        {
+            "name": "URL Entry (Humble)",
+            "alias": "Humble.Umbraco.PropertyEditors.UrlEntry",
+            "editor": {
+            "valueType": "TEXT",
+            "view": "/app_plugins/humble.umbraco.propertyEditors/urlEntry/urlEntry.html"
+        },
+            "prevalues": {
+            }
+        }
+    ],
+    "css": [
+        "/app_plugins/humble.umbraco.propertyEditors/urlEntry/urlEntry.css"
+    ],
+    "javascript": [
+        "/app_plugins/humble.umbraco.propertyEditors/urlEntry/urlEntry.js"
+    ]
+}

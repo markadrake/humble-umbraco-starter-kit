@@ -1,0 +1,36 @@
+<div ng-controller="humble_umbraco_propertyEditors_urlEntry">
+    <uui-input placeholder="my-custom-url/">
+        <div style="
+            user-select:none;
+            height: 100%;
+            padding: 0 var(--uui-size-3);
+            border-right: 1px solid var(--uui-input-border-color, var(--uui-color-border));
+            background: #f3f3f3;
+            color: grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;" slot="prepend">/</div>
+    </uui-input>
+    <uui-button look="outline"
+                color="default"
+                label="Add URL"
+                ng-click="addUrl()"></uui-button>
+
+    <uui-icon-registry-essential slot="icon">
+        <uui-ref-list ng-show="model.value.length >= 1"
+        style="margin-top:1rem">
+            <uui-ref-node ng-repeat="item in model.value.split(',') track by $index" 
+                          name="Alternate Address"
+                          detail="{{item}}"
+                          border
+                          style="margin:4px 0;">
+                <uui-icon name="link" slot="icon"></uui-icon>
+                <uui-action-bar slot="actions">
+                    <uui-button label="Remove"
+                                ng-click="removeUrl($index)">Remove</uui-button>
+                </uui-action-bar>
+            </uui-ref-node>
+        </uui-ref-list>
+
+    </uui-icon-registry-essential>
+</div>

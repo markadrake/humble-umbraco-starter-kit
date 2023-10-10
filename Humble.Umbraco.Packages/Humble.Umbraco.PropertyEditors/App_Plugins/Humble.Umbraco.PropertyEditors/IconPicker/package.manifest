@@ -1,0 +1,17 @@
+{
+	"propertyEditors": [
+		{
+			"name": "Icon Picker (Humble)",
+			"alias": "Humble.Umbraco.PropertyEditors.IconPicker",
+			"editor": {
+				"valueType": "STRING",
+				"view": "~/app_plugins/humble.umbraco.propertyEditors/iconPicker/iconPicker.html"
+			}
+		}
+	],
+	"css": [
+	],
+	"javascript": [
+		"~/app_plugins/humble.umbraco.propertyEditors/iconPicker/iconPicker.js"
+	]
+}
