@@ -9,4 +9,58 @@
 	var settings = Model.Settings;
 }
 
-Image
+@{
+	var image = content.Image.FirstOrDefault();
+}
+
+@*
+	Render the image at the original uploaded size.
+	- The variable `image` is strongly typed, using the models builder.
+	  It is typed as `MediaWithCrops`.
+*@
+@if (image != null)
+{
+	<img src="@(image.Url())" 
+	     alt="@(image.Value<string>("SEOAlternateText"))" 
+	     width="@(image.Content.Value("umbracoWidth"))" 
+	     height="@(image.Content.Value("umbracoHeight"))" />
+}
+
+@*
+	Render the image using a configured image crop.
+	- The variable `image` is strongly typed, using the models builder.
+	  It is typed as `MediaWithCrops`.
+    - The crop we want is defined locally. Locally means that you have
+      configured the media picker property with custom crops. This is important!
+*@
+@{
+	var localCrops = image?.LocalCrops.Crops;
+	var localCrop = localCrops?.Where(crop => crop.Alias.Equals("1:1")).FirstOrDefault();
+}
+@if (localCrop != null)
+{
+	<img src="@(image.GetCropUrl(localCrop.Alias))"
+	     alt="@(image.Value<string>("SEOAlternateText"))"
+	     width="@(localCrop.Width)"
+	     height="@(localCrop.Height)" />
+}
+     
+@*
+	Render the image using a configured image crop.
+	- The variable `image` is strongly typed, using the models builder.
+	  It is typed as `MediaWithCrops`.
+    - The crop we want is defined globally. Globally means that you have
+      configured the media content type. This is important!
+*@
+@{
+	var convertToImage = image.Content as Image;
+	var globalCrops = convertToImage?.UmbracoFile?.Crops;
+	var globalCrop = globalCrops?.Where(crop => crop.Alias.Equals("16:9 XL")).FirstOrDefault();
+}
+@if (globalCrop != null)
+{
+	<img src="@(image.GetCropUrl(globalCrop.Alias))"
+	     alt="@(image.Value<string>("SEOAlternateText"))"
+	     width="@(globalCrop.Width)"
+	     height="@(globalCrop.Height)" />	
+}

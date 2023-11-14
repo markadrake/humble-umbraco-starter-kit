@@ -10,6 +10,7 @@ using Umbraco.Cms.Core.Models.Entities;
 using Umbraco.Cms.Core.Notifications;
 using Umbraco.Cms.Core.PropertyEditors;
 using Umbraco.Cms.Core.Services;
+using Umbraco.Extensions;
 
 namespace Humble.Umbraco.NamingConventions;
 
@@ -99,6 +100,13 @@ public class DataTypeSavingHandler : INotificationHandler<DataTypeSavingNotifica
 		{
 			// Only for Block Lists
 			if(entity.EditorAlias == Constants.PropertyEditors.Aliases.BlockList) {
+				
+				// Ignore block list data types that don't mention 'Humble' in their name.
+				if (!entity.Name.InvariantContains("humble"))
+				{
+					return;
+				}
+				
 				// Set custom view, custom stylesheet, and thumbnail value for every block editor in the configuration.
 				var config = (BlockListConfiguration) entity.Configuration;
 
